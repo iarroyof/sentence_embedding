@@ -1,0 +1,6 @@
+/almac/ignacio/data/glove/glove.6B.200d.vec
+/almac/ignacio/data/glove/glove.840B.300d.vec
+/almac/ignacio/data/word2vec/w2v_En_vector_space_H300.vec
+/almac/ignacio/data/fastText/wikiEn_Full_H200.model.vec
+/almac/ignacio/data/fastText/wikiEn_Full_H300.model.vec
+/almac/ignacio/data/dependency_word2vec/deps_words.vec
