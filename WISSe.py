@@ -136,8 +136,17 @@ if __name__ == "__main__":
             tfidf=pickle.load(open(args.tfidf, 'rb'))
     else:
         tfidf=False
-
-    embedding=load_vectors(args.embed, binary=False, encoding="latin-1")
+    
+    if args.embed.endswith(".bin") and ("w2v" in args.embed.lower() or "word2vec" in args.embed.lower()):
+        embedding=load_vectors(args.embed, binary=True, encoding="latin-1")
+    elif args.embed.endswith(".bin") and ("fstx" in args.embed.lower() or "fasttext" in args.embed.lower()):
+        import fasttext
+        embedding=fasttext.load(args.embed)
+    elif not args.embed.endswith(".bin"):
+        embedding=load_vectors(args.embed, binary=False, encoding="latin-1")
+    else:
+        logging.info("Error in the word embedding model name (EXIT): %s ..." % args.embed)
+        exit()
     # TODO: In the case this approach to work, try other pairwise metrics (sklearn)
     embedding_name=args.embed #"_".join(args.embed.split("/")[-1].split(".")[:-1])
     suffix= "_".join([embedding_name, 
