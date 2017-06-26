@@ -92,8 +92,7 @@ if __name__ == "__main__":
                                            The Gram–Schmidt process (ortho). (ld) 
                                            keeps original word vectors.""", 
                                            default=None) 
-    parser.add_argument("--binary", help="Toggles binarize local TF.", action="store_true")
-    parser.add_argument("--sublinear", help="Toggles sublinear local TF.", action="store_true")
+    parser.add_argument("--locTF", help="Local TF rescaling: none, binary, sublinear (default=none).", default="none")
     parser.add_argument("--stop", help="Toggles stop local words stripping.", action="store_true")
     args = parser.parse_args()
     # '/almac/ignacio/data/INEXQA2012corpus/wikiEn_sts_clean_ph2_tfidf.pk'
@@ -126,8 +125,8 @@ if __name__ == "__main__":
                                  encoding="latin-1",
                                  decode_error="replace",
                                  lowercase=False,
-                                 binary=args.binary,
-                                 sublinear_tf=args.sublinear,
+                                 binary= True if args.locTF.startswith("bin") else False,
+                                 sublinear_tf= True if args.locTF.startswith("subl") else False,
                                  stop_words= "english" if args.stop else None)
             logging.info("Fitting local TFIDF weights from: %s ..." % args.pairs)
             tfidf = vectorizer.fit(corpus)
@@ -136,13 +135,13 @@ if __name__ == "__main__":
             tfidf=pickle.load(open(args.tfidf, 'rb'))
     else:
         tfidf=False
-    
-    if args.embed.endswith(".bin") and ("w2v" in args.embed.lower() or "word2vec" in args.embed.lower()):
+    #st()
+    if args.embed.endswith("bin") and ("w2v" in args.embed.lower() or "word2vec" in args.embed.lower()):
         embedding=load_vectors(args.embed, binary=True, encoding="latin-1")
-    elif args.embed.endswith(".bin") and ("fstx" in args.embed.lower() or "fasttext" in args.embed.lower()):
+    elif args.embed.endswith("bin") and ("fstx" in args.embed.lower() or "fasttext" in args.embed.lower()):
         import fasttext
-        embedding=fasttext.load(args.embed)
-    elif not args.embed.endswith(".bin"):
+        embedding=fasttext.load_model(args.embed)
+    elif not args.embed.endswith("bin"):
         embedding=load_vectors(args.embed, binary=False, encoding="latin-1")
     else:
         logging.info("Error in the word embedding model name (EXIT): %s ..." % args.embed)
