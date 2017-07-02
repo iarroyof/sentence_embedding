@@ -1,0 +1,51 @@
+from numpy import array, einsum, arccos, newaxis, zeros, vstack
+from numpy.linalg import norm
+from numpy import triu_indices
+import argparse, logging
+import cPickle as pickle
+
+class streamer(object):
+    def __init__(self, file_name, pairs=False):
+        self.file_name=file_name
+
+    def __iter__(self):
+        for s in open(self.file_name):
+            if not pairs:
+                yield s.strip().split()
+            else:
+                
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--embed", help="""Input file containing TFIDF pre-trained
+                                            weights. If not provided, all weights
+                                            will be 1.0 (pickled sklearn object).""",
+                                            required=True)
+    parser.add_argument("--angles", help="""Output file containing word embeddings
+                                            angles.""", default="angles.pk")
+
+    args = parser.parse_args()
+    logging.info("Fitting distances from: %s ...\n" % args.embed)
+
+    vectors=streamer(args.embed)
+    for v in vectors:
+        if len(v) == 2:
+            X=zeros((1, int(v[1]))).astype("float32")
+            continue
+
+        X=vstack([X, [float(x) for x in v[1:]]])
+
+    X=delete(X, 0, 0)
+#X=array([[1.0,0.0], [1.0,1.0], [0.0,1.0], [-1.0, 2.0], [-1.0, -2.0], [-1.0, 0.0]])
+    iu2 = triu_indices(X.shape[0], 1)
+
+    dotprod_mat=einsum('ij,kj->ik', X, X)
+    costheta = dotprod_mat / norm(X, axis=1)[:, newaxis]
+    costheta /= norm(X, axis=1)
+    
+    logging.info("Saved: \n%s and:  %s\n ..." % args.angles)
+
+    pickle.dump(arccos(costheta)[iu2], args.angles)
+
+    logging.info("Saved: \n%s and:  %s\n ..." % args.angles)

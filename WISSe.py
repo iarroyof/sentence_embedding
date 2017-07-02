@@ -159,6 +159,12 @@ if __name__ == "__main__":
     distances=[]
     missing_bow=[]
     missing_cbow=[]
+
+#   with open(args.pairs+".output_"+suffix, "w") as f:
+
+    fo=open(args.pairs+".output_"+suffix, "w")  
+    iPair=1
+
     for pair in pairs:
         p=pair.split("\t")
         weights_a, m=infer_tfidf_weights(' '.join(clean_Ustring_fromU(p[0])), tfidf, predict=pred_tfidf)
@@ -223,24 +229,41 @@ if __name__ == "__main__":
         #v_b=array([weights_b[word]*embedding[word]
         #                                    for word in weights_b]).sum(axis=0).reshape(1, -1)
         if args.dist.startswith("all"):
-            distances.append((1-cosine_distances(v_a, v_b), 
-                                euclidean_distances(v_a, v_b),
-                                manhattan_distances(v_a, v_b)))
+            #distances.append((1-cosine_distances(v_a, v_b), 
+            #                    euclidean_distances(v_a, v_b),
+            #                    manhattan_distances(v_a, v_b)))
+            try:
+                fo.write("%f\t%f\t%f\n" % (1-cosine_distances(v_a, v_b)[0], 
+                                                euclidean_distances(v_a, v_b)[0],
+                                                manhattan_distances(v_a, v_b)[0]))
+            except:
+                fo.write("%f\t%f\t%f\t%s\n" % (0.2, 1.0, 1.0,"Distance error in pair: "+str(iPair))) 
+
         elif args.dist.startswith("euc"):
             distances.append(euclidean_distances(v_a, v_b))
         elif args.dist.startswith("cos"):
             distances.append(cosine_distances(v_a, v_b))
         elif args.dist.startswith("man"):
             distances.append(manhattan_distances(v_a, v_b))
-
-    with open(args.pairs+".output_"+suffix, "w") as f:
+    
         if args.dist.startswith("all"):
             for item in distances:
                 f.write("%f\t%f\t%f\n" % (item[0][0], item[1][0], item[2][0]))
         else:
             for item in distances:
                 f.write("%f\n" % item[0])
+        
+        iPair+=1
+#    with open(args.pairs+".output_"+suffix, "w") as f:
+#        if args.dist.startswith("all"):
+#            for item in distances:
+#                f.write("%f\t%f\t%f\n" % (item[0][0], item[1][0], item[2][0]))
+#        else:
+#            for item in distances:
+#                f.write("%f\n" % item[0])
     # Print missing words for the given pretrained model
+    fo.close()
+
     if not os.path.isfile(args.pairs+".missing_"+ embedding_name):
         with open(args.pairs+".missing_"+ embedding_name, "w") as f:
             f.write("%s\n" % {"bow": missing_bow, "cbow": missing_cbow})

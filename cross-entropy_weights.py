@@ -23,8 +23,7 @@ if __name__ == "__main__":
                                                                 default="output_tfidf.pk")
     parser.add_argument("--minc", help="The minimum word frequency considered to compute CE weight.",
                                                                 default=2, type=int)
-    parser.add_argument("--binary", help="Toggles binarize TF.", action="store_true")
-    parser.add_argument("--sublinear", help="Toggles sublinear TF.", action="store_true")
+    parser.add_argument("--tf", help="TF normalization: none, binary, sublinear (default=none).", default="none")
     parser.add_argument("--stop", help="Toggles stop words stripping.", action="store_true")
     
     args = parser.parse_args()
@@ -34,8 +33,8 @@ if __name__ == "__main__":
                                  encoding="latin-1", 
                                  decode_error="replace", 
                                  lowercase=False, 
-                                 binary=args.binary, 
-                                 sublinear_tf=args.sublinear,
+                                 binary= True if args.tf.startswith("bin") else False, 
+                                 sublinear_tf= True if args.tf.startswith("subl") else False,
                                  stop_words= "english" if args.stop else None)
     vectorizer
     tfidf = vectorizer.fit(corpus)
