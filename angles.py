@@ -51,13 +51,11 @@ if __name__ == "__main__":
                 exit()
         X=array(X)
         
-#X=array([[1.0,0.0], [1.0,1.0], [0.0,1.0], [-1.0, 2.0], [-1.0, -2.0], [-1.0, 0.0]])
         iu2 = triu_indices(X.shape[0], 1)
 
         dotprod_mat=einsum('ij,kj->ik', X, X)
         costheta = dotprod_mat / norm(X, axis=1)[:, newaxis]
         costheta /= norm(X, axis=1)
-        #logging.info("Saved: \n%s and:  %s\n ..." % args.angles)
         angles=arccos(costheta)[iu2]
         
         logging.info("Computed angles sentence %d ..." % c)
