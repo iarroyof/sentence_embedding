@@ -6,9 +6,10 @@ Pirated from everywhere
 """
 
 import _pickle as pickle
+from sklearn.neural_network import MLPClassifier
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.neighbors import RadiusNeighborsClassifier, KNeighborsClassifier
-from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import SGDClassifier,LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.decomposition import TruncatedSVD
 from sklearn.preprocessing import Normalizer
@@ -142,15 +143,15 @@ def load_dataset(win_lsa_file, win_tags_file, text=True, ratio=0.7,
         
         return train_test_split(all['data'], all['target'], train_size = ratio)
 
-win_lsa_file="/almac/ignacio/swem/ngrams/sample.doc"
-win_tags_file="/almac/ignacio/swem/ngrams/sample.i"
+win_lsa_file="/almac/ignacio/data/windows/sample.doc"
+win_tags_file="/almac/ignacio/data/windows/sample.i"
 
 #win_tags_file="/almac/ignacio/swem/ngrams/outngrams/centers_AA.txt"
 #win_lsa_file="/almac/ignacio/swem/ngrams/outngrams/all_AA.txt"
 #win_lsa_file="/almac/ignacio/swem/ngrams/outngrams/500e3_AA.txt"
 #win_tags_file="/almac/ignacio/swem/ngrams/outngrams/500e3c_AA.txt"
-dataset="windows_"
-f_min=20
+dataset="/almac/ignacio/data/windows/windows_"
+f_min=10
 f_max=1000
 
 #load_dataset(win_lsa_file, win_tags_file, text=True, ratio=0.7,
@@ -179,8 +180,8 @@ pipe = make_pipeline_imb(
                         RandomUnderSampler(), 
                         #SMOTEENN(random_state=0),
                         #SMOTETomek(random_state=42),
-                        TruncatedSVD(100),
-                        #Normalizer(),
+                        Normalizer(),
+                        TruncatedSVD(200),
                         #KernelPCA(n_components=75, kernel="poly", gamma=10, degree=3, n_jobs=-1), 
                         #KernelPCA( kernel="rbf", gamma=10, degree=3, n_jobs=-1), 
                         #RBFSampler(gamma=0.1, random_state=1),
@@ -192,7 +193,11 @@ pipe = make_pipeline_imb(
                         #              class_weight='balanced',
                         #              #warm_start=True, 
                         #              penalty='l1')
-                        GaussianProcessClassifier(n_jobs=-1)
+                        #GaussianProcessClassifier(n_jobs=-1)
+                        MLPClassifier(hidden_layer_sizes=(75, 56), verbose=True, max_iter=300)
+                        #LogisticRegression(C=5.0, verbose=100,
+                        # multi_class='multinomial', n_jobs=-1, max_iter=100,
+                        # penalty='l2', solver='saga', tol=0.1,class_weight='balanced')
                         #RadiusNeighborsClassifier(radius=2.0, weights='distance', algorithm='auto', leaf_size=10, p=2)
                         #KNeighborsClassifier(n_neighbors=1000, weights='distance', algorithm='brute', leaf_size=10, p=2, n_jobs=-1)
                         #LinearSVC(class_weight='balanced', verbose=100, max_iter=100, penalty='l1', dual=False)
