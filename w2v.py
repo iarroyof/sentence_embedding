@@ -1,7 +1,7 @@
 # Author: Ignacio Arroyo-Fernandez (UNAM)
 
 from gensim.models import Word2Vec, Doc2Vec
-from gensim.models.doc2vec import TaggedLineDocument, LabeledSentence
+from gensim.models.doc2vec import TaggedDocument
 import os
 from argparse import ArgumentParser as ap
 import sys
@@ -70,7 +70,7 @@ class yield_line_documents(object):
                     else:
                         tag = str(l)+"_snippet"                # sentence index tag                          
                     if cs:
-                        yield LabeledSentence(cs, [tag])
+                        yield TaggedDocument(cs, [tag])
                     else:
                         #sys.stderr.write("Empty string at line %s.\n" % l)
                         yield None
