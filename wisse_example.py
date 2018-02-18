@@ -4,7 +4,7 @@
 from gensim.models.keyedvectors import KeyedVectors as vDB
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
-import numexpr as ne
+#import numexpr as ne
 import argparse
 #import _pickle as pickle
 import cPickle as pickle
@@ -13,7 +13,6 @@ import os
 from functools import partial
 import wisse
 
-from pdb import set_trace as st
 
 load_vectors = vDB.load_word2vec_format
 
