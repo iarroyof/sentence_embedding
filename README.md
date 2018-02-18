@@ -79,13 +79,11 @@ $ python wisse_example.py --input /path/to/sentences.txt --idfmodel local --embe
 ```
 
 # Paper for citing
-
+```bibtex
 @article{arroyo2017unsupervised,
   title={Unsupervised Sentence Representations as Word Information Series: Revisiting TF--IDF},
   author={Arroyo-Fern{\'a}ndez, Ignacio and M{\'e}ndez-Cruz, Carlos-Francisco and Sierra, Gerardo and Torres-Moreno, Juan-Manuel and Sidorov, Grigori},
   journal={arXiv preprint arXiv:1710.06524},
   year={2017}
 }
-
-
-
+```
