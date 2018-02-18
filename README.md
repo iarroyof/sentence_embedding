@@ -12,7 +12,7 @@ import wisse
 from gensim.models.keyedvectors import KeyedVectors as vDB
 load_vectors = vDB.load_word2vec_format
 
-embedding = load_vectors("/path/to/the/embeddings", binary = True)
+embedding = load_vectors("/path/to/the/embeddings.bin", binary = True)
 
 wisse.keyed2indexed(embedding, "/path/for/saving/the/embeddings")
 embedding = wisse.vector_space("/path/for/saving/the/embeddings")
@@ -51,8 +51,10 @@ series.transform("this is a separable inclusion sentence")
 # It gives you two lists containing missing words in the vocabulary of the model
 
 # You can fit a sentence representation generator from a list of sentences:
-sents=series.fit_transform(["this is a separable inclusion", "trade regarding cause"])
+
+sents = series.fit_transform(["this is a separable inclusion", "trade regarding cause"])
 # <wisse.wisse at 0x7fa479bffc10>
+
 [s for s in sents]
 #[([],
 #  ['this', 'is'],
@@ -75,3 +77,15 @@ An example of use can be feed with a file containing a sentence by line:
 ```bash
 $ python wisse_example.py --input /path/to/sentences.txt --idfmodel local --embedmodel /path/to/pretrained_idf.pk --localw binary --output test.vec
 ```
+
+# Paper for citing
+
+@article{arroyo2017unsupervised,
+  title={Unsupervised Sentence Representations as Word Information Series: Revisiting TF--IDF},
+  author={Arroyo-Fern{\'a}ndez, Ignacio and M{\'e}ndez-Cruz, Carlos-Francisco and Sierra, Gerardo and Torres-Moreno, Juan-Manuel and Sidorov, Grigori},
+  journal={arXiv preprint arXiv:1710.06524},
+  year={2017}
+}
+
+
+
