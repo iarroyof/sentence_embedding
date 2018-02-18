@@ -1,5 +1,6 @@
-# sentence_embedding
-A sentence embedding method based on entropy-weighted series. The entropy weights are estimated by using TFIDF transform.
+# Sentence embeddings / sentence representations
+A sentence embedding method based on entropy-weighted series. The entropy weights are estimated by using TFIDF transform. 
+This method does not rely on language or knowledge resources.
 
 # Usage
 
