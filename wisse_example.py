@@ -11,6 +11,7 @@ import cPickle as pickle
 import logging
 import os
 from functools import partial
+import wisse
 
 load_vectors = vDB.load_word2vec_format
 
@@ -89,16 +90,6 @@ class streamer(object):
             yield s.strip()
 
 
-class iterable(object):
-    def __init__(self, list_):
-        self.list_ = list_
-        self.__buffer__ = " ".join(self.list_)
-        
-    def __iter__(self):
-        self.__buffer__ = " ".join(self.list_)
-        yield " ".join(self.list_)
-
-
 def infer_tfidf_weights(sentence, vectorizer, predict=False):
     existent = {}
     missing = []
@@ -165,8 +156,8 @@ if __name__ == "__main__":
                                     locally computed word vector weights.""",
                                                         action = "store_true")
     parser.add_argument("--format", help = """The format of the embedding model
-                                     file: {binary, text}. default = 'binary'""",
-                                                            default = "binary")
+                                     file: {binary, text, wisse}. 
+                                    default = 'binary'""", default = "binary")
     args = parser.parse_args()
 
     if not os.path.isfile(args.embedmodel):
@@ -197,7 +188,7 @@ if __name__ == "__main__":
             args.suffix]).strip("_")
         output_name = args.input + ".output_" + suffix
 
-    sentences = streamer(args.input)
+    sentences = wisse.streamer(args.input)
 
     if args.tfidf.startswith("tfidf"):
         pred_tfidf = True
@@ -233,9 +224,12 @@ if __name__ == "__main__":
         if args.format.startswith("bin"):
             embedding = load_vectors(args.embedmodel, binary = True,
                                                         encoding = "latin-1")
-        else:
+        elif args.format.startswith("tex"):
             embedding = load_vectors(args.embedmodel, binary = False,
                                                         encoding = "latin-1")
+        else:
+            embedding = wisse.load_index(args.embedmodel)
+
     except:
         logging.info(
             """Error while loading word embedding model. Verify if the file
@@ -245,49 +239,41 @@ if __name__ == "__main__":
     embedding_name = os.path.basename(args.embedmodel).split(".")[0]
     tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
 
-    missing_bow = []
-    missing_cbow = []
-    series = {}
+    #missing_bow = []
+    #missing_cbow = []
+    #series = {}
     sidx = 1
 
-    #if args.comb.startswith("avg"):
-    #    combiner = partial(np.mean, axis = 0)
-    #else:
-    #    combiner = partial(np.sum, axis = 0)
-
-    with open(output_name, "w") as fo:#, encoding = 'latin-1',
-                                                    #errors = 'replace') as fo:
+    with open(output_name, "w") as fo:
         for sent in sentences:
-            ss = tokenize(sent)
-            if not ss == []:
-                weights, m = infer_tfidf_weights(ss, tfidf, predict = pred_tfidf)
-            else:
-                continue
+            #ss = tokenize(sent)
+            #if not ss == []:
+            #    weights, m = infer_tfidf_weights(ss, tfidf, predict = pred_tfidf)
+            #else:
+            #    continue
 
-            missing_bow += m
+            #missing_bow += m
 
-            for w in weights:
-                try:
-                    series[w] = (weights[w], embedding[w])
-                except KeyError:
-                    
-                    series[w] = None
-                    missing_cbow.append(w)
-                    continue
-                except IndexError:
-                    continue
+            #for w in weights:
+            #    try:
+            #        series[w] = (weights[w], embedding[w])
+            #    except KeyError:
+            #        
+            #        series[w] = None
+            #        missing_cbow.append(w)
+            #        continue
+            #    except IndexError:
+            #        continue
 
-            if weights == {}: continue
-            logging.info("Sentence weights %s" % weights)
+            #if weights == {}: continue
+            #logging.info("Sentence weights %s" % weights)
             # Embedding the sentence... :
-            sentence = np.array([series[w][1] for w in series if not series[w] is None])
-            series = {}
-            if args.comb.startswith("avg"):
-                sentence = sentence.mean(axis = 0)
-            #sentence = combiner(sentence)
-            else:
-                #sentence = ne.evaluate('sum(sentence,0)')
-                sentence = sentence.sum(axis = 0)
+            #sentence = np.array([series[w][1] for w in series if not series[w] is None])
+            #series = {}
+            #if args.comb.startswith("avg"):
+            #    sentence = sentence.mean(axis = 0)
+            #else:
+            #    sentence = sentence.sum(axis = 0)
                         
             fo.write("%d\t%s\n" % (sidx, np.array2string(sentence,
                                 formatter = {'float_kind':lambda x: "%.6f" % x},
