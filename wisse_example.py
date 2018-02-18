@@ -13,117 +13,21 @@ import os
 from functools import partial
 import wisse
 
+from pdb import set_trace as st
+
 load_vectors = vDB.load_word2vec_format
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
 
-class wisse(object):
-    """ The TFIDFVectorizer must be pretrained, either from the local sentence corpus or
-        from model persintence.
-    """
-    def __init__(self, embeddings, vectorizer, tf_tfidf):
-        self.word2vec = word2vec
-        self.tokenizer = vectorizer.build_tokenizer()
-        self.tfidf = vectorizer
-        self.embedding = embeddings
-        self.pred_tfidf = tf_tfidf
-
-    def fit(self, sent):
-        return self.transform(sent)
-
-    def transform(self, X):
-        if isinstance(X, list):
-            return wisse_streamer(X)
-        
-        return infer_sentence(X, self.tfidf, self.embedding, self.pred_tfidf)
-    
-    def fit_transform(self, X, y=None):
-        return self.transform(X)
-
-
-    def infer_sentence(self, sent, tfidf, embedding, pred_tfidf)
-        ss = tokenize(sent)
-        if not ss == []:
-            weights, m = infer_tfidf_weights(ss, self.tfidf, predict = self.pred_tfidf)
-        else:
-            return None
-
-        missing_bow += m
-
-        for w in weights:
-            try:
-                series[w] = (weights[w], embedding[w])
-            except KeyError:
-                series[w] = None
-                missing_cbow.append(w)
-                continue
-            except IndexError:
-                continue
-
-        if weights == {}: return None
-        # Embedding the sentence... :
-        sentence = np.array([series[w][1] for w in series if not series[w] is None])
-        series = {}
-        if args.comb.startswith("avg"):
-            return missing_cbow, missing_bow, sentence.mean(axis = 0)
-        else:
-            return missing_cbow, missing_bow, sentence.sum(axis = 0)
-                        
-
-class transform_stream(object):
-    def __init__(self, sent_list):
-        self.sent_list = sent_list
-
-    def __iter__(self):
-        for s in self.sent_list:
-            yield wisse.transform(s)
-
-
-class streamer(object):
-    def __init__(self, file_name):
-        self.file_name = file_name
-
-    def __iter__(self):
-        for s in open(self.file_name):
-            yield s.strip()
-
-
-def infer_tfidf_weights(sentence, vectorizer, predict=False):
-    existent = {}
-    missing = []
-
-    if not vectorizer:
-        for word in sentence:
-            existent[word] = 1.0
-
-        return existent, missing
-
-    if predict:
-        #it = iterable(sentence)
-        unseen = vectorizer.transform([" ".join(sentence)]).toarray()
-        for word in sentence:
-            try:
-                existent[word] = unseen[0][vectorizer.vocabulary_[word]]
-            except KeyError:
-                missing.append(word)
-                continue
-    else:
-        for word in sentence:
-            try:
-                weight = vectorizer.idf_[vectorizer.vocabulary_[word]]
-                existent[word] = weight if weight > 2 else 0.01
-            except KeyError:
-                missing.append(word)
-                continue
-
-    return existent, missing
-
-
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="""This use example shows sentence 
+        embedding by using WISSE. The input is a text file which has a sentece in 
+        each of its rows. The output file has two tab-separated columns: the index
+        line of the sentece in the input file and the sentence vector representation
+        .""")
     parser.add_argument("--idfmodel", help = """Input file containing IDF
                                         pre-trained weights. If not provided,
                                         all word vector weights will be set to
@@ -160,6 +64,7 @@ if __name__ == "__main__":
                                     default = 'binary'""", default = "binary")
     args = parser.parse_args()
 
+
     if not os.path.isfile(args.embedmodel):
         logging.info("""Embedding model file does not exist (EXIT):
                 \n%s\n ...""" % args.embedmodel)
@@ -188,7 +93,6 @@ if __name__ == "__main__":
             args.suffix]).strip("_")
         output_name = args.input + ".output_" + suffix
 
-    sentences = wisse.streamer(args.input)
 
     if args.tfidf.startswith("tfidf"):
         pred_tfidf = True
@@ -206,13 +110,13 @@ if __name__ == "__main__":
                 sublinear_tf = True if args.localw.startswith("subl") else False,
                 stop_words = "english" if args.stop else None)
 
-    tokenize = vectorizer.build_tokenizer()
+    sentences = wisse.streamer(args.input)
 
     if args.idfmodel.startswith("local"):
         logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
         tfidf = vectorizer.fit(sentences)
 
-    elif args.idfmodel is not None:
+    elif os.path.isfile(args.idfmodel):
         logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
         with open(args.idfmodel, 'rb') as f:
             tfidf = pickle.load(f)#, encoding = 'latin-1')
@@ -239,43 +143,23 @@ if __name__ == "__main__":
     embedding_name = os.path.basename(args.embedmodel).split(".")[0]
     tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
 
-    #missing_bow = []
-    #missing_cbow = []
-    #series = {}
-    sidx = 1
+    missing_bow = []    # Stores missing words in the TFIDF model
+    missing_cbow = []   # Stores missing words in the W2V model
+    sidx = 1 # The index of the sentence according to the input file
+    logging.info("\n\nEmbedding sentences and saving then to a the output file..\n\n")
 
     with open(output_name, "w") as fo:
         for sent in sentences:
-            #ss = tokenize(sent)
-            #if not ss == []:
-            #    weights, m = infer_tfidf_weights(ss, tfidf, predict = pred_tfidf)
-            #else:
-            #    continue
+            series = wisse.wisse(embeddings = embedding, vectorizer = tfidf, 
+                                                tf_tfidf = True, combiner='sum')
+            try:
+                mc, mb, vector = series.transform(sent)
+            except TypeError:
+                continue
 
-            #missing_bow += m
-
-            #for w in weights:
-            #    try:
-            #        series[w] = (weights[w], embedding[w])
-            #    except KeyError:
-            #        
-            #        series[w] = None
-            #        missing_cbow.append(w)
-            #        continue
-            #    except IndexError:
-            #        continue
-
-            #if weights == {}: continue
-            #logging.info("Sentence weights %s" % weights)
-            # Embedding the sentence... :
-            #sentence = np.array([series[w][1] for w in series if not series[w] is None])
-            #series = {}
-            #if args.comb.startswith("avg"):
-            #    sentence = sentence.mean(axis = 0)
-            #else:
-            #    sentence = sentence.sum(axis = 0)
-                        
-            fo.write("%d\t%s\n" % (sidx, np.array2string(sentence,
+            missing_cbow += mc
+            missing_bow += mb
+            fo.write("%d\t%s\n" % (sidx, np.array2string(vector,
                                 formatter = {'float_kind':lambda x: "%.6f" % x},
                                 max_line_width = 20000).strip(']').strip('[') ))
             sidx += 1
@@ -283,6 +167,8 @@ if __name__ == "__main__":
     missing_name = (os.path.basename(args.input).split(".")[0] + "_" +
                                                         embedding_name + "_" +
                                                         tfidf_name + ".missing")
+    logging.info("\n\nSaving missing vocabulary to %s..\n\n" % missing_name)
+
     with open(missing_name, "w") as f:
         f.write("# missing word embeddings:\n")
         for w in set(missing_cbow):
