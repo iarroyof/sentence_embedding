@@ -109,7 +109,66 @@ class wisse(object):
     def __iter__(self):
         for s in self.sentences:
             yield self.transform(s)
-                        
+
+
+def save_dense(directory, filename, array):
+    directory=os.path.normpath(directory) + '/'
+    if filename.isalpha():
+        np.save(directory + filename, array)
+    else:
+        return None
+
+def load_dense(filename):
+    np.load(filename)
+
+
+def load_sparse_bsr(filename):     
+    loader = np.load(filename) 
+    return bsr_matrix((loader['data'], loader['indices'], loader['indptr']),                       
+        shape=loader['shape']) 
+
+
+def save_sparse_bsr(directory, filename, array):     
+# note that .npz extension is added automatically     
+    directory=os.path.normpath(directory) + '/'
+    if word.isalpha():
+        array=array.tobsr()
+        np.savez(directory + filename, data=array.data, indices=array.indices,              
+            indptr=array.indptr, shape=array.shape) 
+    else:
+        return None
+
+
+class vector_space(object):     
+    def __init__(self, directory, sparse = False):
+        self.sparse = sparse 
+        directory=os.path.normpath(directory) + '/' 
+        self.words = {word.strip(".npz"): directory + word for word in os.listdir(directory)}
+
+    def __getitem__(self, item):
+        if self.sparse: 
+            return load_sparse_bsr(self.words[item]) 
+        else:
+            return load_dense(self.words[item])
+
+
+def keyed2indexed(keyed_model, output_dir = "word_embeddings/", parallel = True, n_jobs = -1):
+    output_dir = os.path.normpath(output_dir) + '/'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    if parallel:
+        from joblib import Parallel, delayed
+
+        Parallel(n_jobs = n_jobs, verbose = 10)(delayed(save_dense)(output_dir, word, keyed_model[word]) 
+                                                        for word, _ in keyed_model.vocab.items())
+
+    else:
+        for word, _ in keyed_model.vocab.items():
+            save_dense(output_dir + word, keyed_model[word])
+    
+
+##def (directory):
 
 
 class streamer(object):

@@ -132,7 +132,7 @@ if __name__ == "__main__":
             embedding = load_vectors(args.embedmodel, binary = False,
                                                         encoding = "latin-1")
         else:
-            embedding = wisse.load_index(args.embedmodel)
+            embedding = wisse.vector_space(args.embedmodel, sparse = False)
 
     except:
         logging.info(
@@ -145,11 +145,12 @@ if __name__ == "__main__":
 
     missing_bow = []    # Stores missing words in the TFIDF model
     missing_cbow = []   # Stores missing words in the W2V model
-    sidx = 1 # The index of the sentence according to the input file
+    sidx = 0 # The index of the sentence according to the input file
     logging.info("\n\nEmbedding sentences and saving then to a the output file..\n\n")
 
     with open(output_name, "w") as fo:
         for sent in sentences:
+            sidx += 1
             series = wisse.wisse(embeddings = embedding, vectorizer = tfidf, 
                                                 tf_tfidf = True, combiner='sum')
             try:
@@ -162,12 +163,11 @@ if __name__ == "__main__":
             fo.write("%d\t%s\n" % (sidx, np.array2string(vector,
                                 formatter = {'float_kind':lambda x: "%.6f" % x},
                                 max_line_width = 20000).strip(']').strip('[') ))
-            sidx += 1
 
     missing_name = (os.path.basename(args.input).split(".")[0] + "_" +
                                                         embedding_name + "_" +
                                                         tfidf_name + ".missing")
-    logging.info("\n\nSaving missing vocabulary to %s..\n\n" % missing_name)
+    logging.info("\n\nSaving missing vocabulary to %s ..\n\n" % missing_name)
 
     with open(missing_name, "w") as f:
         f.write("# missing word embeddings:\n")
