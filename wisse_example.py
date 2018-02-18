@@ -65,10 +65,16 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 
-    if not os.path.isfile(args.embedmodel):
-        logging.info("""Embedding model file does not exist (EXIT):
+    if not args.format.startswith("wisse"):
+        if not os.path.isfile(args.embedmodel):
+            logging.info("""Embedding model file does not exist (EXIT):
+                \n%s\n ...""" % args.embedmodel)
+            exit()
+    elif not os.path.exists(args.embedmodel):
+        logging.info("""Embedding model directory does not exist (EXIT):
                 \n%s\n ...""" % args.embedmodel)
         exit()
+
     if not os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local"):
         logging.info("""IDF model file does not exist (EXIT):
                 \n%s\n ...""" % args.idfmodel)

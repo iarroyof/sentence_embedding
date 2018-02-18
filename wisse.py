@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 # Python2.7
+
 import numpy as np
-#import numexpr as ne
 import logging
 import os
 from functools import partial
@@ -119,7 +119,7 @@ def save_dense(directory, filename, array):
         return None
 
 def load_dense(filename):
-    np.load(filename)
+    return np.load(filename)
 
 
 def load_sparse_bsr(filename):     
@@ -139,11 +139,13 @@ def save_sparse_bsr(directory, filename, array):
         return None
 
 
-class vector_space(object):     
+class vector_space(object):
     def __init__(self, directory, sparse = False):
         self.sparse = sparse 
+        ext = ".npz" if sparse else ".npy"
         directory=os.path.normpath(directory) + '/' 
-        self.words = {word.strip(".npz"): directory + word for word in os.listdir(directory)}
+        self.words = {word.replace(ext, ''): directory + word 
+                                            for word in os.listdir(directory)}
 
     def __getitem__(self, item):
         if self.sparse: 
@@ -162,14 +164,10 @@ def keyed2indexed(keyed_model, output_dir = "word_embeddings/", parallel = True,
 
         Parallel(n_jobs = n_jobs, verbose = 10)(delayed(save_dense)(output_dir, word, keyed_model[word]) 
                                                         for word, _ in keyed_model.vocab.items())
-
     else:
         for word, _ in keyed_model.vocab.items():
-            save_dense(output_dir + word, keyed_model[word])
+            save_dense(output_dir, word, keyed_model[word])
     
-
-##def (directory):
-
 
 class streamer(object):
     def __init__(self, file_name):
