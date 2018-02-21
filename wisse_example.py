@@ -106,7 +106,7 @@ if __name__ == "__main__":
     else:
         pred_tfidf = False
         tfidf = False
-    
+
     vectorizer = TfidfVectorizer(min_df = 1,
                 encoding = "latin-1",
                 decode_error = "replace",
@@ -163,6 +163,9 @@ if __name__ == "__main__":
             except TypeError:
                 continue
 
+            # At this point you can use the embedding 'vector' for any application as it
+            # is a numpy array. Also you can simply save the vectors in text format as
+            # follows:
             missing_cbow += mc
             missing_bow += mb
             fo.write("%d\t%s\n" % (sidx, np.array2string(vector,

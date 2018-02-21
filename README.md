@@ -4,7 +4,7 @@ This method does not rely on language or knowledge resources.
 
 # Usage
 
-You can convert your word embeddings binary to a much more memory friendly format that uses the OS index instead of loading 
+You can convert your word embeddings from binary to a much more memory friendly format by simply saving embeddings into individual binary files. In this way, buit-in WISSE library objects use the OS index instead of loading 
 the whole embeddings into memory. This is useful for accelerating several tests with sentence embeddings or when your memory
 is limited.
 
