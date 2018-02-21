@@ -73,10 +73,15 @@ sents = series.fit_transform(["this is a separable inclusion", "trade regarding 
 #        dtype=float32))]
 
 ``` 
-An example of use can be feed with a file containing a sentence by line:
+An example script using WISSE can be feed with a file containing a sentence by line as well as word embedding and IDF pretrained models:
 
 ```bash
-$ python wisse_example.py --input /path/to/sentences.txt --idfmodel local --embedmodel /path/to/pretrained_idf.pk --localw binary --output test.vec
+$ python wisse_example.py --input /path/to/sentences.txt --embedmodel /path/to/embeddings.bin --idfmodel /path/to/pretrained_idf.pk --output test.vec
+```
+If you want to get TFIDF weights from the input text use:
+
+```bash
+$ python wisse_example.py --input /path/to/sentences.txt --idfmodel local --embedmodel /path/to/embeddings.bin --localw binary --output test.vec
 ```
 
 # Paper for citing
