@@ -15,8 +15,8 @@ load_vectors = vDB.load_word2vec_format
 
 embedding = load_vectors("/path/to/the/embeddings.bin", binary = True)
 
-wisse.keyed2indexed(embedding, "/path/for/saving/the/embeddings")
-embedding = wisse.vector_space("/path/for/saving/the/embeddings")
+wisse.keyed2indexed(embedding, "/path/for/saving/the/embeddings/")
+embedding = wisse.vector_space("/path/for/saving/the/embeddings/")
 
 # Print a word representation:
 
@@ -33,11 +33,11 @@ Either you have been converted the embeddings to abovementioned new format or no
 ```python
 # Loading a pretrained sklearn IDF model saved with pickle
 
-with open("/path/to/the/idf/model", 'rb') as f:
+with open("/path/to/pretrained_idf.pk", 'rb') as f:
             idf_model = pickle.load(f)
 
 # Fit the wisse model:
-series = wisse.wisse(embedding, idf_model, tf_tfidf = True)
+series = wisse.wisse(embedding, idf_model, tf_tfidf=True)
 
 # Print a sentence representation:
 series.transform("this is a separable inclusion sentence")
