@@ -113,10 +113,13 @@ class wisse(object):
 
 def save_dense(directory, filename, array):
     directory=os.path.normpath(directory) + '/'
-    if filename.isalpha():
-        np.save(directory + filename, array)
-    else:
-        return None
+    try:
+        if filename.isalpha():
+            np.save(directory + filename, array)
+        else:
+            return None
+    except UnicodeEncodeError:
+        return None    
 
 def load_dense(filename):
     return np.load(filename)
