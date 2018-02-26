@@ -27,6 +27,14 @@ embedding["word"]
 #        0.79254 ,  0.10515 ], dtype=float32)
 
 ```
+Indexed versions of pretrained embeddings can be dowloaded from:
+
+* Dependency-based word embeddings (Word2Vec 300d): [idx_Dep2Vec](https://mega.nz/#!LbJ1gSzQ!2UwWignh9vGRG5_1bh5voRpRR7A-XyxzGywy3AQA6ok)
+* Word2Vec trained with English Wikipedia (300d): [idx_Word2Vec](https://mega.nz/#!mDQGQDxR!2fjZVT7m5-wIqm-y2tuWAVnbsFxhzdZ5XmYMZmU-R38)
+* FastText trained with English Wikipedia (300d): [idx_FastText](https://mega.nz/#!mS4QjbwJ!90tjKq-n-8iqjT1uY1WXBQdnq89aAXvGMdoQe2RAKqk)
+* Glove (840B_300d): [idx_Glove](https://mega.nz/#!Pa4GQC7Y!ccQ9398j234ixYcqhbIqEUPj-jS-aC3HXdExMk5PyQs)
+
+Decompress the directories and load the index with `wisse.vector_space()` as above.
 
 Either you have been converted the embeddings to abovementioned new format or not the use of wisse is simple:
 
