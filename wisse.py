@@ -6,7 +6,7 @@ import numpy as np
 import logging
 import os
 from functools import partial
-
+from pdb import set_trace as st
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
@@ -113,19 +113,19 @@ class wisse(object):
 
 def save_dense(directory, filename, array):
     directory=os.path.normpath(directory) + '/'
-    try:
-        if filename.isalpha():
+#    try:
+    if filename.isalpha():
             np.save(directory + filename, array)
-        else:
+    else:
             return None
-    except UnicodeEncodeError:
-        return None    
+#    except UnicodeEncodeError:
+#        return None    
 
 def load_dense(filename):
     return np.load(filename)
 
 
-def load_sparse_bsr(filename):     
+def load_sparse_bsr(filename):
     loader = np.load(filename) 
     return bsr_matrix((loader['data'], loader['indices'], loader['indptr']),                       
         shape=loader['shape']) 
@@ -146,15 +146,39 @@ class vector_space(object):
     def __init__(self, directory, sparse = False):
         self.sparse = sparse 
         ext = ".npz" if sparse else ".npy"
-        directory=os.path.normpath(directory) + '/' 
-        self.words = {word.replace(ext, ''): directory + word 
-                                            for word in os.listdir(directory)}
+        if directory.endswith(".tar.gz"):
+            self._tar = True
+            import tarfile
+            self.tar = tarfile.open(directory)
+            file_list = self.tar.getnames() #[os.path.basename(n) for n in self.tar.getnames()]
+            self.words = {os.path.basename(word).replace(ext, ''): word 
+                                                    for word in file_list}
+        else:
+            self._tar = False
+            directory = os.path.normpath(directory) + '/' 
+            file_list = os.listdir(directory)
+            self.words = {word.replace(ext, ''): directory + word 
+                                                for word in file_list}
+
 
     def __getitem__(self, item):
-        if self.sparse: 
-            return load_sparse_bsr(self.words[item]) 
+        if self.sparse:
+            if self._tar:
+                member = self.tar.getmember(self.words[item])
+                word = self.tar.extractfile(member)
+            else:
+                word = self.words[item]
+            #return load_sparse_bsr(self.words[item])
+            return load_sparse_bsr(word) 
+
         else:
-            return load_dense(self.words[item])
+            if self._tar:
+                member = self.tar.getmember(self.words[item])
+                word = self.tar.extractfile(member)
+            else:
+                word = self.words[item]
+            #return load_sparse_bsr(self.words[item])
+            return load_dense(word)
 
 
 def keyed2indexed(keyed_model, output_dir = "word_embeddings/", parallel = True, n_jobs = -1):

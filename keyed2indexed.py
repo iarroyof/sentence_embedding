@@ -3,6 +3,9 @@ from gensim.models.keyedvectors import KeyedVectors as vDB
 import sys
 import logging
 
+# sys.argv[1]: Input embeddings model (w2v format)
+# sys.argv[2]: Output direcory for indexed format
+# sys.argv[3]: Input format (default: binary)
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
         level=logging.INFO)
 
