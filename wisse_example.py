@@ -88,6 +88,8 @@ if __name__ == "__main__":
                 logging.info("""Output directory does not exist (EXIT):
                     \n%s\n ...""" % args.output)
                 exit()
+            else:
+                output_name = args.output
         else:
             output_name = args.output
     else:
@@ -151,7 +153,7 @@ if __name__ == "__main__":
     missing_bow = []    # Stores missing words in the TFIDF model
     missing_cbow = []   # Stores missing words in the W2V model
     sidx = 0 # The index of the sentence according to the input file
-    logging.info("\n\nEmbedding sentences and saving then to a the output file..\n\n")
+    logging.info("\n\nEmbedding sentences and saving then to a the output file..\n%s\n" % output_name)
 
     with open(output_name, "w") as fo:
         for sent in sentences:
