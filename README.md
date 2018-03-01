@@ -34,7 +34,7 @@ Indexed versions of pretrained embeddings can be downloaded from:
 * FastText trained with English Wikipedia (300d): [idx_FastText](https://mega.nz/#!mS4QjbwJ!90tjKq-n-8iqjT1uY1WXBQdnq89aAXvGMdoQe2RAKqk)
 * Glove (840B_300d): [idx_Glove](https://mega.nz/#!Pa4GQC7Y!ccQ9398j234ixYcqhbIqEUPj-jS-aC3HXdExMk5PyQs)
 
-Decompress the needed directory and load the index with `wisse.vector_space()` from Python as above. Passing directly the `*.tar.gz` file to this object is possible, but slower however.
+Decompress the needed directory and load the index with `wisse.vector_space()` from Python as above. Passing directly the `*.tar.gz` file to this object is possible, but much slower however!
 
 Either you have been converted the embeddings to abovementioned new format or not, the use of wisse is simple:
 
