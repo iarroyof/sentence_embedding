@@ -86,7 +86,7 @@ An example script using WISSE can be feed with a file containing a sentence by l
 ```bash
 $ python wisse_example.py --input /path/to/sentences.txt --embedmodel /path/to/embeddings.bin --idfmodel /path/to/pretrained_idf.pk --output test.vec
 ```
-Here an [IDF model](https://mega.nz/#!WPx1iYwA!okha3WRVIksZJuq7cJKeKzplxuDYqOa0aq31hyMHvAo) trained with the English Wikipedia (stop words ignored)
+There is an [IDF model](https://mega.nz/#!WPx1iYwA!okha3WRVIksZJuq7cJKeKzplxuDYqOa0aq31hyMHvAo) trained with the English Wikipedia (stop words ignored)
 
 If you want to get TFIDF weights from the input text use:
 
