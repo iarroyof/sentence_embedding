@@ -94,6 +94,12 @@ If you want to get TFIDF weights from the input text use:
 $ python wisse_example.py --input /path/to/sentences.txt --idfmodel local --embedmodel /path/to/embeddings.bin --localw binary --output test.vec
 ```
 
+Get TFIDF weights from the input text file and with indexed embeddings (use `--format` option and pass a directory to the `--embedmodel` option):
+
+```bash
+$ python wisse_example.py --format wisse --input /path/to/sentences.txt --idfmodel local --embedmodel /path/to/embeddings/ --localw binary --output test.vec
+```
+
 # Paper for citing
 ```bibtex
 @article{arroyo2017unsupervised,
