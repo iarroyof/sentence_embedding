@@ -40,6 +40,7 @@ Either you have been converted the embeddings to abovementioned new format or no
 
 ```python
 # Loading a pretrained sklearn IDF model saved with pickle
+# IMPORTANT: versions of sklearn > 0.18.1 are not supported
 
 with open("/path/to/pretrained_idf.pk", 'rb') as f:
             idf_model = pickle.load(f)
