@@ -9,11 +9,13 @@ the whole embeddings into memory. This is useful for accelerating several tests 
 is limited.
 
 ```python
+# IMPORTANT: versions of sklearn > 0.18.1 are not supported
+
 import wisse
 from gensim.models.keyedvectors import KeyedVectors as vDB
 load_vectors = vDB.load_word2vec_format
 
-embedding = load_vectors("/path/to/the/embeddings.bin", binary = True)
+embedding = load_vectors("/path/to/the/embeddings.bin", binary=True, encoding="latin-1")
 
 wisse.keyed2indexed(embedding, "/path/for/saving/the/embeddings/")
 embedding = wisse.vector_space("/path/for/saving/the/embeddings/")
@@ -40,10 +42,13 @@ Either you have been converted the embeddings to abovementioned new format or no
 
 ```python
 # Loading a pretrained sklearn IDF model saved with pickle
-# IMPORTANT: versions of sklearn > 0.18.1 are not supported
+
+import _pickle as pickle
+# import cPickle as pickle # Python 2.7
 
 with open("/path/to/pretrained_idf.pk", 'rb') as f:
-            idf_model = pickle.load(f)
+            idf_model = pickle.load(f, enconding="latin-1")
+            # idf_model = pickle.load(f) # Python 2.7
 
 # Fit the wisse model:
 series = wisse.wisse(embedding, idf_model, tf_tfidf=True)
