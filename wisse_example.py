@@ -1,13 +1,16 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
-# Python2.7
 from gensim.models.keyedvectors import KeyedVectors as vDB
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 #import numexpr as ne
 import argparse
-#import _pickle as pickle
-import cPickle as pickle
+import sys
+pyVersion = sys.version.split()[0].split(".")[0]
+if pyVersion == '2':
+    import cPickle as pickle
+else:
+    import _pickle as pickle
 import logging
 import os
 from functools import partial
@@ -126,7 +129,10 @@ if __name__ == "__main__":
     elif os.path.isfile(args.idfmodel):
         logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
         with open(args.idfmodel, 'rb') as f:
-            tfidf = pickle.load(f)#, encoding = 'latin-1')
+            if pyVersion == '2':
+                tfidf = pickle.load(f)
+            else:
+                tfidf = pickle.load(f, encoding = 'latin-1')
 
     else:
         tfidf = False
