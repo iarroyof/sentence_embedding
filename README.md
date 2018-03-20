@@ -89,6 +89,7 @@ sents = series.fit_transform(["this is a separable inclusion", "trade regarding 
 ``` 
 An example script using WISSE can be feed with a file containing a sentence by line as well as word embedding and IDF pretrained models:
 
+## 1) With embeddings in the original word2vec binary format:
 ```bash
 $ python wisse_example.py --input /path/to/sentences.txt --embedmodel /path/to/embeddings.bin --idfmodel /path/to/pretrained_idf.pk --output test.vec
 ```
@@ -99,6 +100,7 @@ If you want to get TFIDF weights from the input text use:
 ```bash
 $ python wisse_example.py --input /path/to/sentences.txt --idfmodel local --embedmodel /path/to/embeddings.bin --localw binary --output test.vec
 ```
+## 2) With word embedings indexed within a directory:
 
 Get TFIDF weights from the input text file and with indexed embeddings (use `--format` option and pass a directory to the `--embedmodel` option):
 
