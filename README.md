@@ -89,7 +89,7 @@ sents = series.fit_transform(["this is a separable inclusion", "trade regarding 
 ``` 
 An example script using WISSE can be feed with a file containing a sentence by line as well as word embedding and IDF pretrained models:
 
-## 1) With embeddings in the original word2vec binary format:
+## 1) With word embeddings in the original word2vec binary format:
 ```bash
 $ python wisse_example.py --input /path/to/sentences.txt --embedmodel /path/to/embeddings.bin --idfmodel /path/to/pretrained_idf.pk --output test.vec
 ```
