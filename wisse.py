@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
-# Python2.7
-
+# scikit-learn 0.18.1 (only)
+from pdb import set_trace as st
 import numpy as np
 import logging
 import os
@@ -12,43 +12,58 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
 
 
 class wisse(object):
-    """ Both the TFIDFVectorizer and the word embedding model must be pretrained, either from the local 
-        sentence corpus or from model persintence.
+    """ Both the TFIDFVectorizer and the word embedding model must be
+    pretrained, either from the local sentence corpus or from model persintence.
     """
-    def __init__(self, embeddings, vectorizer, tf_tfidf, combiner = "sum"):
+    def __init__(self, embeddings, vectorizer, tf_tfidf, combiner="sum",
+                                        return_missing=False, generate=False):
         self.tokenize = vectorizer.build_tokenizer()
         self.tfidf = vectorizer
         self.embedding = embeddings
         self.pred_tfidf = tf_tfidf
+        self.rm = return_missing
+        self.generate = generate
         if combiner.startswith("avg"):
-            self.comb = partial(np.mean, axis = 0)
+            self.comb = partial(np.mean, axis=0)
         else:
-            self.comb = partial(np.sum, axis = 0)
+            self.comb = partial(np.sum, axis=0)
 
 
-    def fit(self, X, y = None): # Scikit-learn template
-        if isinstance(X, list):
+    def fit(self, X, y=None): # Scikit-learn template
+        if isinstance(X, list) or isinstance(X, tuple):
             self.sentences = X
+            if not self.generate and not self.rm:
+                S = [self.infer_sentence(s) for s in self.sentences]                
+                nulls = [index for index, value in enumerate(S) 
+                                    if (type(value) is np.float64 or value is None)]
 
+                if nulls != []:
+                    a_idx = next((index for index, value in enumerate(S) 
+                                            if not (type(value) is np.float64 or value is None)), None)
+                    dim = S[a_idx].shape[0]
+                    for n in nulls:
+                        S[n] = np.zeros(dim)
+
+                return np.vstack(S)
         return self
 
 
     def transform(self, X):
-        if isinstance(X, list):
+        if isinstance(X, list) or isinstance(X, tuple):
             return self.fit(X)
 
         elif isinstance(X, str):
             return self.infer_sentence(X)
 
-    
+
     def fit_transform(self, X, y=None):
         return self.transform(X)
 
 
     def infer_sentence(self, sent):
         ss = self.tokenize(sent)
-        missing_bow = []
-        missing_cbow = []
+        self.missing_bow = []
+        self.missing_cbow = []
         series = {}
 
         if not ss == []:
@@ -56,24 +71,26 @@ class wisse(object):
         else:
             return None
 
-        missing_bow += m
+        self.missing_bow += m
 
         for w in self.weights:
             try:
                 series[w] = (self.weights[w], self.embedding[w])
             except KeyError:
                 series[w] = None
-                missing_cbow.append(w)
+                self.missing_cbow.append(w)
                 continue
             except IndexError:
                 continue
 
-        if self.weights == {}: return None
+        if self.weights=={}: return None
         # Embedding the sentence... :
         sentence = np.array([series[w][1] for w in series if not series[w] is None])
         series = {}
-
-        return missing_cbow, missing_bow, self.comb(sentence)
+        if self.rm:
+            return self.missing_cbow, self.missing_bow, self.comb(sentence)
+        else:
+            return self.comb(sentence)
 
 
     def infer_tfidf_weights(self, sentence):
@@ -119,45 +136,45 @@ def save_dense(directory, filename, array):
     else:
             return None
 #    except UnicodeEncodeError:
-#        return None    
+#        return None
 
 def load_dense(filename):
     return np.load(filename)
 
 
 def load_sparse_bsr(filename):
-    loader = np.load(filename) 
-    return bsr_matrix((loader['data'], loader['indices'], loader['indptr']),                       
-        shape=loader['shape']) 
+    loader = np.load(filename)
+    return bsr_matrix((loader['data'], loader['indices'], loader['indptr']),
+        shape=loader['shape'])
 
 
-def save_sparse_bsr(directory, filename, array):     
-# note that .npz extension is added automatically     
+def save_sparse_bsr(directory, filename, array):
+# note that .npz extension is added automatically
     directory=os.path.normpath(directory) + '/'
     if word.isalpha():
         array=array.tobsr()
-        np.savez(directory + filename, data=array.data, indices=array.indices,              
-            indptr=array.indptr, shape=array.shape) 
+        np.savez(directory + filename, data=array.data, indices=array.indices,
+            indptr=array.indptr, shape=array.shape)
     else:
         return None
 
 
 class vector_space(object):
     def __init__(self, directory, sparse = False):
-        self.sparse = sparse 
+        self.sparse = sparse
         ext = ".npz" if sparse else ".npy"
         if directory.endswith(".tar.gz"):
             self._tar = True
             import tarfile
             self.tar = tarfile.open(directory)
-            file_list = self.tar.getnames() #[os.path.basename(n) for n in self.tar.getnames()]
-            self.words = {os.path.basename(word).replace(ext, ''): word 
+            file_list = self.tar.getnames()
+            self.words = {os.path.basename(word).replace(ext, ''): word
                                                     for word in file_list}
         else:
             self._tar = False
-            directory = os.path.normpath(directory) + '/' 
+            directory = os.path.normpath(directory) + '/'
             file_list = os.listdir(directory)
-            self.words = {word.replace(ext, ''): directory + word 
+            self.words = {word.replace(ext, ''): directory + word
                                                 for word in file_list}
 
 
@@ -168,8 +185,8 @@ class vector_space(object):
                 word = self.tar.extractfile(member)
             else:
                 word = self.words[item]
-            #return load_sparse_bsr(self.words[item])
-            return load_sparse_bsr(word) 
+
+            return load_sparse_bsr(word)
 
         else:
             if self._tar:
@@ -189,12 +206,12 @@ def keyed2indexed(keyed_model, output_dir = "word_embeddings/", parallel = True,
     if parallel:
         from joblib import Parallel, delayed
 
-        Parallel(n_jobs = n_jobs, verbose = 10)(delayed(save_dense)(output_dir, word, keyed_model[word]) 
+        Parallel(n_jobs = n_jobs, verbose = 10)(delayed(save_dense)(output_dir, word, keyed_model[word])
                                                         for word, _ in keyed_model.vocab.items())
     else:
         for word, _ in keyed_model.vocab.items():
             save_dense(output_dir, word, keyed_model[word])
-    
+
 
 class streamer(object):
     def __init__(self, file_name):

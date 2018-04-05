@@ -165,7 +165,7 @@ if __name__ == "__main__":
         for sent in sentences:
             sidx += 1
             series = wisse.wisse(embeddings = embedding, vectorizer = tfidf, 
-                                                tf_tfidf = True, combiner='sum')
+                                  tf_tfidf = True, combiner='sum', return_missing=True, generate=True)
             try:
                 mc, mb, vector = series.transform(sent)
             except TypeError:
