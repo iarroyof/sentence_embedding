@@ -51,7 +51,8 @@ with open("/path/to/pretrained_idf.pk", 'rb') as f:
             # idf_model = pickle.load(f) # Python 2.7
 
 # Fit the wisse model:
-series = wisse.wisse(embedding, idf_model, tf_tfidf=True)
+series = wisse.wisse(embedding, idf_model, tf_tfidf=True, 
+                            generate=True, return_missing=True)
 
 # Print a sentence representation:
 series.transform("this is a separable inclusion sentence")
