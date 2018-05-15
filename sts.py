@@ -1,9 +1,11 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
+from pdb import set_trace as st
+
 from gensim.models.keyedvectors import KeyedVectors as vDB
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
-#import numexpr as ne
+import numbers
 import argparse
 import sys
 pyVersion = sys.version.split()[0].split(".")[0]
@@ -15,18 +17,62 @@ import logging
 import os
 from functools import partial
 import numpy as np
+from joblib import Parallel, delayed
 import wisse
 
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
-def similarity(va, vb, file_pointer=None):
-    dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+def similarity(va, vb, file_pointer=None, d="cos"):
+    if d == "cos":
+        dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+    elif d.startswith("euc"):
+        dp = np.linalg.norm(va - vb)
+    elif d.startswith("man"):
+        dp = np.absolute(x-y).sum()
+        
     if file_pointer:
-        file_pointer.write("{:.4%}\n".format(dp))
-    else:
-        print("{:.4%}\n".format(dp))
+        file_pointer.write("{:.4}\n".format(dp))
+        
+    return dp
+
+
+def sts(i, pair):
+    try:
+        a, b = pair.split('\t')[:2]
+    except IndexError:
+        #print("None: %d" % i)
+        #incomplete.append(i)
+        #continue
+        st()
+        return i, None
+            
+    try:
+        va = series.transform(a)
+        vb = series.transform(b)
+    except TypeError:
+        #incomplete.append(i)
+        #print("None: %d" % i)
+        #continue
+        st()
+        return i, None
+
+    try:
+        return i, similarity(va, vb, fo)
+    except TypeError:
+        #incomplete.append(i)
+        #print("None: %d" % i)
+        #continue
+        st()
+        return i, None
+            
+    except AttributeError:
+        #incomplete.append(i)
+        #print("None: %d" % i)
+        #continue
+        st()
+        return i, None
 
 
 if __name__ == "__main__":
@@ -123,6 +169,7 @@ if __name__ == "__main__":
         pred_tfidf = False
         tfidf = False
 
+
     vectorizer = TfidfVectorizer(min_df = 1,
                 encoding = "latin-1",
                 decode_error = "replace",
@@ -168,6 +215,7 @@ if __name__ == "__main__":
     tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
 
     logging.info("\n\nEmbedding sentences ..\n%s\n" % output_name)
+    global series
     series = wisse.wisse(embeddings = embedding, vectorizer = tfidf, 
                              tf_tfidf = True, combiner='sum', return_missing=False, generate=True)
     if output_name != '':
@@ -175,30 +223,16 @@ if __name__ == "__main__":
     else:
         fo = None
         
-    incomplete=[]
-    for i, pair in enumerate(pairs):
-        try:
-            a, b = pair.split('\t')[:2]
-        except IndexError:
-            incomplete.append(i)
-            continue
-            
-        try:
-            va = series.transform(a)
-            vb = series.transform(b)
-        except TypeError:
-            continue
+    #incomplete=[]
+    similarities = Parallel(n_jobs=1)(delayed(sts)(i, pair) 
+                                            for i, pair in enumerate(pairs))
+    #for i, pair in enumerate(pairs):
+    for i, s in similarities:
+        if isinstance(s, numbers.Number):
+            print("{:.4}".format(s))
+        else:
+            print(" ")
 
-        try:
-            similarity(va, vb, fo)
-        except TypeError:
-            incomplete.append(i)
-            continue
-            print("None: %d" % i)
-        except AttributeError:
-            incomplete.append(i)
-            print("None: %d" % i)
-            continue
             # At this point you can use the embeddings 'va' and 'vb' for any application 
             # as it is a numpy array. Also you can simply save the vectors in text format 
             # as follows:
