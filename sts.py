@@ -25,12 +25,12 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
 def similarity(va, vb, file_pointer=None, d="cos"):
-    if d == "cos":
+    if d.startswith("cos"):
         dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
     elif d.startswith("euc"):
         dp = np.linalg.norm(va - vb)
     elif d.startswith("man"):
-        dp = np.absolute(x-y).sum()
+        dp = np.absolute(va - vb).sum()
         
     if file_pointer:
         file_pointer.write("{:.4}\n".format(dp))
@@ -42,36 +42,20 @@ def sts(i, pair):
     try:
         a, b = pair.split('\t')[:2]
     except IndexError:
-        #print("None: %d" % i)
-        #incomplete.append(i)
-        #continue
-        st()
         return i, None
             
     try:
         va = series.transform(a)
         vb = series.transform(b)
     except TypeError:
-        #incomplete.append(i)
-        #print("None: %d" % i)
-        #continue
-        st()
         return i, None
 
     try:
         return i, similarity(va, vb, fo)
     except TypeError:
-        #incomplete.append(i)
-        #print("None: %d" % i)
-        #continue
-        st()
         return i, None
             
     except AttributeError:
-        #incomplete.append(i)
-        #print("None: %d" % i)
-        #continue
-        st()
         return i, None
 
 
@@ -115,6 +99,9 @@ if __name__ == "__main__":
     parser.add_argument("--format", help = "The format of the embedding model "
                                      "file: {binary, text, wisse}. "
                                     "default = 'binary'.", default = "binary")
+    parser.add_argument("--ngrams", help = "The n-gram range specified as  "
+                       "e.g. '(1-3)' for 1-grams, 2-grams and 3-grams, "
+                       "considered to obtain TF-IDF weights. Default = '(1-1)'.", default = "(1-1)")
     args = parser.parse_args()
 
 
@@ -169,8 +156,15 @@ if __name__ == "__main__":
         pred_tfidf = False
         tfidf = False
 
-
+    try:
+        r_a, r_b = args.ngrams.replace('(', '').replace(')', '').split('-')
+    except:
+        print("ERROR: n-gram range must be specified by two integers either as "
+        "'int_1-int_2' or as '(int_1-int_2)' or as int_1-int_2; "
+        "without spaces. ")
+        exit()
     vectorizer = TfidfVectorizer(min_df = 1,
+     ngram_range=(int(r_a), int(r_b)),
                 encoding = "latin-1",
                 decode_error = "replace",
                 lowercase = True,
