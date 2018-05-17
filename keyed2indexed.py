@@ -1,6 +1,6 @@
 import wisse
 from gensim.models.keyedvectors import KeyedVectors as vDB
-import sys
+import argparse
 import logging
 
 # sys.argv[1]: Input embeddings model (w2v format)
@@ -11,13 +11,21 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
 
 load_vectors = vDB.load_word2vec_format
 
-try:
-    if sys.argv[3]:
-        binary = False
-except:
-    binary = True
+parser = argparse.ArgumentParser()
+parser.add_argument("--input", help = "Input embeddings model (w2v format)", 
+                                    required = True)
+parser.add_argument("--output", help = "Output direcory for indexed format", 
+                                    default = 'output_indexed')
+parser.add_argument("--txt", help = "Toggles text word2vec format input format "
+                                    "(default: binary)", 
+                                    action='store_false')
+args = parser.parse_args()                                 
 
-embedding = load_vectors(sys.argv[1], binary=binary, encoding = "latin-1")
-logging.info("""Indexing embeddings, this will take a while...\n""")
-wisse.keyed2indexed(embedding, sys.argv[2])
-logging.info("""Embeddings indexed, please verify the contents of the output directory...\n""")
+binary = args.binary
+embedding = load_vectors(args.input, binary=binary, encoding = "latin-1")
+logging.info("Indexing embeddings, this will take a while...\n")
+
+wisse.keyed2indexed(embedding, args.output)
+
+logging.info("Embeddings indexed, please verify the contents of the output "
+                "directory:\n %s\n" % args.output)
