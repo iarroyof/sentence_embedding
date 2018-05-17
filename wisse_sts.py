@@ -2,7 +2,6 @@
 # -*- coding: latin-1 -*-
 from gensim.models.keyedvectors import KeyedVectors as vDB
 from sklearn.feature_extraction.text import TfidfVectorizer
-from w2v import *
 from itertools import product
 from numpy import mean
 from numpy import multiply
@@ -10,7 +9,8 @@ from numpy import array
 from numpy import cumsum
 from numpy import insert
 import argparse
-import cPickle as pickle
+#import cPickle as pickle
+import _pickle as pickle
 from sklearn.metrics.pairwise import cosine_distances
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.metrics.pairwise import manhattan_distances

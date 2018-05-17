@@ -8,11 +8,13 @@ import numpy as np
 import numbers
 import argparse
 import sys
+
 pyVersion = sys.version.split()[0].split(".")[0]
 if pyVersion == '2':
     import cPickle as pickle
 else:
     import _pickle as pickle
+
 import logging
 import os
 from functools import partial
@@ -99,9 +101,13 @@ if __name__ == "__main__":
     parser.add_argument("--format", help = "The format of the embedding model "
                                      "file: {binary, text, wisse}. "
                                     "default = 'binary'.", default = "binary")
-    parser.add_argument("--ngrams", help = "The n-gram range specified as  "
-                       "e.g. '(1-3)' for 1-grams, 2-grams and 3-grams, "
-                       "considered to obtain TF-IDF weights. Default = '(1-1)'.", default = "(1-1)")
+    parser.add_argument("--ngrams", help = "The n-gram limit specified as, "
+                       "e.g., 3 for 1-grams, 2-grams and 3-grams, "
+                       "considered to obtain TF-IDF weights. Default = 1.", 
+                       default = 1, type=int)
+    parser.add_argument("--njobs", help = "The number of jobs to compute "
+                           "similarities of the input sentences, Default = 1.",
+                           default = 1, type=int)
     args = parser.parse_args()
 
 
@@ -156,15 +162,8 @@ if __name__ == "__main__":
         pred_tfidf = False
         tfidf = False
 
-    try:
-        r_a, r_b = args.ngrams.replace('(', '').replace(')', '').split('-')
-    except:
-        print("ERROR: n-gram range must be specified by two integers either as "
-        "'int_1-int_2' or as '(int_1-int_2)' or as int_1-int_2; "
-        "without spaces. ")
-        exit()
     vectorizer = TfidfVectorizer(min_df = 1,
-     ngram_range=(int(r_a), int(r_b)),
+     ngram_range=(1, args.ngrams),
                 encoding = "latin-1",
                 decode_error = "replace",
                 lowercase = True,
@@ -191,34 +190,37 @@ if __name__ == "__main__":
 
     try:
         if args.format.startswith("bin"):
+            logging.info("Loading word embeddings from: %s ..." % args.embedmodel)
             embedding = load_vectors(args.embedmodel, binary = True,
                                                         encoding = "latin-1")
         elif args.format.startswith("tex"):
+            logging.info("Loading word embeddings from: %s ..." % args.embedmodel)
             embedding = load_vectors(args.embedmodel, binary = False,
                                                         encoding = "latin-1")
         else:
+            logging.info("Loading word embeddings index from: %s ..." % args.embedmodel)
             embedding = wisse.vector_space(args.embedmodel, sparse = False)
 
     except:
         logging.info(
-            """Error while loading word embedding model. Verify if the file
-            is broken (EXIT)...\n%s\n""" % args.embedmodel)
+            "Error while loading word embedding model. Verify if the file "
+            "is broken (EXIT)...\n%s" % args.embedmodel)
         exit()
 
     embedding_name = os.path.basename(args.embedmodel).split(".")[0]
     tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
 
-    logging.info("\n\nEmbedding sentences ..\n%s\n" % output_name)
+    logging.info("Embedding sentences ...")
     global series
-    series = wisse.wisse(embeddings = embedding, vectorizer = tfidf, 
-                             tf_tfidf = True, combiner='sum', return_missing=False, generate=True)
+    series = wisse.wisse(embeddings=embedding, vectorizer=tfidf, tf_tfidf=True, 
+                            combiner=args.comb, return_missing=False, generate=True)
     if output_name != '':
         fo = open(output_name, "w") 
     else:
         fo = None
         
-    #incomplete=[]
-    similarities = Parallel(n_jobs=1)(delayed(sts)(i, pair) 
+    logging.info("Computing similarities...")
+    similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair) 
                                             for i, pair in enumerate(pairs))
     #for i, pair in enumerate(pairs):
     for i, s in similarities:
@@ -231,5 +233,5 @@ if __name__ == "__main__":
             # as it is a numpy array. Also you can simply save the vectors in text format 
             # as follows:
 
-logging.info("FINISHED! \n")
+logging.info("FINISHED! see output: %s \n" % output_name)
 
