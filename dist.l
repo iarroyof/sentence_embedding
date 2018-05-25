@@ -1,0 +1,3 @@
+cosine
+euclid
+manha

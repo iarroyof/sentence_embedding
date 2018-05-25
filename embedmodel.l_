@@ -1,0 +1,15 @@
+/almac/ignacio/data/fastText/fstx_1000d_indexed/
+/almac/ignacio/data/fastText/fstx_100d_indexed/
+/almac/ignacio/data/fastText/fstx_200d_indexed/
+/almac/ignacio/data/fastText/fstx_300d_indexed/
+/almac/ignacio/data/fastText/fstx_500d_indexed/
+/almac/ignacio/data/fastText/fstx_50d_indexed/
+/almac/ignacio/data/word2vec/indexed_w2v_En_vector_space_H100/
+/almac/ignacio/data/word2vec/indexed_w2v_En_vector_space_H1000/
+/almac/ignacio/data/word2vec/indexed_w2v_En_vector_space_H200/
+/almac/ignacio/data/word2vec/indexed_w2v_En_vector_space_H300/
+/almac/ignacio/data/word2vec/indexed_w2v_En_vector_space_H50/
+/almac/ignacio/data/word2vec/indexed_w2v_En_vector_space_H500/
+/almac/ignacio/data/glove/indexed_glove_En_200d/
+/almac/ignacio/data/glove/indexed_glove_En_300d/
+/almac/ignacio/data/dependency_word2vec/indexed_d2v_En_300d/

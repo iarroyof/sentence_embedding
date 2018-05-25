@@ -1,0 +1,12 @@
+links/fstx_300d
+links/w2v_1000d
+links/w2v_500d
+links/fstx_200d
+links/fstx_50d
+links/w2v_200d
+links/w2v_50d
+links/fstx_500d
+links/w2v_100d
+links/w2v_300d
+links/fstx_1000d
+links/fstx_100d
