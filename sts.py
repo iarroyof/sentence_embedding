@@ -40,7 +40,7 @@ def similarity(va, vb, file_pointer=None, d="cos"):
     return dp
 
 
-def sts(i, pair):
+def sts(i, pair, fo=None, dist='cos'):
     try:
         a, b = pair.split('\t')[:2]
     except IndexError:
@@ -53,7 +53,7 @@ def sts(i, pair):
         return i, None
 
     try:
-        return i, similarity(va, vb, fo)
+        return i, similarity(va, vb, fo, dist)
     except TypeError:
         return i, None
             
@@ -87,20 +87,24 @@ if __name__ == "__main__":
     parser.add_argument("--suffix", nargs = '?', help = "A suffix to be added "
                                         "to the output file (default = '').",
                                             default = "", required = False)
-    parser.add_argument("--tfidf", help="To predict TFIDF complete weights "
-                                        "('tfidf') or use only partial IDFs "
+    parser.add_argument("--tfidf", help="In local mode, to predict TFIDF complete weights "
+                                        "('tfidf') or to use only partial IDFs "
                                         "('idf'). (default = 'tfidf').",
                                         default = "tfidf")
     parser.add_argument("--localw", help = "TFIDF word vector weights "
                                     "computed locally from the input file of "
                                     "sentences {freq, binary, sublinear} "
                                     "(default='none').", default = "none")
-    parser.add_argument("--stop", help = "Toggles stripping stop words in "
-                                    "locally computed word vector weights. ",
-                                                        action = "store_true")
+    parser.add_argument("--stop", help = "Stripping stop words ('ost') in "
+                                    "locally computed word vector weights. "
+                                    "Default='wst' (with, inlcuding, stop words)",    
+                                                        default = "wst")
     parser.add_argument("--format", help = "The format of the embedding model "
-                                     "file: {binary, text, wisse}. "
-                                    "default = 'binary'.", default = "binary")
+                                     "file: {bin, txt, wisse}. "
+                                    "default = 'bin'.", default = "bin")
+    parser.add_argument("--dist", help = "The similarity metric. Available options: "
+                                         " {cosine, euclidean, manhattan}. "
+                                         "default = 'cosine'.", default = "cos")                                    
     parser.add_argument("--ngrams", help = "The n-gram limit specified as, "
                        "e.g., 3 for 1-grams, 2-grams and 3-grams, "
                        "considered to obtain TF-IDF weights. Default = 1.", 
@@ -111,27 +115,68 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 
-    if not args.format.startswith("wisse"):
+    if not os.path.isfile(args.input):
+        logging.info("Input file can't be found. Impossible to continue (EXIT): "
+                        "%s\n" % args.input)
+        exit()
+    else:
+        pairs = wisse.streamer(args.input)
+
+    if not args.format.startswith("wisse") and (args.format.startswith("bin") or args.format.startswith("txt") ):
         if not os.path.isfile(args.embedmodel):
             logging.info("Embedding model file does not exist (EXIT):"
                 "\n%s\n ..." % args.embedmodel)
             exit()
         load_vectors = vDB.load_word2vec_format
 
-    elif not os.path.exists(args.embedmodel):
+    elif not os.path.exists(args.embedmodel) and args.format.startswith("wisse"):
         logging.info("Embedding model directory does not exist (EXIT):"
                 "\n%s\n ..." % args.embedmodel)
         exit()
+    elif not os.path.exists(args.embedmodel) and not args.format.startswith("wisse"):
+        logging.info("Bad input format specification (EXIT): {bin, txt, wisse} "
+                        "%s\n ..." % args.format)
+        exit()
+# ---------
 
-
-    if not os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local"):
+    vectorizer = TfidfVectorizer(min_df = 1,
+                ngram_range=(1, args.ngrams),
+                encoding = "latin-1",
+                decode_error = "replace",
+                lowercase = True,
+                binary = True if args.localw.startswith("bin") else False,
+                sublinear_tf = True if args.localw.startswith("subl") else False,
+                stop_words = "english" if args.stop == 'ost' else None)
+                
+    if args.idfmodel.startswith("none"):
+        logging.info("The word embeddings will be combined unweighted.")
+        tfidf = False
+    elif not os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local") and not args.idfmodel.startswith("none"):
         logging.info("IDF model file does not exist (EXIT):"
                 "\n%s\n ..." % args.idfmodel)
         exit()
-    if not os.path.isfile(args.input):
-        logging.info("Input file does not exist (EXIT):"
-                "\n%s\n ..." % args.input)
-        exit()
+        
+    elif os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local"):
+        pred_tfidf = False
+        logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
+        with open(args.idfmodel, 'rb') as f:
+            if pyVersion == '2':
+                tfidf = pickle.load(f)
+            else:
+                tfidf = pickle.load(f, encoding = 'latin-1')
+                
+    elif args.idfmodel.startswith("local"):
+        logging.info("The word embeddings will be combined and weighted.")
+        tfidf = True
+        if args.tfidf.startswith("tfidf") and tfidf:
+            pred_tfidf = True
+        elif args.tfidf.startswith("idf") and tfidf:
+            pred_tfidf = False
+            
+        logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
+        tfidf = vectorizer.fit(pairs)
+# --------        
+
     if args.output != "" and args.output != "stdout":
         if os.path.dirname(args.output) != "":
             if not os.path.exists(os.path.dirname(args.output)):
@@ -154,39 +199,6 @@ if __name__ == "__main__":
     else:
         output_name = ''
 
-    if args.tfidf.startswith("tfidf"):
-        pred_tfidf = True
-    elif args.tfidf.startswith("idf"):
-        pred_tfidf = False
-    else:
-        pred_tfidf = False
-        tfidf = False
-
-    vectorizer = TfidfVectorizer(min_df = 1,
-     ngram_range=(1, args.ngrams),
-                encoding = "latin-1",
-                decode_error = "replace",
-                lowercase = True,
-                binary = True if args.localw.startswith("bin") else False,
-                sublinear_tf = True if args.localw.startswith("subl") else False,
-                stop_words = "english" if args.stop else None)
-
-    pairs = wisse.streamer(args.input)
-
-    if args.idfmodel.startswith("local"):
-        logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
-        tfidf = vectorizer.fit(pairs)
-
-    elif os.path.isfile(args.idfmodel):
-        logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
-        with open(args.idfmodel, 'rb') as f:
-            if pyVersion == '2':
-                tfidf = pickle.load(f)
-            else:
-                tfidf = pickle.load(f, encoding = 'latin-1')
-
-    else:
-        tfidf = False
 
     try:
         if args.format.startswith("bin"):
@@ -206,6 +218,14 @@ if __name__ == "__main__":
             "Error while loading word embedding model. Verify if the file "
             "is broken (EXIT)...\n%s" % args.embedmodel)
         exit()
+        
+    dss = ["cosine", "euclidean", "manhattan"]
+    if not any([d.startswith(args.dist) for d in dss]):
+        logging.info("Badly specified similarity metric: %s" 
+                        "... setting the default (cosine)." % args.dist)
+        metric = "cosine"
+    else:
+        metric = args.dist
 
     embedding_name = os.path.basename(args.embedmodel).split(".")[0]
     tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
@@ -220,7 +240,7 @@ if __name__ == "__main__":
         fo = None
         
     logging.info("Computing similarities...")
-    similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair) 
+    similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair, fo, metric) 
                                             for i, pair in enumerate(pairs))
     #for i, pair in enumerate(pairs):
     for i, s in similarities:

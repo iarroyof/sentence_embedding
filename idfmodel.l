@@ -1,0 +1,5 @@
+/almac/ignacio/data/INEXQA2012corpus/wikiEn_sts_clean_ph2_tfidf_binary_stop.pk
+/almac/ignacio/data/INEXQA2012corpus/wikiEn_sts_clean_ph2_tfidf_binary_wst.pk
+/almac/ignacio/data/INEXQA2012corpus/wikiEn_sts_clean_ph2_tfidf_freq_wst.pk
+/almac/ignacio/data/INEXQA2012corpus/wikiEn_sts_clean_ph2_tfidf_sublinear_stop.pk
+/almac/ignacio/data/INEXQA2012corpus/wikiEn_sts_clean_ph2_tfidf_sublinear_wst.pk

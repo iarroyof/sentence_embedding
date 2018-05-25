@@ -61,8 +61,12 @@ class wisse(object):
 
 
     def infer_sentence(self, sent):
-        if self.tfidf.lowercase:
-            sent = sent.lower()
+        try:
+            if self.tfidf.lowercase:
+                sent = sent.lower()
+        except:
+            pass
+            
         ss = self.tokenize(sent)
         self.missing_bow = []
         self.missing_cbow = []
