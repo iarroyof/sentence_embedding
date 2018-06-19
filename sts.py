@@ -8,6 +8,7 @@ import numpy as np
 import numbers
 import argparse
 import sys
+import time 
 
 pyVersion = sys.version.split()[0].split(".")[0]
 if pyVersion == '2':
@@ -112,6 +113,8 @@ if __name__ == "__main__":
     parser.add_argument("--njobs", help = "The number of jobs to compute "
                            "similarities of the input sentences, Default = 1.",
                            default = 1, type=int)
+    parser.add_argument("--verbose", help = "Toggle verbose.", 
+                                                        action="store_true") 
     args = parser.parse_args()
 
 
@@ -125,7 +128,7 @@ if __name__ == "__main__":
     if not args.format.startswith("wisse") and (args.format.startswith("bin") or args.format.startswith("txt") ):
         if not os.path.isfile(args.embedmodel):
             logging.info("Embedding model file does not exist (EXIT):"
-                "\n%s\n ..." % args.embedmodel)
+                                            "\n%s\n ..." % args.embedmodel)
             exit()
         load_vectors = vDB.load_word2vec_format
 
@@ -138,7 +141,7 @@ if __name__ == "__main__":
                         "%s\n ..." % args.format)
         exit()
 # ---------
-
+    
     vectorizer = TfidfVectorizer(min_df = 1,
                 ngram_range=(1, args.ngrams),
                 encoding = "latin-1",
@@ -147,34 +150,41 @@ if __name__ == "__main__":
                 binary = True if args.localw.startswith("bin") else False,
                 sublinear_tf = True if args.localw.startswith("subl") else False,
                 stop_words = "english" if args.stop == 'ost' else None)
-                
-    if args.idfmodel.startswith("none"):
-        logging.info("The word embeddings will be combined unweighted.")
-        tfidf = False
-    elif not os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local") and not args.idfmodel.startswith("none"):
+
+    start = time.time()                
+    if args.idfmodel.startswith("none") or args.idfmodel is None:
+        if args.verbose:
+            logging.info("The word embeddings will be combined unweighted.")
+        tfidf = None
+    elif not os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local"):
         logging.info("IDF model file does not exist (EXIT):"
                 "\n%s\n ..." % args.idfmodel)
         exit()
         
-    elif os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local"):
-        pred_tfidf = False
-        logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
+    elif os.path.isfile(args.idfmodel):
+        if args.verbose:
+            logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
         with open(args.idfmodel, 'rb') as f:
             if pyVersion == '2':
-                tfidf = pickle.load(f)
+                vectorizer = pickle.load(f)
             else:
-                tfidf = pickle.load(f, encoding = 'latin-1')
+                vectorizer = pickle.load(f, encoding = 'latin-1')
+                
+        if args.tfidf.startswith("tfidf"):
+            tfidf = True
+        elif args.tfidf.startswith("idf"):
+            tfidf = False
                 
     elif args.idfmodel.startswith("local"):
-        logging.info("The word embeddings will be combined and weighted.")
-        tfidf = True
-        if args.tfidf.startswith("tfidf") and tfidf:
-            pred_tfidf = True
-        elif args.tfidf.startswith("idf") and tfidf:
-            pred_tfidf = False
-            
-        logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
-        tfidf = vectorizer.fit(pairs)
+        if args.verbose:
+            logging.info("The word embeddings will be combined and weighted.")
+        if args.tfidf.startswith("tfidf"):
+            tfidf = True
+        elif args.tfidf.startswith("idf"):
+            tfidf = False
+        if args.verbose:    
+            logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
+        vectorizer.fit(pairs)
 # --------        
 
     if args.output != "" and args.output != "stdout":
@@ -199,18 +209,20 @@ if __name__ == "__main__":
     else:
         output_name = ''
 
-
     try:
         if args.format.startswith("bin"):
-            logging.info("Loading word embeddings from: %s ..." % args.embedmodel)
+            if args.verbose:
+                logging.info("Loading word embeddings from: %s ..." % args.embedmodel)
             embedding = load_vectors(args.embedmodel, binary = True,
                                                         encoding = "latin-1")
         elif args.format.startswith("tex"):
-            logging.info("Loading word embeddings from: %s ..." % args.embedmodel)
+            if args.verbose:
+                logging.info("Loading word embeddings from: %s ..." % args.embedmodel)
             embedding = load_vectors(args.embedmodel, binary = False,
                                                         encoding = "latin-1")
         else:
-            logging.info("Loading word embeddings index from: %s ..." % args.embedmodel)
+            if args.verbose:
+                logging.info("Loading word embeddings index from: %s ..." % args.embedmodel)
             embedding = wisse.vector_space(args.embedmodel, sparse = False)
 
     except:
@@ -229,29 +241,33 @@ if __name__ == "__main__":
 
     embedding_name = os.path.basename(args.embedmodel).split(".")[0]
     tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
-
-    logging.info("Embedding sentences ...")
+    if args.verbose:
+        logging.info("Embedding sentences ...")
     global series
-    series = wisse.wisse(embeddings=embedding, vectorizer=tfidf, tf_tfidf=True, 
-                            combiner=args.comb, return_missing=False, generate=True)
+    series = wisse.wisse(embeddings=embedding, vectorizer=vectorizer, tf_tfidf=tfidf, 
+                         combiner=args.comb, return_missing=False, generate=True, 
+                         verbose=args.verbose)
     if output_name != '':
         fo = open(output_name, "w") 
     else:
         fo = None
+    if args.verbose:    
+        logging.info("Computing similarities...")
         
-    logging.info("Computing similarities...")
-    similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair, fo, metric) 
+    if args.njobs > 1:
+        similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair, fo, metric) 
                                             for i, pair in enumerate(pairs))
-    #for i, pair in enumerate(pairs):
-    for i, s in similarities:
-        if isinstance(s, numbers.Number):
-            print("{:.4}".format(s))
-        else:
-            print(" ")
+    else:
+        similarities = []
+        for i, pair in enumerate(pairs):
+            similarities.append(sts(i, pair, fo, metric))
 
-            # At this point you can use the embeddings 'va' and 'vb' for any application 
-            # as it is a numpy array. Also you can simply save the vectors in text format 
-            # as follows:
+#    if args.verbose:
+#        for i, s in similarities:
+#            if isinstance(s, numbers.Number):
+#                print("{:.4}".format(s))
+#            else:
+#                print(" ")
 
-logging.info("FINISHED! see output: %s \n" % output_name)
+logging.info("FINISHED! in %f s. See output: %s \n" % (time.time() - start, output_name))
 

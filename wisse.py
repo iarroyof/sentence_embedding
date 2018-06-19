@@ -1,12 +1,14 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 # scikit-learn 0.18.1 (only)
-from pdb import set_trace as st
 import numpy as np
 import logging
 import os
 from functools import partial
+
 from pdb import set_trace as st
+
+
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
@@ -15,18 +17,19 @@ class wisse(object):
     """ Both the TFIDFVectorizer and the word embedding model must be
     pretrained, either from the local sentence corpus or from model persintence.
     """
-    def __init__(self, embeddings, vectorizer, tf_tfidf, combiner="sum",
-                                        return_missing=False, generate=False):
+    def __init__(self, embeddings, vectorizer, tf_tfidf=None, combiner="sum",
+                                      verbose=False, return_missing=False, generate=False):
         self.tokenize = vectorizer.build_tokenizer()
         self.tfidf = vectorizer
         self.embedding = embeddings
-        self.pred_tfidf = tf_tfidf
+        self.tf_tfidf = tf_tfidf
         self.rm = return_missing
         self.generate = generate
         if combiner.startswith("avg"):
             self.comb = partial(np.mean, axis=0)
         else:
             self.comb = partial(np.sum, axis=0)
+        self.verbose = verbose
 
 
     def fit(self, X, y=None): # Scikit-learn template
@@ -66,14 +69,17 @@ class wisse(object):
                 sent = sent.lower()
         except:
             pass
-            
+        
         ss = self.tokenize(sent)
         self.missing_bow = []
         self.missing_cbow = []
         series = {}
-
+        
         if not ss == []:
-            self.weights, m = self.infer_tfidf_weights(ss)
+            if self.tf_tfidf is None:
+                self.weights, m = dict(zip(ss,  [1.0]*len(ss))), []
+            else:
+                self.weights, m = self.infer_tfidf_weights(ss)
         else:
             return None
 
@@ -83,7 +89,7 @@ class wisse(object):
             try:
                 series[w] = (self.weights[w], self.embedding[w])
             except KeyError:
-                series[w] = None
+                #series[w] = None
                 self.missing_cbow.append(w)
                 continue
             except IndexError:
@@ -91,8 +97,10 @@ class wisse(object):
 
         if self.weights=={}: return None
         # Embedding the sentence... :
-        sentence = np.array([series[w][1] for w in series if not series[w] is None])
+        sentence = np.array([w * W for w, W in series.values()])
         series = {}
+        if self.verbose:
+            logging.info("Sentence weights: %s" % self.weights)        
         if self.rm:
             return self.missing_cbow, self.missing_bow, self.comb(sentence)
         else:
@@ -103,13 +111,7 @@ class wisse(object):
         existent = {}
         missing = []
 
-        if not self.tfidf:
-            for word in sentence:
-                existent[word] = 1.0
-
-            return existent, missing
-
-        if self.pred_tfidf:
+        if self.tf_tfidf:
             unseen = self.tfidf.transform([" ".join(sentence)]).toarray()
             for word in sentence:
                 try:
@@ -120,8 +122,7 @@ class wisse(object):
         else:
             for word in sentence:
                 try:
-                    weight = vectorizer.idf_[vectorizer.vocabulary_[word]]
-                    existent[word] = weight if weight > 2 else 0.01
+                    existent[word] = self.tfidf.idf_[self.tfidf.vocabulary_[word]]
                 except KeyError:
                     missing.append(word)
                     continue
