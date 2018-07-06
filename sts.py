@@ -174,6 +174,7 @@ if __name__ == "__main__":
             tfidf = True
         elif args.tfidf.startswith("idf"):
             tfidf = False
+        seg = 60.0
                 
     elif args.idfmodel.startswith("local"):
         if args.verbose:
@@ -185,6 +186,7 @@ if __name__ == "__main__":
         if args.verbose:    
             logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
         vectorizer.fit(pairs)
+        seg = 1.0
 # --------        
 
     if args.output != "" and args.output != "stdout":
@@ -269,5 +271,7 @@ if __name__ == "__main__":
 #            else:
 #                print(" ")
 
-logging.info("FINISHED! in %f s. See output: %s \n" % (time.time() - start, output_name))
+logging.info("FINISHED! in %f %s. See output: %s \n" % ((time.time() - start)/seg, 
+                                                        'm' if seg != 1.0 else 's' , 
+                                                        output_name))
 
