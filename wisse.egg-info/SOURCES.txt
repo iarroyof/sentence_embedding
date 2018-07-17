@@ -1,0 +1,7 @@
+README.md
+setup.py
+wisse/wisse.py
+wisse.egg-info/PKG-INFO
+wisse.egg-info/SOURCES.txt
+wisse.egg-info/dependency_links.txt
+wisse.egg-info/top_level.txt
