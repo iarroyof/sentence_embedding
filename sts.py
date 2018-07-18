@@ -29,16 +29,13 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
 def similarity(va, vb, d="cos"):
-    try:
-        if d.startswith("cos"):
-            dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
-        elif d.startswith("euc"):
-            dp = np.linalg.norm(va - vb)
-        elif d.startswith("man"):
-            dp = np.absolute(va - vb).sum()
-    except:
-        dp = when_error
-        
+    if d.startswith("euc"):
+        dp = np.linalg.norm(va - vb)
+    elif d.startswith("man"):
+        dp = np.absolute(va - vb).sum()
+    else:# d.startswith("cos"):
+        dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+
     return dp
 
 
@@ -46,7 +43,7 @@ def sts(i, pair, fo=None, dist='cos'):
     try:
         a, b = pair.split('\t')[:2]
     except IndexError:
-        return i, None
+        return i, "Entrada incompleta."
 
     try:
         va = series.transform(a)
@@ -56,17 +53,11 @@ def sts(i, pair, fo=None, dist='cos'):
             pass
         else:
             fo.write("{:.4}\n".format(when_error))
-        return i, when_error # None
-    else:
-        if not fo:
-            pass
-        else:
-            fo.write("{:.4}\n".format(when_error))
-        return i, when_error
-
+        return i, "Error al inferir vector." # None
+    
     try:
         sim = similarity(va, vb, dist)
-        if file_pointer:
+        if fo:
             fo.write("{:.4}\n".format(sim))
         return i, sim
     except TypeError:
@@ -74,16 +65,16 @@ def sts(i, pair, fo=None, dist='cos'):
             pass
         else:
             fo.write("{:.4}\n".format(when_error))
-        return i, when_error # None
+        return i, "Error al calcular similitud [TypeError]" # None
 
     except AttributeError:
         if not fo:
             pass
         else:
             fo.write("{:.4}\n".format(when_error))
-        return i, when_error
+        return i, "Error al calcular similitud [AttributeError]"
     else:
-        return i, when_error
+        return i, "Error desconocido al calcular similitud."
 
 
 if __name__ == "__main__":
