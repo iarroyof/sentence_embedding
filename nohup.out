@@ -2158,1083 +2158,1083 @@ Traceback (most recent call last):
   File "sts.py", line 5, in <module>
     from gensim.models.keyedvectors import KeyedVectors as vDB
 ModuleNotFoundError: No module named 'gensim'
-2018-07-17 20:38:50,027 : INFO : FINISHED! in 11.851372 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:02,428 : INFO : FINISHED! in 11.830319 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:38:50,213 : INFO : FINISHED! in 12.007124 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:02,365 : INFO : FINISHED! in 11.803168 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:38:49,793 : INFO : FINISHED! in 11.536333 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-manha.out 
+2018-07-17 22:12:02,594 : INFO : FINISHED! in 12.010766 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:38:50,025 : INFO : FINISHED! in 11.835865 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:02,572 : INFO : FINISHED! in 11.953102 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:38:49,784 : INFO : FINISHED! in 11.515121 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-manha.out 
+2018-07-17 22:12:02,833 : INFO : FINISHED! in 12.270845 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:38:50,390 : INFO : FINISHED! in 12.111270 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:02,789 : INFO : FINISHED! in 12.207567 s. See output: results_revision/local-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:38:52,285 : INFO : FINISHED! in 14.065958 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:04,978 : INFO : FINISHED! in 14.394862 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:38:52,542 : INFO : FINISHED! in 14.289277 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:04,875 : INFO : FINISHED! in 14.176913 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:38:52,999 : INFO : FINISHED! in 14.633741 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-sum-manha.out 
+2018-07-17 22:12:04,977 : INFO : FINISHED! in 14.302485 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:38:53,374 : INFO : FINISHED! in 15.166286 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:12:05,267 : INFO : FINISHED! in 14.637861 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:38:53,479 : INFO : FINISHED! in 15.289865 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:12:05,430 : INFO : FINISHED! in 14.766140 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:38:53,519 : INFO : FINISHED! in 15.251459 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:05,440 : INFO : FINISHED! in 14.817254 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:38:53,480 : INFO : FINISHED! in 15.156482 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-avg-manha.out 
+2018-07-17 22:12:05,348 : INFO : FINISHED! in 14.719748 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:38:53,643 : INFO : FINISHED! in 15.325613 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:05,708 : INFO : FINISHED! in 15.019762 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:38:53,648 : INFO : FINISHED! in 15.323769 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:05,819 : INFO : FINISHED! in 15.215255 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:38:53,719 : INFO : FINISHED! in 15.471814 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:05,893 : INFO : FINISHED! in 15.309119 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:38:53,724 : INFO : FINISHED! in 15.440927 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:05,861 : INFO : FINISHED! in 15.238344 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:38:53,758 : INFO : FINISHED! in 15.465437 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:06,078 : INFO : FINISHED! in 15.450948 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:38:53,894 : INFO : FINISHED! in 15.636978 s. See output: results_revision/local-tfidf-freq-ost-fstx-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:06,149 : INFO : FINISHED! in 15.475107 s. See output: results_revision/local-tfidf-freq-ost-fstx-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:38:53,871 : INFO : FINISHED! in 15.653163 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:06,142 : INFO : FINISHED! in 15.466430 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:38:54,468 : INFO : FINISHED! in 16.215555 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:06,288 : INFO : FINISHED! in 15.629894 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:38:54,516 : INFO : FINISHED! in 16.296972 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:06,768 : INFO : FINISHED! in 16.139522 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:38:54,680 : INFO : FINISHED! in 16.354014 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-avg-manha.out 
+2018-07-17 22:12:06,938 : INFO : FINISHED! in 16.296410 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:38:54,727 : INFO : FINISHED! in 16.394888 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-sum-manha.out 
+2018-07-17 22:12:07,008 : INFO : FINISHED! in 16.369609 s. See output: results_revision/local-tfidf-freq-ost-fstx-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:07,298 : INFO : FINISHED! in 11.958884 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:19,549 : INFO : FINISHED! in 12.033119 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:07,201 : INFO : FINISHED! in 11.841095 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:19,760 : INFO : FINISHED! in 12.198717 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:07,854 : INFO : FINISHED! in 13.856091 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:19,860 : INFO : FINISHED! in 12.216170 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:07,956 : INFO : FINISHED! in 12.111032 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-sum-manha.out 
+2018-07-17 22:12:20,772 : INFO : FINISHED! in 14.333809 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:08,296 : INFO : FINISHED! in 12.444302 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:20,632 : INFO : FINISHED! in 12.552565 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:08,645 : INFO : FINISHED! in 14.425787 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:20,796 : INFO : FINISHED! in 12.598024 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:08,651 : INFO : FINISHED! in 12.651454 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:20,886 : INFO : FINISHED! in 12.663171 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:08,554 : INFO : FINISHED! in 12.618624 s. See output: results_revision/local-tfidf-freq-ost-glove-200d-bmk_test-avg-manha.out 
+2018-07-17 22:12:21,065 : INFO : FINISHED! in 14.580406 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:09,538 : INFO : FINISHED! in 15.019577 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-sum-manha.out 
+2018-07-17 22:12:21,865 : INFO : FINISHED! in 15.286869 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:09,729 : INFO : FINISHED! in 14.798284 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:22,028 : INFO : FINISHED! in 15.397862 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:10,052 : INFO : FINISHED! in 15.052294 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:22,233 : INFO : FINISHED! in 15.299139 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:09,954 : INFO : FINISHED! in 15.002135 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-avg-manha.out 
+2018-07-17 22:12:22,590 : INFO : FINISHED! in 15.548863 s. See output: results_revision/local-tfidf-freq-ost-fstx-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:11,156 : INFO : FINISHED! in 16.167843 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:22,642 : INFO : FINISHED! in 15.381214 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:11,035 : INFO : FINISHED! in 15.926199 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-sum-manha.out 
+2018-07-17 22:12:22,688 : INFO : FINISHED! in 15.527737 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:11,513 : INFO : FINISHED! in 16.338669 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:22,708 : INFO : FINISHED! in 15.329200 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:11,543 : INFO : FINISHED! in 16.370362 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:23,141 : INFO : FINISHED! in 16.103966 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:11,593 : INFO : FINISHED! in 19.774774 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:23,526 : INFO : FINISHED! in 16.203863 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:11,661 : INFO : FINISHED! in 19.831108 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:23,551 : INFO : FINISHED! in 16.034096 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:11,797 : INFO : FINISHED! in 16.463610 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-avg-manha.out 
+2018-07-17 22:12:23,744 : INFO : FINISHED! in 19.635509 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:11,929 : INFO : FINISHED! in 16.808877 s. See output: results_revision/local-tfidf-freq-ost-fstx-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:24,080 : INFO : FINISHED! in 19.939228 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:12,040 : INFO : FINISHED! in 20.194455 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:24,441 : INFO : FINISHED! in 20.357437 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:12,059 : INFO : FINISHED! in 20.192001 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-sum-manha.out 
+2018-07-17 22:12:24,750 : INFO : FINISHED! in 20.062696 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:12,460 : INFO : FINISHED! in 20.681723 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:24,976 : INFO : FINISHED! in 20.814250 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:12,416 : INFO : FINISHED! in 20.105999 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-avg-manha.out 
+2018-07-17 22:12:25,354 : INFO : FINISHED! in 20.646438 s. See output: results_revision/local-tfidf-freq-ost-fstx-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:23,416 : INFO : FINISHED! in 14.543736 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:38,050 : INFO : FINISHED! in 16.631472 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:23,587 : INFO : FINISHED! in 14.642099 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:38,081 : INFO : FINISHED! in 16.610990 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:25,755 : INFO : FINISHED! in 15.707005 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-sum-manha.out 
+2018-07-17 22:12:37,777 : INFO : FINISHED! in 16.341411 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:25,658 : INFO : FINISHED! in 15.628808 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:39,104 : INFO : FINISHED! in 16.494119 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:26,094 : INFO : FINISHED! in 16.060784 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:38,868 : INFO : FINISHED! in 14.868486 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:26,030 : INFO : FINISHED! in 15.686875 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-avg-manha.out 
+2018-07-17 22:12:39,325 : INFO : FINISHED! in 16.917696 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:27,770 : INFO : FINISHED! in 14.573165 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-avg-manha.out 
+2018-07-17 22:12:39,345 : INFO : FINISHED! in 15.174784 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:28,339 : INFO : FINISHED! in 15.666819 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:39,519 : INFO : FINISHED! in 16.967465 s. See output: results_revision/local-tfidf-freq-ost-glove-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:28,339 : INFO : FINISHED! in 15.726671 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:39,658 : INFO : FINISHED! in 15.468283 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:28,301 : INFO : FINISHED! in 15.281665 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-sum-manha.out 
+2018-07-17 22:12:39,581 : INFO : FINISHED! in 14.222504 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:28,685 : INFO : FINISHED! in 15.552727 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:39,997 : INFO : FINISHED! in 15.052298 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:28,725 : INFO : FINISHED! in 15.428348 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:40,027 : INFO : FINISHED! in 15.092850 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:28,848 : INFO : FINISHED! in 15.211291 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-sum-manha.out 
+2018-07-17 22:12:39,959 : INFO : FINISHED! in 17.411624 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:28,924 : INFO : FINISHED! in 15.864249 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:40,186 : INFO : FINISHED! in 14.521284 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:28,892 : INFO : FINISHED! in 18.543018 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:40,223 : INFO : FINISHED! in 15.631933 s. See output: results_revision/local-tfidf-freq-ost-w2v-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:28,901 : INFO : FINISHED! in 18.526067 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:40,518 : INFO : FINISHED! in 17.668566 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:29,359 : INFO : FINISHED! in 15.730915 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:41,290 : INFO : FINISHED! in 15.244922 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:29,333 : INFO : FINISHED! in 15.351325 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-avg-manha.out 
+2018-07-17 22:12:41,444 : INFO : FINISHED! in 14.482693 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:29,363 : INFO : FINISHED! in 16.019494 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:41,568 : INFO : FINISHED! in 15.247033 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:29,621 : INFO : FINISHED! in 15.650552 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:41,551 : INFO : FINISHED! in 14.623971 s. See output: results_revision/local-tfidf-freq-ost-w2v-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:30,660 : INFO : FINISHED! in 19.125632 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:12:42,520 : INFO : FINISHED! in 18.909994 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:30,760 : INFO : FINISHED! in 19.565786 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:12:42,538 : INFO : FINISHED! in 18.736505 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:30,725 : INFO : FINISHED! in 19.171686 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:42,862 : INFO : FINISHED! in 19.231936 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:30,943 : INFO : FINISHED! in 19.614577 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:42,829 : INFO : FINISHED! in 18.775263 s. See output: results_revision/local-tfidf-freq-ost-w2v-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:39,214 : INFO : FINISHED! in 13.564047 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:55,572 : INFO : FINISHED! in 15.215173 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:40,021 : INFO : FINISHED! in 14.350207 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:55,677 : INFO : FINISHED! in 15.271892 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:41,698 : INFO : FINISHED! in 14.208625 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:55,558 : INFO : FINISHED! in 12.514112 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:41,914 : INFO : FINISHED! in 14.398692 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-sum-manha.out 
+2018-07-17 22:12:55,433 : INFO : FINISHED! in 12.459988 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:42,056 : INFO : FINISHED! in 14.153234 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-avg-manha.out 
+2018-07-17 22:12:55,768 : INFO : FINISHED! in 11.931439 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:42,562 : INFO : FINISHED! in 14.682011 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:56,094 : INFO : FINISHED! in 11.933384 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:42,580 : INFO : FINISHED! in 11.639114 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:55,865 : INFO : FINISHED! in 11.764201 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:43,405 : INFO : FINISHED! in 12.152148 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:56,177 : INFO : FINISHED! in 15.860430 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:44,271 : INFO : FINISHED! in 12.353226 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-sum-manha.out 
+2018-07-17 22:12:56,337 : INFO : FINISHED! in 15.426834 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:44,598 : INFO : FINISHED! in 12.350801 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:56,149 : INFO : FINISHED! in 15.251217 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:44,711 : INFO : FINISHED! in 12.674474 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:56,003 : INFO : FINISHED! in 14.829386 s. See output: results_revision/local-tfidf-freq-ost-w2v-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:44,731 : INFO : FINISHED! in 12.535324 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-avg-manha.out 
+2018-07-17 22:12:56,549 : INFO : FINISHED! in 14.761328 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:46,411 : INFO : FINISHED! in 15.594123 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-avg-manha.out 
+2018-07-17 22:12:56,356 : INFO : FINISHED! in 12.271672 s. See output: results_revision/local-tfidf-binary-ost-dep2vec-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:46,714 : INFO : FINISHED! in 16.170452 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:56,662 : INFO : FINISHED! in 15.059853 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:46,511 : INFO : FINISHED! in 15.878363 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:56,638 : INFO : FINISHED! in 14.475646 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:46,740 : INFO : FINISHED! in 15.949846 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-sum-manha.out 
+2018-07-17 22:12:57,331 : INFO : FINISHED! in 14.731368 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:46,906 : INFO : FINISHED! in 15.940199 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:12:57,291 : INFO : FINISHED! in 15.472291 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:47,047 : INFO : FINISHED! in 16.296130 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:12:57,929 : INFO : FINISHED! in 15.110283 s. See output: results_revision/local-tfidf-freq-ost-w2v-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:47,747 : INFO : FINISHED! in 18.358993 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:12:59,813 : INFO : FINISHED! in 18.615117 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:48,971 : INFO : FINISHED! in 18.854229 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:12:59,876 : INFO : FINISHED! in 18.203662 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:39:48,913 : INFO : FINISHED! in 18.407276 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-avg-manha.out 
+2018-07-17 22:13:00,651 : INFO : FINISHED! in 19.312684 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:49,773 : INFO : FINISHED! in 19.709906 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-sum-manha.out 
+2018-07-17 22:13:00,654 : INFO : FINISHED! in 19.364746 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:49,950 : INFO : FINISHED! in 19.490932 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:00,546 : INFO : FINISHED! in 18.834570 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:50,197 : INFO : FINISHED! in 20.142717 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:00,863 : INFO : FINISHED! in 19.445494 s. See output: results_revision/local-tfidf-freq-ost-w2v-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:55,086 : INFO : FINISHED! in 14.221675 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:13,046 : INFO : FINISHED! in 15.569645 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:39:55,582 : INFO : FINISHED! in 13.707682 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:13,193 : INFO : FINISHED! in 15.681608 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:58,199 : INFO : FINISHED! in 14.736922 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:13:12,755 : INFO : FINISHED! in 15.203017 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:39:58,528 : INFO : FINISHED! in 14.919557 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:12,741 : INFO : FINISHED! in 14.659924 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:58,847 : INFO : FINISHED! in 14.643544 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:12,463 : INFO : FINISHED! in 14.130833 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:39:59,009 : INFO : FINISHED! in 15.338495 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:13,449 : INFO : FINISHED! in 14.716120 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:39:59,271 : INFO : FINISHED! in 15.109133 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:13:13,417 : INFO : FINISHED! in 15.854523 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:39:59,804 : INFO : FINISHED! in 14.817362 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:13,557 : INFO : FINISHED! in 16.072028 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:01,506 : INFO : FINISHED! in 15.386875 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:13,512 : INFO : FINISHED! in 15.952662 s. See output: results_revision/local-tfidf-binary-ost-fstx-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:01,759 : INFO : FINISHED! in 15.989524 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-sum-manha.out 
+2018-07-17 22:13:13,390 : INFO : FINISHED! in 15.014861 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:02,245 : INFO : FINISHED! in 16.003077 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-avg-manha.out 
+2018-07-17 22:13:13,775 : INFO : FINISHED! in 14.371731 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:02,316 : INFO : FINISHED! in 16.106923 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:14,040 : INFO : FINISHED! in 16.009964 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:03,518 : INFO : FINISHED! in 14.970435 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:14,015 : INFO : FINISHED! in 15.212076 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:03,848 : INFO : FINISHED! in 15.723950 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:14,261 : INFO : FINISHED! in 16.680858 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:03,880 : INFO : FINISHED! in 15.166692 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-avg-manha.out 
+2018-07-17 22:13:14,312 : INFO : FINISHED! in 16.287484 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:04,086 : INFO : FINISHED! in 15.647760 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:14,622 : INFO : FINISHED! in 16.508680 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:04,229 : INFO : FINISHED! in 15.920534 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-sum-manha.out 
+2018-07-17 22:13:14,818 : INFO : FINISHED! in 16.715862 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:04,811 : INFO : FINISHED! in 16.424784 s. See output: results_revision/local-tfidf-binary-ost-fstx-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:14,829 : INFO : FINISHED! in 16.754694 s. See output: results_revision/local-tfidf-binary-ost-fstx-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:07,055 : INFO : FINISHED! in 17.377863 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:19,506 : INFO : FINISHED! in 18.039037 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:09,946 : INFO : FINISHED! in 19.440716 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:21,826 : INFO : FINISHED! in 20.303910 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:10,878 : INFO : FINISHED! in 14.191438 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:21,951 : INFO : FINISHED! in 19.472247 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:10,758 : INFO : FINISHED! in 18.778921 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-avg-manha.out 
+2018-07-17 22:13:22,010 : INFO : FINISHED! in 19.653630 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:11,229 : INFO : FINISHED! in 19.601657 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:24,295 : INFO : FINISHED! in 21.865079 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:11,307 : INFO : FINISHED! in 14.016165 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:24,498 : INFO : FINISHED! in 21.842124 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:11,639 : INFO : FINISHED! in 20.186904 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:28,395 : INFO : FINISHED! in 12.125211 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:12,040 : INFO : FINISHED! in 21.204320 s. See output: results_revision/local-tfidf-binary-ost-fstx-300d-bmk_test-sum-manha.out 
+2018-07-17 22:13:30,168 : INFO : FINISHED! in 15.172166 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:13,937 : INFO : FINISHED! in 13.805228 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-sum-manha.out 
+2018-07-17 22:13:30,158 : INFO : FINISHED! in 14.342259 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:14,540 : INFO : FINISHED! in 14.400337 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:30,071 : INFO : FINISHED! in 14.198943 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:14,919 : INFO : FINISHED! in 14.308208 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:30,193 : INFO : FINISHED! in 14.326807 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:15,656 : INFO : FINISHED! in 14.218312 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:30,601 : INFO : FINISHED! in 15.655972 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:15,797 : INFO : FINISHED! in 15.052295 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-avg-manha.out 
+2018-07-17 22:13:30,718 : INFO : FINISHED! in 14.469809 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:15,658 : INFO : FINISHED! in 14.620806 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:30,839 : INFO : FINISHED! in 14.537071 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:18,621 : INFO : FINISHED! in 13.104427 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-sum-manha.out 
+2018-07-17 22:13:31,181 : INFO : FINISHED! in 16.175450 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:18,672 : INFO : FINISHED! in 12.875898 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:31,272 : INFO : FINISHED! in 16.249963 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:18,658 : INFO : FINISHED! in 15.405710 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-sum-manha.out 
+2018-07-17 22:13:31,419 : INFO : FINISHED! in 16.425925 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:18,807 : INFO : FINISHED! in 15.307863 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:32,115 : INFO : FINISHED! in 17.178040 s. See output: results_revision/local-tfidf-binary-ost-fstx-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:18,799 : INFO : FINISHED! in 12.988599 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:33,978 : INFO : FINISHED! in 18.480087 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:18,994 : INFO : FINISHED! in 13.573458 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:33,866 : INFO : FINISHED! in 18.354176 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:19,015 : INFO : FINISHED! in 13.498339 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:34,173 : INFO : FINISHED! in 18.624936 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:19,193 : INFO : FINISHED! in 14.983090 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-avg-manha.out 
+2018-07-17 22:13:34,211 : INFO : FINISHED! in 18.559392 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:19,132 : INFO : FINISHED! in 15.186883 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:34,568 : INFO : FINISHED! in 18.700911 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:19,367 : INFO : FINISHED! in 12.928143 s. See output: results_revision/local-tfidf-binary-ost-glove-200d-bmk_test-avg-manha.out 
+2018-07-17 22:13:34,847 : INFO : FINISHED! in 19.313123 s. See output: results_revision/local-tfidf-binary-ost-fstx-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:23,567 : INFO : FINISHED! in 14.780589 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:36,120 : INFO : FINISHED! in 15.074092 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:28,221 : INFO : FINISHED! in 15.988641 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:38,847 : INFO : FINISHED! in 15.160629 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:29,585 : INFO : FINISHED! in 16.687281 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:39,284 : INFO : FINISHED! in 15.561605 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:29,877 : INFO : FINISHED! in 16.891334 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:39,751 : INFO : FINISHED! in 15.820352 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:29,661 : INFO : FINISHED! in 16.480739 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-avg-manha.out 
+2018-07-17 22:13:41,279 : INFO : FINISHED! in 14.897267 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:29,436 : INFO : FINISHED! in 16.142503 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:41,445 : INFO : FINISHED! in 14.932493 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:30,079 : INFO : FINISHED! in 17.468362 s. See output: results_revision/local-tfidf-binary-ost-glove-300d-bmk_test-sum-manha.out 
+2018-07-17 22:13:46,267 : INFO : FINISHED! in 14.059142 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:30,236 : INFO : FINISHED! in 16.423101 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:46,473 : INFO : FINISHED! in 16.409000 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:31,262 : INFO : FINISHED! in 13.899149 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:46,637 : INFO : FINISHED! in 14.238149 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:31,315 : INFO : FINISHED! in 13.837917 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:47,346 : INFO : FINISHED! in 14.528190 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:32,286 : INFO : FINISHED! in 16.601828 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:13:47,830 : INFO : FINISHED! in 14.808728 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:33,603 : INFO : FINISHED! in 17.287347 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:48,125 : INFO : FINISHED! in 14.392511 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:33,473 : INFO : FINISHED! in 16.901900 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:48,341 : INFO : FINISHED! in 15.466081 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:34,402 : INFO : FINISHED! in 17.059313 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:13:50,047 : INFO : FINISHED! in 18.135990 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:34,644 : INFO : FINISHED! in 14.204090 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:50,609 : INFO : FINISHED! in 18.244135 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:34,798 : INFO : FINISHED! in 14.298232 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-avg-manha.out 
+2018-07-17 22:13:50,703 : INFO : FINISHED! in 18.869344 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:35,215 : INFO : FINISHED! in 15.001273 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-sum-manha.out 
+2018-07-17 22:13:51,031 : INFO : FINISHED! in 15.294822 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:35,179 : INFO : FINISHED! in 14.855282 s. See output: results_revision/local-tfidf-binary-ost-w2v-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:50,926 : INFO : FINISHED! in 19.138613 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:35,601 : INFO : FINISHED! in 15.144279 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:51,090 : INFO : FINISHED! in 15.534563 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:35,702 : INFO : FINISHED! in 15.146430 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-sum-manha.out 
+2018-07-17 22:13:51,193 : INFO : FINISHED! in 15.669528 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:35,954 : INFO : FINISHED! in 15.436183 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:51,044 : INFO : FINISHED! in 19.270979 s. See output: results_revision/local-tfidf-binary-ost-w2v-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:36,213 : INFO : FINISHED! in 15.391420 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:51,095 : INFO : FINISHED! in 15.312044 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:36,321 : INFO : FINISHED! in 15.423094 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-avg-manha.out 
+2018-07-17 22:13:51,364 : INFO : FINISHED! in 15.263095 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:36,513 : INFO : FINISHED! in 15.752475 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:51,555 : INFO : FINISHED! in 13.807886 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:39,591 : INFO : FINISHED! in 14.023198 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:13:51,934 : INFO : FINISHED! in 15.462759 s. See output: results_revision/local-tfidf-binary-ost-w2v-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:43,972 : INFO : FINISHED! in 14.086434 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:13:54,155 : INFO : FINISHED! in 13.653183 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:46,893 : INFO : FINISHED! in 15.382098 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-sum-manha.out 
+2018-07-17 22:13:54,695 : INFO : FINISHED! in 13.211087 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:46,786 : INFO : FINISHED! in 15.219078 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:13:54,956 : INFO : FINISHED! in 13.885200 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:46,615 : INFO : FINISHED! in 15.094240 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:13:56,912 : INFO : FINISHED! in 14.055099 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:46,603 : INFO : FINISHED! in 15.033829 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-avg-manha.out 
+2018-07-17 22:13:57,369 : INFO : FINISHED! in 14.153265 s. See output: results_revision/local-tfidf-binary-ost-w2v-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:49,671 : INFO : FINISHED! in 12.408663 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:03,561 : INFO : FINISHED! in 13.723701 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:49,767 : INFO : FINISHED! in 12.423554 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:04,796 : INFO : FINISHED! in 12.238449 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:49,942 : INFO : FINISHED! in 14.469595 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:05,141 : INFO : FINISHED! in 12.440528 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:50,090 : INFO : FINISHED! in 12.777184 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-sum-manha.out 
+2018-07-17 22:14:05,188 : INFO : FINISHED! in 12.578980 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:50,149 : INFO : FINISHED! in 12.316078 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:05,224 : INFO : FINISHED! in 12.433903 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:50,243 : INFO : FINISHED! in 12.090449 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-avg-manha.out 
+2018-07-17 22:14:05,427 : INFO : FINISHED! in 12.398015 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:50,069 : INFO : FINISHED! in 18.323387 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:05,604 : INFO : FINISHED! in 12.962498 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:49,969 : INFO : FINISHED! in 18.136714 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:05,986 : INFO : FINISHED! in 14.286647 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:50,501 : INFO : FINISHED! in 17.601050 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-sum-manha.out 
+2018-07-17 22:14:06,679 : INFO : FINISHED! in 18.622401 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:50,673 : INFO : FINISHED! in 12.722014 s. See output: results_revision/local-tfidf-sublinear-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:07,098 : INFO : FINISHED! in 18.720659 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:40:50,987 : INFO : FINISHED! in 18.146403 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:07,275 : INFO : FINISHED! in 13.925927 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:40:51,253 : INFO : FINISHED! in 15.091620 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:07,345 : INFO : FINISHED! in 15.152863 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:51,729 : INFO : FINISHED! in 15.516186 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-sum-manha.out 
+2018-07-17 22:14:07,656 : INFO : FINISHED! in 15.169132 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:52,004 : INFO : FINISHED! in 15.123081 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:07,586 : INFO : FINISHED! in 15.016930 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:51,988 : INFO : FINISHED! in 17.990846 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:07,882 : INFO : FINISHED! in 15.540074 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:52,091 : INFO : FINISHED! in 15.271056 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-avg-manha.out 
+2018-07-17 22:14:08,098 : INFO : FINISHED! in 19.728289 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:40:52,220 : INFO : FINISHED! in 15.953135 s. See output: results_revision/local-tfidf-binary-ost-w2v-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:08,384 : INFO : FINISHED! in 19.311501 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:40:52,727 : INFO : FINISHED! in 17.197703 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-avg-manha.out 
+2018-07-17 22:14:08,590 : INFO : FINISHED! in 19.135264 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:40:55,029 : INFO : FINISHED! in 13.780829 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:08,956 : INFO : FINISHED! in 19.214283 s. See output: results_revision/local-tfidf-binary-ost-w2v-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:40:59,215 : INFO : FINISHED! in 13.216331 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:09,741 : INFO : FINISHED! in 13.867355 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:03,042 : INFO : FINISHED! in 14.593954 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:14:10,621 : INFO : FINISHED! in 14.267059 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:03,001 : INFO : FINISHED! in 14.553462 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:11,141 : INFO : FINISHED! in 14.490765 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:03,000 : INFO : FINISHED! in 14.614955 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:12,677 : INFO : FINISHED! in 14.047421 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:02,764 : INFO : FINISHED! in 14.260948 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:14:12,773 : INFO : FINISHED! in 13.808310 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:06,892 : INFO : FINISHED! in 15.652258 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:19,528 : INFO : FINISHED! in 14.223203 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:07,442 : INFO : FINISHED! in 15.725966 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-sum-manha.out 
+2018-07-17 22:14:20,901 : INFO : FINISHED! in 13.856600 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:07,226 : INFO : FINISHED! in 15.028033 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:21,193 : INFO : FINISHED! in 13.507051 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:07,381 : INFO : FINISHED! in 15.185418 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:22,106 : INFO : FINISHED! in 15.344285 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:07,662 : INFO : FINISHED! in 15.422256 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-sum-manha.out 
+2018-07-17 22:14:22,746 : INFO : FINISHED! in 14.442160 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:07,565 : INFO : FINISHED! in 15.335793 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:22,715 : INFO : FINISHED! in 16.220753 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:07,843 : INFO : FINISHED! in 14.998750 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:22,796 : INFO : FINISHED! in 15.826595 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:08,361 : INFO : FINISHED! in 15.476979 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-avg-manha.out 
+2018-07-17 22:14:23,015 : INFO : FINISHED! in 16.294563 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:08,352 : INFO : FINISHED! in 16.777218 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:23,035 : INFO : FINISHED! in 16.294758 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:08,116 : INFO : FINISHED! in 16.352253 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:23,490 : INFO : FINISHED! in 14.731343 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:08,416 : INFO : FINISHED! in 16.754807 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:23,549 : INFO : FINISHED! in 14.773000 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:08,680 : INFO : FINISHED! in 16.903995 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-100d-bmk_test-avg-manha.out 
+2018-07-17 22:14:23,754 : INFO : FINISHED! in 14.920605 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:10,709 : INFO : FINISHED! in 14.021087 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:23,811 : INFO : FINISHED! in 13.168114 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:13,241 : INFO : FINISHED! in 20.028263 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:25,426 : INFO : FINISHED! in 14.104752 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:13,180 : INFO : FINISHED! in 19.761750 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:26,015 : INFO : FINISHED! in 13.947976 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:13,763 : INFO : FINISHED! in 20.139664 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:27,287 : INFO : FINISHED! in 14.641059 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:14,633 : INFO : FINISHED! in 21.168319 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-sum-manha.out 
+2018-07-17 22:14:28,621 : INFO : FINISHED! in 14.419593 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:14,661 : INFO : FINISHED! in 21.063839 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:28,929 : INFO : FINISHED! in 14.620496 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:14,820 : INFO : FINISHED! in 20.341828 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-avg-manha.out 
+2018-07-17 22:14:29,877 : INFO : FINISHED! in 20.719579 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:15,325 : INFO : FINISHED! in 14.134458 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:30,114 : INFO : FINISHED! in 21.023874 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:19,684 : INFO : FINISHED! in 14.730512 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-sum-manha.out 
+2018-07-17 22:14:30,104 : INFO : FINISHED! in 20.707695 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:20,029 : INFO : FINISHED! in 15.029385 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-avg-manha.out 
+2018-07-17 22:14:30,351 : INFO : FINISHED! in 20.497721 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:20,290 : INFO : FINISHED! in 15.349339 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:30,526 : INFO : FINISHED! in 20.459562 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:20,461 : INFO : FINISHED! in 15.521022 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:31,236 : INFO : FINISHED! in 21.218483 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:22,215 : INFO : FINISHED! in 12.328532 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:36,297 : INFO : FINISHED! in 14.589274 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:22,624 : INFO : FINISHED! in 12.987586 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:36,925 : INFO : FINISHED! in 14.002742 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:23,282 : INFO : FINISHED! in 13.338979 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-sum-manha.out 
+2018-07-17 22:14:37,020 : INFO : FINISHED! in 12.641536 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:23,408 : INFO : FINISHED! in 13.082347 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:37,260 : INFO : FINISHED! in 14.649293 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:23,506 : INFO : FINISHED! in 13.492002 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:37,628 : INFO : FINISHED! in 12.886051 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:24,072 : INFO : FINISHED! in 13.920624 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-avg-manha.out 
+2018-07-17 22:14:38,092 : INFO : FINISHED! in 13.174644 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:25,752 : INFO : FINISHED! in 16.723027 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:38,270 : INFO : FINISHED! in 13.053907 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:26,221 : INFO : FINISHED! in 17.386314 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:38,186 : INFO : FINISHED! in 14.364592 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:26,268 : INFO : FINISHED! in 17.095083 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-sum-manha.out 
+2018-07-17 22:14:38,437 : INFO : FINISHED! in 13.298212 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:26,677 : INFO : FINISHED! in 17.639354 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:38,542 : INFO : FINISHED! in 14.216461 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:26,653 : INFO : FINISHED! in 17.320602 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:38,658 : INFO : FINISHED! in 13.193232 s. See output: results_revision/local-tfidf-sublinear-ost-glove-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:26,735 : INFO : FINISHED! in 17.455436 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-avg-manha.out 
+2018-07-17 22:14:38,938 : INFO : FINISHED! in 14.581386 s. See output: results_revision/local-tfidf-sublinear-ost-fstx-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:27,483 : INFO : FINISHED! in 15.216617 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:40,224 : INFO : FINISHED! in 14.750996 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:30,782 : INFO : FINISHED! in 15.673596 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-sum-manha.out 
+2018-07-17 22:14:41,618 : INFO : FINISHED! in 13.953808 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:31,746 : INFO : FINISHED! in 16.721514 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:42,187 : INFO : FINISHED! in 15.033566 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:32,559 : INFO : FINISHED! in 16.829797 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:43,412 : INFO : FINISHED! in 14.420803 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:32,568 : INFO : FINISHED! in 16.237985 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:45,561 : INFO : FINISHED! in 15.243744 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:32,601 : INFO : FINISHED! in 16.262131 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-avg-manha.out 
+2018-07-17 22:14:45,557 : INFO : FINISHED! in 15.080926 s. See output: results_revision/local-tfidf-sublinear-ost-glove-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:33,399 : INFO : FINISHED! in 16.424990 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:50,884 : INFO : FINISHED! in 18.782788 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:33,551 : INFO : FINISHED! in 16.912606 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:51,274 : INFO : FINISHED! in 13.222956 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:38,292 : INFO : FINISHED! in 14.315337 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:51,419 : INFO : FINISHED! in 18.468530 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:38,457 : INFO : FINISHED! in 14.289553 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:51,673 : INFO : FINISHED! in 19.748807 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:39,233 : INFO : FINISHED! in 17.891050 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:14:51,890 : INFO : FINISHED! in 19.908284 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:39,773 : INFO : FINISHED! in 14.976759 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-sum-manha.out 
+2018-07-17 22:14:51,949 : INFO : FINISHED! in 19.966148 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:39,396 : INFO : FINISHED! in 17.774754 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:52,006 : INFO : FINISHED! in 19.831536 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:39,740 : INFO : FINISHED! in 17.699898 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:53,833 : INFO : FINISHED! in 15.193362 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:39,830 : INFO : FINISHED! in 17.688189 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:14:53,878 : INFO : FINISHED! in 14.848425 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:39,993 : INFO : FINISHED! in 15.045835 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:54,036 : INFO : FINISHED! in 15.331097 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:40,095 : INFO : FINISHED! in 15.130070 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:54,249 : INFO : FINISHED! in 14.603379 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:40,473 : INFO : FINISHED! in 14.854158 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-avg-manha.out 
+2018-07-17 22:14:54,348 : INFO : FINISHED! in 15.102456 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:41,490 : INFO : FINISHED! in 14.147779 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:54,576 : INFO : FINISHED! in 14.807066 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:43,194 : INFO : FINISHED! in 15.222042 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:55,204 : INFO : FINISHED! in 15.103450 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:43,044 : INFO : FINISHED! in 14.967174 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-sum-manha.out 
+2018-07-17 22:14:55,318 : INFO : FINISHED! in 15.371360 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:43,426 : INFO : FINISHED! in 14.893986 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-avg-manha.out 
+2018-07-17 22:14:55,493 : INFO : FINISHED! in 15.552190 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:43,502 : INFO : FINISHED! in 15.237871 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:14:55,522 : INFO : FINISHED! in 13.772923 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:43,377 : INFO : FINISHED! in 14.176897 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:14:55,916 : INFO : FINISHED! in 15.044556 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:43,595 : INFO : FINISHED! in 15.297692 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:56,008 : INFO : FINISHED! in 15.679410 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:46,577 : INFO : FINISHED! in 13.809638 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:14:57,222 : INFO : FINISHED! in 13.908265 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:47,092 : INFO : FINISHED! in 13.758808 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-sum-manha.out 
+2018-07-17 22:14:57,846 : INFO : FINISHED! in 13.856505 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:48,549 : INFO : FINISHED! in 14.402274 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:14:59,074 : INFO : FINISHED! in 14.036741 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:48,558 : INFO : FINISHED! in 14.408960 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-avg-manha.out 
+2018-07-17 22:15:01,187 : INFO : FINISHED! in 13.929256 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:48,747 : INFO : FINISHED! in 14.646854 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:01,458 : INFO : FINISHED! in 14.171242 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:51,328 : INFO : FINISHED! in 16.109766 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:07,920 : INFO : FINISHED! in 14.132698 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:51,538 : INFO : FINISHED! in 16.242892 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:09,460 : INFO : FINISHED! in 14.366747 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:56,349 : INFO : FINISHED! in 15.006157 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:10,649 : INFO : FINISHED! in 15.276591 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:56,851 : INFO : FINISHED! in 15.434487 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:10,819 : INFO : FINISHED! in 15.058298 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:56,914 : INFO : FINISHED! in 15.449508 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:11,073 : INFO : FINISHED! in 15.516826 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:56,884 : INFO : FINISHED! in 16.959743 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-sum-manha.out 
+2018-07-17 22:15:10,929 : INFO : FINISHED! in 15.117234 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:41:57,141 : INFO : FINISHED! in 16.982623 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:11,726 : INFO : FINISHED! in 18.885836 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:41:57,267 : INFO : FINISHED! in 15.725005 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-sum-manha.out 
+2018-07-17 22:15:11,917 : INFO : FINISHED! in 18.355023 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:41:57,520 : INFO : FINISHED! in 15.904624 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:12,857 : INFO : FINISHED! in 20.005624 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:41:57,682 : INFO : FINISHED! in 15.574889 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-50d-bmk_test-avg-manha.out 
+2018-07-17 22:15:13,366 : INFO : FINISHED! in 20.013431 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:41:58,371 : INFO : FINISHED! in 17.264479 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:13,379 : INFO : FINISHED! in 19.790122 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:41:58,370 : INFO : FINISHED! in 17.044448 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-avg-manha.out 
+2018-07-17 22:15:14,428 : INFO : FINISHED! in 18.246769 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:01,090 : INFO : FINISHED! in 18.210259 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:13,974 : INFO : FINISHED! in 20.308486 s. See output: results_revision/local-tfidf-sublinear-ost-w2v-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:02,745 : INFO : FINISHED! in 17.933932 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-sum-manha.out 
+2018-07-17 22:15:15,026 : INFO : FINISHED! in 18.339903 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:02,900 : INFO : FINISHED! in 18.038588 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:15,241 : INFO : FINISHED! in 18.362850 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:03,340 : INFO : FINISHED! in 18.243442 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-avg-manha.out 
+2018-07-17 22:15:15,472 : INFO : FINISHED! in 18.295170 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:03,515 : INFO : FINISHED! in 18.406046 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:15,617 : INFO : FINISHED! in 18.706372 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:03,477 : INFO : FINISHED! in 18.444546 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:15,765 : INFO : FINISHED! in 18.485260 s. See output: results_revision/local-idf-freq-ost-dep2vec-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:04,945 : INFO : FINISHED! in 19.739365 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:17,499 : INFO : FINISHED! in 20.008547 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:08,229 : INFO : FINISHED! in 19.727512 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:18,687 : INFO : FINISHED! in 19.878397 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:08,477 : INFO : FINISHED! in 19.776263 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:15:18,916 : INFO : FINISHED! in 19.468053 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:10,666 : INFO : FINISHED! in 20.406934 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:20,744 : INFO : FINISHED! in 19.987564 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:10,429 : INFO : FINISHED! in 20.196567 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:23,403 : INFO : FINISHED! in 20.501157 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:10,479 : INFO : FINISHED! in 20.127708 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:15:23,515 : INFO : FINISHED! in 20.411216 s. See output: results_revision/local-idf-freq-ost-fstx-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:13,570 : INFO : FINISHED! in 20.407184 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:29,823 : INFO : FINISHED! in 19.830088 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:13,765 : INFO : FINISHED! in 20.081756 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:29,507 : INFO : FINISHED! in 18.286233 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:19,582 : INFO : FINISHED! in 21.366560 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-sum-manha.out 
+2018-07-17 22:15:33,481 : INFO : FINISHED! in 20.039262 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:19,148 : INFO : FINISHED! in 20.243411 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:34,188 : INFO : FINISHED! in 21.772854 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:19,909 : INFO : FINISHED! in 21.451238 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:34,188 : INFO : FINISHED! in 21.482554 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:20,144 : INFO : FINISHED! in 21.526767 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:34,028 : INFO : FINISHED! in 20.296893 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:19,775 : INFO : FINISHED! in 20.853863 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:34,426 : INFO : FINISHED! in 21.782979 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:19,910 : INFO : FINISHED! in 20.794097 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-sum-manha.out 
+2018-07-17 22:15:34,381 : INFO : FINISHED! in 21.742502 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:20,427 : INFO : FINISHED! in 20.445125 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:34,771 : INFO : FINISHED! in 19.994331 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:20,705 : INFO : FINISHED! in 21.884488 s. See output: results_revision/local-idf-freq-ost-fstx-100d-bmk_test-avg-manha.out 
+2018-07-17 22:15:35,243 : INFO : FINISHED! in 19.869121 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:20,695 : INFO : FINISHED! in 21.415455 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:35,521 : INFO : FINISHED! in 20.468124 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:21,648 : INFO : FINISHED! in 21.610911 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-avg-manha.out 
+2018-07-17 22:15:35,781 : INFO : FINISHED! in 19.779102 s. See output: results_revision/local-idf-freq-ost-fstx-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:24,528 : INFO : FINISHED! in 21.778076 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:38,837 : INFO : FINISHED! in 19.939860 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:26,699 : INFO : FINISHED! in 20.270258 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:40,230 : INFO : FINISHED! in 24.211260 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:28,711 : INFO : FINISHED! in 24.536859 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:40,783 : INFO : FINISHED! in 20.190736 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:29,581 : INFO : FINISHED! in 19.760161 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:41,073 : INFO : FINISHED! in 20.494524 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:30,087 : INFO : FINISHED! in 25.154111 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:42,577 : INFO : FINISHED! in 20.240140 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:30,219 : INFO : FINISHED! in 25.196624 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-avg-manha.out 
+2018-07-17 22:15:43,116 : INFO : FINISHED! in 26.238475 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:30,266 : INFO : FINISHED! in 20.166744 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-sum-manha.out 
+2018-07-17 22:15:43,050 : INFO : FINISHED! in 25.735902 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:30,477 : INFO : FINISHED! in 26.022808 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-sum-manha.out 
+2018-07-17 22:15:43,766 : INFO : FINISHED! in 26.635812 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:30,869 : INFO : FINISHED! in 25.963381 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:43,549 : INFO : FINISHED! in 26.846274 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:32,695 : INFO : FINISHED! in 20.365337 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:44,616 : INFO : FINISHED! in 27.510998 s. See output: results_revision/local-idf-freq-ost-fstx-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:32,811 : INFO : FINISHED! in 20.457910 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-avg-manha.out 
+2018-07-17 22:15:45,098 : INFO : FINISHED! in 19.953090 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:32,950 : INFO : FINISHED! in 20.546905 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:46,276 : INFO : FINISHED! in 20.925081 s. See output: results_revision/local-idf-freq-ost-fstx-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:36,193 : INFO : FINISHED! in 20.815131 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:53,324 : INFO : FINISHED! in 21.916642 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:36,612 : INFO : FINISHED! in 21.257877 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:53,411 : INFO : FINISHED! in 21.972157 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:41,087 : INFO : FINISHED! in 18.886646 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-sum-manha.out 
+2018-07-17 22:15:54,884 : INFO : FINISHED! in 18.466857 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:41,520 : INFO : FINISHED! in 19.756834 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:15:55,375 : INFO : FINISHED! in 19.204563 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:41,879 : INFO : FINISHED! in 20.203189 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:15:56,070 : INFO : FINISHED! in 18.669191 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:42,359 : INFO : FINISHED! in 20.041404 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:56,414 : INFO : FINISHED! in 20.785661 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:42,995 : INFO : FINISHED! in 20.607400 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:56,863 : INFO : FINISHED! in 20.568822 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:43,140 : INFO : FINISHED! in 21.822052 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:15:57,256 : INFO : FINISHED! in 20.591687 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:43,147 : INFO : FINISHED! in 21.442078 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:15:57,708 : INFO : FINISHED! in 21.738862 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:43,211 : INFO : FINISHED! in 19.950981 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-avg-manha.out 
+2018-07-17 22:15:57,899 : INFO : FINISHED! in 21.821108 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:43,171 : INFO : FINISHED! in 21.448691 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-avg-manha.out 
+2018-07-17 22:15:58,099 : INFO : FINISHED! in 20.922073 s. See output: results_revision/local-idf-freq-ost-glove-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:44,404 : INFO : FINISHED! in 23.060805 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-sum-manha.out 
+2018-07-17 22:15:58,547 : INFO : FINISHED! in 22.553911 s. See output: results_revision/local-idf-freq-ost-fstx-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:48,874 : INFO : FINISHED! in 22.330921 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:01,538 : INFO : FINISHED! in 20.959122 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:49,251 : INFO : FINISHED! in 20.838127 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:05,345 : INFO : FINISHED! in 23.151649 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:52,373 : INFO : FINISHED! in 21.618905 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-sum-manha.out 
+2018-07-17 22:16:05,770 : INFO : FINISHED! in 21.037503 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:42:52,531 : INFO : FINISHED! in 21.278131 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:05,883 : INFO : FINISHED! in 21.665776 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:53,711 : INFO : FINISHED! in 21.835553 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:06,702 : INFO : FINISHED! in 23.747266 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:55,802 : INFO : FINISHED! in 23.659049 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-avg-manha.out 
+2018-07-17 22:16:06,889 : INFO : FINISHED! in 24.357881 s. See output: results_revision/local-idf-freq-ost-glove-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:56,536 : INFO : FINISHED! in 24.394815 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:06,938 : INFO : FINISHED! in 22.140156 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:42:56,914 : INFO : FINISHED! in 24.627488 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:08,467 : INFO : FINISHED! in 22.685792 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:42:57,712 : INFO : FINISHED! in 23.162534 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:16:09,701 : INFO : FINISHED! in 22.955480 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:42:57,852 : INFO : FINISHED! in 25.254123 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:16:11,068 : INFO : FINISHED! in 24.171959 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:42:58,874 : INFO : FINISHED! in 24.525652 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:13,558 : INFO : FINISHED! in 28.025753 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:42:59,984 : INFO : FINISHED! in 21.583534 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:15,116 : INFO : FINISHED! in 27.029367 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:00,639 : INFO : FINISHED! in 22.561738 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:16,322 : INFO : FINISHED! in 19.806236 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:00,804 : INFO : FINISHED! in 26.322969 s. See output: results_revision/local-idf-freq-ost-w2v-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:17,219 : INFO : FINISHED! in 20.126981 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:06,231 : INFO : FINISHED! in 23.161485 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-sum-manha.out 
+2018-07-17 22:16:17,253 : INFO : FINISHED! in 19.589874 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:06,066 : INFO : FINISHED! in 21.177153 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:19,351 : INFO : FINISHED! in 24.191092 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:06,300 : INFO : FINISHED! in 21.416096 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:19,276 : INFO : FINISHED! in 23.708642 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:06,021 : INFO : FINISHED! in 20.005397 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-avg-manha.out 
+2018-07-17 22:16:19,426 : INFO : FINISHED! in 20.195305 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:06,775 : INFO : FINISHED! in 23.551802 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:20,399 : INFO : FINISHED! in 20.633165 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:06,625 : INFO : FINISHED! in 22.533871 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-avg-manha.out 
+2018-07-17 22:16:20,767 : INFO : FINISHED! in 20.601396 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:06,620 : INFO : FINISHED! in 21.644910 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:22,578 : INFO : FINISHED! in 24.249355 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:07,064 : INFO : FINISHED! in 23.558352 s. See output: results_revision/local-idf-freq-ost-w2v-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:22,468 : INFO : FINISHED! in 23.653695 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:09,109 : INFO : FINISHED! in 24.613420 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:23,274 : INFO : FINISHED! in 24.607972 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:09,773 : INFO : FINISHED! in 24.923632 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-sum-manha.out 
+2018-07-17 22:16:24,971 : INFO : FINISHED! in 25.151467 s. See output: results_revision/local-idf-freq-ost-w2v-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:10,623 : INFO : FINISHED! in 19.695628 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:27,030 : INFO : FINISHED! in 23.494325 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:10,687 : INFO : FINISHED! in 19.736880 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:27,420 : INFO : FINISHED! in 20.002805 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:14,006 : INFO : FINISHED! in 19.817358 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-sum-manha.out 
+2018-07-17 22:16:27,826 : INFO : FINISHED! in 20.186941 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:14,276 : INFO : FINISHED! in 20.092010 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:28,624 : INFO : FINISHED! in 20.074628 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:17,535 : INFO : FINISHED! in 21.753619 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:31,557 : INFO : FINISHED! in 22.672079 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:17,556 : INFO : FINISHED! in 19.705564 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-avg-manha.out 
+2018-07-17 22:16:32,256 : INFO : FINISHED! in 24.853987 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:24,600 : INFO : FINISHED! in 24.835769 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:33,326 : INFO : FINISHED! in 24.659199 s. See output: results_revision/local-idf-freq-ost-w2v-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:24,885 : INFO : FINISHED! in 24.290847 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:33,754 : INFO : FINISHED! in 22.095144 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:26,318 : INFO : FINISHED! in 17.909090 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-sum-manha.out 
+2018-07-17 22:16:34,904 : INFO : FINISHED! in 22.125729 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:27,163 : INFO : FINISHED! in 24.914206 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:38,047 : INFO : FINISHED! in 20.066135 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:27,634 : INFO : FINISHED! in 25.175074 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:38,214 : INFO : FINISHED! in 27.977638 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:28,338 : INFO : FINISHED! in 19.233905 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:38,876 : INFO : FINISHED! in 20.000889 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:28,592 : INFO : FINISHED! in 20.584586 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:39,040 : INFO : FINISHED! in 23.396858 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:28,734 : INFO : FINISHED! in 20.704187 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-sum-manha.out 
+2018-07-17 22:16:40,581 : INFO : FINISHED! in 18.482728 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:28,913 : INFO : FINISHED! in 20.505065 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:41,196 : INFO : FINISHED! in 22.487181 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:29,215 : INFO : FINISHED! in 20.509344 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:43,399 : INFO : FINISHED! in 22.443887 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:29,126 : INFO : FINISHED! in 30.364802 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:43,798 : INFO : FINISHED! in 18.635019 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:29,286 : INFO : FINISHED! in 30.644058 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:45,398 : INFO : FINISHED! in 22.730165 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:29,489 : INFO : FINISHED! in 21.481789 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-avg-manha.out 
+2018-07-17 22:16:45,861 : INFO : FINISHED! in 28.519350 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:30,476 : INFO : FINISHED! in 31.159654 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-sum-manha.out 
+2018-07-17 22:16:47,308 : INFO : FINISHED! in 25.967778 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:30,784 : INFO : FINISHED! in 28.797514 s. See output: results_revision/local-idf-freq-ost-w2v-500d-bmk_test-avg-manha.out 
+2018-07-17 22:16:47,492 : INFO : FINISHED! in 20.501303 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:32,034 : INFO : FINISHED! in 23.339975 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:48,033 : INFO : FINISHED! in 26.662628 s. See output: results_revision/local-idf-freq-ost-w2v-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:32,226 : INFO : FINISHED! in 19.926945 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:16:48,424 : INFO : FINISHED! in 23.903209 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:34,553 : INFO : FINISHED! in 23.371801 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:48,488 : INFO : FINISHED! in 23.970666 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:34,956 : INFO : FINISHED! in 23.226977 s. See output: results_revision/local-idf-binary-ost-dep2vec-300d-bmk_test-avg-manha.out 
+2018-07-17 22:16:49,178 : INFO : FINISHED! in 20.316719 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:35,246 : INFO : FINISHED! in 19.657900 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:16:50,224 : INFO : FINISHED! in 20.758506 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:35,600 : INFO : FINISHED! in 19.791584 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:16:53,146 : INFO : FINISHED! in 19.947254 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:38,188 : INFO : FINISHED! in 25.661982 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:55,370 : INFO : FINISHED! in 20.253734 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:45,822 : INFO : FINISHED! in 26.017856 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:16:55,419 : INFO : FINISHED! in 25.054402 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:45,676 : INFO : FINISHED! in 25.783952 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:16:55,805 : INFO : FINISHED! in 26.329784 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:46,523 : INFO : FINISHED! in 20.134707 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:16:57,304 : INFO : FINISHED! in 20.506531 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:47,047 : INFO : FINISHED! in 20.144575 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:00,222 : INFO : FINISHED! in 26.027127 s. See output: results_revision/local-idf-binary-ost-fstx-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:48,201 : INFO : FINISHED! in 20.157711 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-sum-manha.out 
+2018-07-17 22:17:00,957 : INFO : FINISHED! in 20.990489 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:50,747 : INFO : FINISHED! in 21.397234 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:01,141 : INFO : FINISHED! in 20.779247 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:51,183 : INFO : FINISHED! in 21.364468 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-avg-manha.out 
+2018-07-17 22:17:02,043 : INFO : FINISHED! in 21.264152 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:51,561 : INFO : FINISHED! in 21.944370 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:02,189 : INFO : FINISHED! in 26.346083 s. See output: results_revision/local-idf-binary-ost-fstx-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:51,927 : INFO : FINISHED! in 21.679023 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:03,143 : INFO : FINISHED! in 22.115095 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:53,674 : INFO : FINISHED! in 22.537075 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:04,565 : INFO : FINISHED! in 21.178225 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:55,339 : INFO : FINISHED! in 23.033837 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:06,596 : INFO : FINISHED! in 19.779124 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:43:57,498 : INFO : FINISHED! in 20.382986 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:09,373 : INFO : FINISHED! in 26.999735 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:43:57,397 : INFO : FINISHED! in 26.337299 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:10,921 : INFO : FINISHED! in 23.225645 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:58,247 : INFO : FINISHED! in 25.277586 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-sum-manha.out 
+2018-07-17 22:17:11,739 : INFO : FINISHED! in 26.202257 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:43:58,776 : INFO : FINISHED! in 28.340418 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:12,143 : INFO : FINISHED! in 21.128177 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:43:59,014 : INFO : FINISHED! in 28.504411 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-sum-manha.out 
+2018-07-17 22:17:12,710 : INFO : FINISHED! in 27.282683 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:59,175 : INFO : FINISHED! in 27.873129 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:16,616 : INFO : FINISHED! in 27.636057 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:43:59,215 : INFO : FINISHED! in 22.601814 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:17,489 : INFO : FINISHED! in 20.084639 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:43:59,748 : INFO : FINISHED! in 28.661068 s. See output: results_revision/local-idf-binary-ost-fstx-200d-bmk_test-avg-manha.out 
+2018-07-17 22:17:17,543 : INFO : FINISHED! in 20.432398 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:03,603 : INFO : FINISHED! in 27.206001 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-avg-manha.out 
+2018-07-17 22:17:17,674 : INFO : FINISHED! in 28.277846 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:04,265 : INFO : FINISHED! in 26.836466 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-sum-manha.out 
+2018-07-17 22:17:18,206 : INFO : FINISHED! in 20.600048 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:06,158 : INFO : FINISHED! in 32.241751 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:19,053 : INFO : FINISHED! in 27.045072 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:06,069 : INFO : FINISHED! in 25.621879 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:19,348 : INFO : FINISHED! in 20.442836 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:44:06,247 : INFO : FINISHED! in 32.080786 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:21,970 : INFO : FINISHED! in 27.071397 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:07,926 : INFO : FINISHED! in 20.286759 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-avg-manha.out 
+2018-07-17 22:17:22,482 : INFO : FINISHED! in 20.477426 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:08,228 : INFO : FINISHED! in 20.428691 s. See output: results_revision/local-idf-binary-ost-fstx-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:22,996 : INFO : FINISHED! in 20.329095 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:09,753 : INFO : FINISHED! in 20.994685 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:23,067 : INFO : FINISHED! in 32.749460 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:11,406 : INFO : FINISHED! in 21.437762 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-sum-manha.out 
+2018-07-17 22:17:23,455 : INFO : FINISHED! in 33.351885 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:13,220 : INFO : FINISHED! in 20.705104 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:23,852 : INFO : FINISHED! in 20.737128 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:13,774 : INFO : FINISHED! in 20.832276 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:24,180 : INFO : FINISHED! in 33.879055 s. See output: results_revision/local-idf-binary-ost-fstx-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:14,501 : INFO : FINISHED! in 18.964061 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:25,238 : INFO : FINISHED! in 18.955012 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:15,636 : INFO : FINISHED! in 27.033874 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:28,929 : INFO : FINISHED! in 20.169933 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:16,587 : INFO : FINISHED! in 19.080604 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-sum-manha.out 
+2018-07-17 22:17:30,935 : INFO : FINISHED! in 25.702085 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:44:18,134 : INFO : FINISHED! in 18.956295 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:31,839 : INFO : FINISHED! in 27.522603 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:18,887 : INFO : FINISHED! in 24.851290 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:32,005 : INFO : FINISHED! in 27.757735 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:19,314 : INFO : FINISHED! in 18.922988 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-avg-manha.out 
+2018-07-17 22:17:35,691 : INFO : FINISHED! in 21.411113 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:20,894 : INFO : FINISHED! in 27.130039 s. See output: results_revision/local-idf-binary-ost-fstx-50d-bmk_test-avg-manha.out 
+2018-07-17 22:17:37,637 : INFO : FINISHED! in 26.141978 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:24,653 : INFO : FINISHED! in 25.312286 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:38,717 : INFO : FINISHED! in 25.614561 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:25,619 : INFO : FINISHED! in 24.463900 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:39,514 : INFO : FINISHED! in 25.595967 s. See output: results_revision/local-idf-binary-ost-glove-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:28,089 : INFO : FINISHED! in 22.142048 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:41,555 : INFO : FINISHED! in 22.604540 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:31,692 : INFO : FINISHED! in 20.155102 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:41,709 : INFO : FINISHED! in 22.507699 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:32,070 : INFO : FINISHED! in 31.153279 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:41,751 : INFO : FINISHED! in 22.403649 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:32,265 : INFO : FINISHED! in 31.204168 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:42,294 : INFO : FINISHED! in 22.634691 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:32,779 : INFO : FINISHED! in 31.480920 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-sum-manha.out 
+2018-07-17 22:17:42,903 : INFO : FINISHED! in 28.700859 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:44:33,087 : INFO : FINISHED! in 31.219543 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:44,333 : INFO : FINISHED! in 23.643902 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:33,347 : INFO : FINISHED! in 20.220145 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:45,820 : INFO : FINISHED! in 24.970004 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:35,187 : INFO : FINISHED! in 28.935149 s. See output: results_revision/local-idf-binary-ost-glove-300d-bmk_test-avg-manha.out 
+2018-07-17 22:17:46,085 : INFO : FINISHED! in 20.803328 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:44:35,271 : INFO : FINISHED! in 25.182536 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:17:46,124 : INFO : FINISHED! in 20.796642 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:35,382 : INFO : FINISHED! in 25.214833 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:17:47,624 : INFO : FINISHED! in 27.576178 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:44:35,527 : INFO : FINISHED! in 26.858318 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:47,997 : INFO : FINISHED! in 21.215674 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:36,190 : INFO : FINISHED! in 20.580861 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:48,830 : INFO : FINISHED! in 24.662592 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:37,719 : INFO : FINISHED! in 20.185519 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-avg-manha.out 
+2018-07-17 22:17:49,247 : INFO : FINISHED! in 25.127844 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:38,339 : INFO : FINISHED! in 20.224122 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:17:53,839 : INFO : FINISHED! in 27.854474 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:40,047 : INFO : FINISHED! in 20.331884 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:17:54,217 : INFO : FINISHED! in 28.352484 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:40,949 : INFO : FINISHED! in 32.277154 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:17:55,963 : INFO : FINISHED! in 31.018911 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:41,754 : INFO : FINISHED! in 20.818465 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-sum-manha.out 
+2018-07-17 22:17:58,996 : INFO : FINISHED! in 24.921371 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:41,959 : INFO : FINISHED! in 32.992996 s. See output: results_revision/local-idf-binary-ost-w2v-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:17:59,752 : INFO : FINISHED! in 28.471873 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:43,143 : INFO : FINISHED! in 28.057688 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-sum-manha.out 
+2018-07-17 22:18:01,446 : INFO : FINISHED! in 28.482452 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:44:44,528 : INFO : FINISHED! in 27.884575 s. See output: results_revision/local-idf-binary-ost-w2v-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:01,760 : INFO : FINISHED! in 27.804651 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:48,368 : INFO : FINISHED! in 20.869660 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:03,519 : INFO : FINISHED! in 22.621663 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:44:48,941 : INFO : FINISHED! in 28.047406 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:05,052 : INFO : FINISHED! in 21.529994 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:50,430 : INFO : FINISHED! in 27.201364 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:05,069 : INFO : FINISHED! in 21.540717 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:44:51,670 : INFO : FINISHED! in 21.528457 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:05,458 : INFO : FINISHED! in 21.956410 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:44:55,219 : INFO : FINISHED! in 28.212806 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-avg-manha.out 
+2018-07-17 22:18:05,820 : INFO : FINISHED! in 21.736280 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:56,991 : INFO : FINISHED! in 22.631159 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:05,997 : INFO : FINISHED! in 28.157552 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:44:58,571 : INFO : FINISHED! in 20.883073 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:06,674 : INFO : FINISHED! in 26.997610 s. See output: results_revision/local-idf-binary-ost-w2v-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:44:58,791 : INFO : FINISHED! in 23.839965 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:10,124 : INFO : FINISHED! in 28.499757 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:00,735 : INFO : FINISHED! in 21.300982 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:12,318 : INFO : FINISHED! in 21.170097 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:02,361 : INFO : FINISHED! in 25.327245 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:12,504 : INFO : FINISHED! in 27.309561 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:02,612 : INFO : FINISHED! in 25.286733 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:13,453 : INFO : FINISHED! in 25.552474 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:02,913 : INFO : FINISHED! in 25.639167 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-avg-manha.out 
+2018-07-17 22:18:14,338 : INFO : FINISHED! in 26.454654 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:03,125 : INFO : FINISHED! in 26.184685 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-sum-manha.out 
+2018-07-17 22:18:15,167 : INFO : FINISHED! in 25.476949 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:03,260 : INFO : FINISHED! in 21.443936 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:15,524 : INFO : FINISHED! in 27.605167 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:03,442 : INFO : FINISHED! in 29.361079 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-sum-manha.out 
+2018-07-17 22:18:17,338 : INFO : FINISHED! in 21.546907 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:03,957 : INFO : FINISHED! in 29.388161 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:19,110 : INFO : FINISHED! in 28.216446 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:03,958 : INFO : FINISHED! in 29.075727 s. See output: results_revision/local-idf-binary-ost-w2v-300d-bmk_test-avg-manha.out 
+2018-07-17 22:18:18,744 : INFO : FINISHED! in 28.795437 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:04,651 : INFO : FINISHED! in 19.761341 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:19,496 : INFO : FINISHED! in 32.956174 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:06,527 : INFO : FINISHED! in 31.376547 s. See output: results_revision/local-idf-binary-ost-w2v-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:24,941 : INFO : FINISHED! in 19.836443 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:08,221 : INFO : FINISHED! in 25.051254 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:25,393 : INFO : FINISHED! in 28.950900 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:08,414 : INFO : FINISHED! in 28.127895 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-sum-manha.out 
+2018-07-17 22:18:26,668 : INFO : FINISHED! in 19.999828 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:10,125 : INFO : FINISHED! in 19.626552 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:26,715 : INFO : FINISHED! in 24.790901 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:10,306 : INFO : FINISHED! in 25.678340 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:26,950 : INFO : FINISHED! in 20.186592 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:10,464 : INFO : FINISHED! in 19.709496 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:27,514 : INFO : FINISHED! in 28.997340 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:12,290 : INFO : FINISHED! in 25.646222 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-sum-manha.out 
+2018-07-17 22:18:29,380 : INFO : FINISHED! in 22.110924 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:12,431 : INFO : FINISHED! in 29.023101 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-avg-manha.out 
+2018-07-17 22:18:29,952 : INFO : FINISHED! in 26.182385 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:18,800 : INFO : FINISHED! in 25.985938 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-avg-manha.out 
+2018-07-17 22:18:29,932 : INFO : FINISHED! in 22.044961 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:22,238 : INFO : FINISHED! in 28.255236 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:30,006 : INFO : FINISHED! in 28.779412 s. See output: results_revision/local-idf-binary-ost-w2v-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:22,487 : INFO : FINISHED! in 22.115962 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:30,485 : INFO : FINISHED! in 26.623383 s. See output: results_revision/local-idf-sublinear-ost-dep2vec-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:22,585 : INFO : FINISHED! in 22.008523 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:30,889 : INFO : FINISHED! in 23.033897 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:23,940 : INFO : FINISHED! in 21.366035 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:18:36,011 : INFO : FINISHED! in 21.976760 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:26,403 : INFO : FINISHED! in 28.889223 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:37,651 : INFO : FINISHED! in 29.147192 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:26,522 : INFO : FINISHED! in 27.345460 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:18:38,975 : INFO : FINISHED! in 23.408240 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:27,898 : INFO : FINISHED! in 23.662139 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:39,775 : INFO : FINISHED! in 22.562213 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:29,233 : INFO : FINISHED! in 24.449143 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-sum-manha.out 
+2018-07-17 22:18:39,827 : INFO : FINISHED! in 23.141866 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:29,212 : INFO : FINISHED! in 24.326060 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:40,512 : INFO : FINISHED! in 23.095301 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:30,696 : INFO : FINISHED! in 25.650423 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:41,469 : INFO : FINISHED! in 29.266557 s. See output: results_revision/local-idf-sublinear-ost-fstx-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:30,717 : INFO : FINISHED! in 25.718671 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:41,850 : INFO : FINISHED! in 22.377522 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:30,570 : INFO : FINISHED! in 22.207716 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:18:44,162 : INFO : FINISHED! in 29.523717 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:31,053 : INFO : FINISHED! in 25.580921 s. See output: results_revision/local-idf-sublinear-ost-fstx-100d-bmk_test-avg-manha.out 
+2018-07-17 22:18:48,773 : INFO : FINISHED! in 22.106441 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:33,433 : INFO : FINISHED! in 27.320376 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:50,955 : INFO : FINISHED! in 29.721642 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:34,863 : INFO : FINISHED! in 28.695179 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:50,994 : INFO : FINISHED! in 22.610511 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:35,584 : INFO : FINISHED! in 29.432508 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-sum-manha.out 
+2018-07-17 22:18:51,714 : INFO : FINISHED! in 30.296673 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:36,089 : INFO : FINISHED! in 25.533133 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:52,117 : INFO : FINISHED! in 29.944828 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:40,069 : INFO : FINISHED! in 29.402587 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-avg-manha.out 
+2018-07-17 22:18:54,473 : INFO : FINISHED! in 22.690652 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:41,840 : INFO : FINISHED! in 27.500798 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:18:56,367 : INFO : FINISHED! in 24.221246 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:45,660 : INFO : FINISHED! in 33.601596 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:18:56,579 : INFO : FINISHED! in 23.597476 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:46,195 : INFO : FINISHED! in 25.424777 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-avg-manha.out 
+2018-07-17 22:18:57,441 : INFO : FINISHED! in 29.729492 s. See output: results_revision/local-idf-sublinear-ost-fstx-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:46,940 : INFO : FINISHED! in 34.990138 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:18:57,706 : INFO : FINISHED! in 29.094268 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:46,999 : INFO : FINISHED! in 34.893426 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-sum-manha.out 
+2018-07-17 22:19:00,751 : INFO : FINISHED! in 22.917658 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:47,274 : INFO : FINISHED! in 32.720384 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:01,984 : INFO : FINISHED! in 29.987337 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:47,451 : INFO : FINISHED! in 22.910531 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:03,622 : INFO : FINISHED! in 23.615800 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:51,361 : INFO : FINISHED! in 25.122900 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:05,101 : INFO : FINISHED! in 23.478566 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:51,799 : INFO : FINISHED! in 23.050177 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:05,176 : INFO : FINISHED! in 23.445215 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:45:54,143 : INFO : FINISHED! in 29.478256 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:05,547 : INFO : FINISHED! in 36.495273 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:54,172 : INFO : FINISHED! in 29.473284 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-sum-manha.out 
+2018-07-17 22:19:05,778 : INFO : FINISHED! in 35.901503 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:54,241 : INFO : FINISHED! in 23.930999 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:07,080 : INFO : FINISHED! in 26.040172 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:54,382 : INFO : FINISHED! in 21.449434 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:08,030 : INFO : FINISHED! in 23.994898 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:45:54,502 : INFO : FINISHED! in 25.772278 s. See output: results_revision/local-idf-sublinear-ost-fstx-500d-bmk_test-avg-manha.out 
+2018-07-17 22:19:08,589 : INFO : FINISHED! in 36.667777 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:45:56,790 : INFO : FINISHED! in 25.721535 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:09,671 : INFO : FINISHED! in 38.117746 s. See output: results_revision/local-idf-sublinear-ost-fstx-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:45:56,904 : INFO : FINISHED! in 24.426698 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:12,333 : INFO : FINISHED! in 21.714257 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:45:57,144 : INFO : FINISHED! in 24.464801 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:13,430 : INFO : FINISHED! in 31.076905 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:45:59,043 : INFO : FINISHED! in 21.613289 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:14,014 : INFO : FINISHED! in 30.188892 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:02,183 : INFO : FINISHED! in 30.773138 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-sum-manha.out 
+2018-07-17 22:19:14,246 : INFO : FINISHED! in 21.310680 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:02,712 : INFO : FINISHED! in 30.243535 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-avg-manha.out 
+2018-07-17 22:19:15,969 : INFO : FINISHED! in 29.298714 s. See output: results_revision/local-idf-sublinear-ost-fstx-50d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:02,895 : INFO : FINISHED! in 26.894484 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:17,768 : INFO : FINISHED! in 21.428149 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:03,704 : INFO : FINISHED! in 21.713700 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-avg-manha.out 
+2018-07-17 22:19:20,849 : INFO : FINISHED! in 27.499050 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:04,397 : INFO : FINISHED! in 27.288313 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-sum-manha.out 
+2018-07-17 22:19:21,726 : INFO : FINISHED! in 27.981324 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:06,227 : INFO : FINISHED! in 27.749824 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:22,748 : INFO : FINISHED! in 28.433942 s. See output: results_revision/local-idf-sublinear-ost-glove-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:07,647 : INFO : FINISHED! in 23.787897 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:22,665 : INFO : FINISHED! in 24.420623 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:16,350 : INFO : FINISHED! in 27.093945 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:24,280 : INFO : FINISHED! in 25.325053 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:15,741 : INFO : FINISHED! in 26.481381 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:24,644 : INFO : FINISHED! in 25.076187 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:16,675 : INFO : FINISHED! in 28.027151 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-sum-manha.out 
+2018-07-17 22:19:28,420 : INFO : FINISHED! in 24.482932 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:20,102 : INFO : FINISHED! in 31.952483 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:32,559 : INFO : FINISHED! in 32.862296 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:20,019 : INFO : FINISHED! in 23.293338 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:34,132 : INFO : FINISHED! in 31.085817 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:20,779 : INFO : FINISHED! in 24.465450 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:34,298 : INFO : FINISHED! in 27.384347 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:21,157 : INFO : FINISHED! in 31.590767 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:34,838 : INFO : FINISHED! in 23.258907 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:22,140 : INFO : FINISHED! in 23.384522 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:35,020 : INFO : FINISHED! in 27.972487 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:22,236 : INFO : FINISHED! in 32.933454 s. See output: results_revision/local-idf-sublinear-ost-glove-300d-bmk_test-avg-manha.out 
+2018-07-17 22:19:36,508 : INFO : FINISHED! in 28.528853 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:22,675 : INFO : FINISHED! in 23.835490 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-sum-manha.out 
+2018-07-17 22:19:36,628 : INFO : FINISHED! in 31.147058 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:23,121 : INFO : FINISHED! in 26.870284 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:37,296 : INFO : FINISHED! in 23.131449 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:23,526 : INFO : FINISHED! in 27.288833 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:36,699 : INFO : FINISHED! in 28.513212 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:26,005 : INFO : FINISHED! in 32.556965 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:39,359 : INFO : FINISHED! in 23.302572 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:28,162 : INFO : FINISHED! in 23.699514 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:39,574 : INFO : FINISHED! in 29.816853 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:28,269 : INFO : FINISHED! in 34.060148 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-sum-manha.out 
+2018-07-17 22:19:40,774 : INFO : FINISHED! in 30.056693 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:28,675 : INFO : FINISHED! in 23.632454 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:42,288 : INFO : FINISHED! in 22.810241 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:29,299 : INFO : FINISHED! in 29.840734 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:43,408 : INFO : FINISHED! in 34.317817 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:29,439 : INFO : FINISHED! in 32.836006 s. See output: results_revision/local-idf-sublinear-ost-w2v-1000d-bmk_test-avg-manha.out 
+2018-07-17 22:19:45,422 : INFO : FINISHED! in 29.745586 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:30,371 : INFO : FINISHED! in 29.575334 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-avg-manha.out 
+2018-07-17 22:19:46,577 : INFO : FINISHED! in 30.172466 s. See output: results_revision/local-idf-sublinear-ost-w2v-100d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:30,940 : INFO : FINISHED! in 22.883748 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-avg-manha.out 
+2018-07-17 22:19:47,782 : INFO : FINISHED! in 23.184103 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:33,535 : INFO : FINISHED! in 28.558223 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-sum-manha.out 
+2018-07-17 22:19:48,133 : INFO : FINISHED! in 29.697871 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:35,364 : INFO : FINISHED! in 29.806391 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:49,220 : INFO : FINISHED! in 22.647567 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:35,525 : INFO : FINISHED! in 28.993405 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:49,998 : INFO : FINISHED! in 23.802453 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:38,978 : INFO : FINISHED! in 28.819885 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:52,876 : INFO : FINISHED! in 29.785088 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:40,780 : INFO : FINISHED! in 22.264574 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-sum-manha.out 
+2018-07-17 22:19:53,202 : INFO : FINISHED! in 28.993716 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:42,267 : INFO : FINISHED! in 23.773477 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-sum-euclid.out 
+2018-07-17 22:19:53,401 : INFO : FINISHED! in 22.708659 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:43,878 : INFO : FINISHED! in 21.611506 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-avg-euclid.out 
+2018-07-17 22:19:53,788 : INFO : FINISHED! in 28.814884 s. See output: results_revision/local-idf-sublinear-ost-w2v-200d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:45,117 : INFO : FINISHED! in 19.798255 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-sum-cosine.out 
+2018-07-17 22:19:57,676 : INFO : FINISHED! in 21.375197 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:46,127 : INFO : FINISHED! in 27.085372 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-avg-cosine.out 
+2018-07-17 22:19:59,602 : INFO : FINISHED! in 24.710316 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:47,049 : INFO : FINISHED! in 24.337883 s. See output: results_revision/local-idf-sublinear-ost-w2v-300d-bmk_test-avg-manha.out 
+2018-07-17 22:20:00,754 : INFO : FINISHED! in 24.056442 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:47,272 : INFO : FINISHED! in 19.314703 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-sum-euclid.out 
+2018-07-17 22:20:01,205 : INFO : FINISHED! in 24.199971 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:48,264 : INFO : FINISHED! in 24.349252 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-sum-manha.out 
+2018-07-17 22:20:01,297 : INFO : FINISHED! in 24.745022 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:48,791 : INFO : FINISHED! in 24.301852 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-avg-cosine.out 
+2018-07-17 22:20:01,369 : INFO : FINISHED! in 20.006965 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-sum-manha.out 
 
-2018-07-17 20:46:48,778 : INFO : FINISHED! in 23.788771 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-avg-manha.out 
+2018-07-17 22:20:01,800 : INFO : FINISHED! in 20.476035 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-sum-euclid.out 
 
-2018-07-17 20:46:49,111 : INFO : FINISHED! in 26.211215 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-sum-cosine.out 
+2018-07-17 22:20:02,172 : INFO : FINISHED! in 22.741285 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-sum-cosine.out 
 
-2018-07-17 20:46:49,460 : INFO : FINISHED! in 18.590856 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-avg-euclid.out 
+2018-07-17 22:20:02,237 : INFO : FINISHED! in 19.593011 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:49,498 : INFO : FINISHED! in 18.151109 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-avg-manha.out 
+2018-07-17 22:20:02,473 : INFO : FINISHED! in 18.169478 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:50,436 : INFO : FINISHED! in 27.071718 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-sum-euclid.out 
+2018-07-17 22:20:04,147 : INFO : FINISHED! in 25.683835 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-avg-cosine.out 
 
-2018-07-17 20:46:50,520 : INFO : FINISHED! in 25.675714 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-avg-euclid.out 
+2018-07-17 22:20:04,331 : INFO : FINISHED! in 25.516407 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-avg-euclid.out 
 
-2018-07-17 20:46:51,097 : INFO : FINISHED! in 20.982123 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-sum-manha.out 
+2018-07-17 22:20:04,277 : INFO : FINISHED! in 24.934137 s. See output: results_revision/local-idf-sublinear-ost-w2v-500d-bmk_test-avg-manha.out 
 
-2018-07-17 20:46:51,503 : INFO : FINISHED! in 20.643949 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-avg-cosine.out 
+2018-07-17 22:20:04,849 : INFO : FINISHED! in 18.954922 s. See output: results_revision/local-idf-sublinear-ost-w2v-50d-bmk_test-avg-manha.out 
 
