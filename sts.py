@@ -8,7 +8,7 @@ import numpy as np
 import numbers
 import argparse
 import sys
-import time 
+import time
 
 pyVersion = sys.version.split()[0].split(".")[0]
 if pyVersion == '2':
@@ -22,21 +22,22 @@ from functools import partial
 import numpy as np
 from joblib import Parallel, delayed
 import wisse
-
+from pdb import set_trace as st
+when_error = 0.5
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
                     level=logging.INFO)
 
-def similarity(va, vb, file_pointer=None, d="cos"):
-    if d.startswith("cos"):
-        dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
-    elif d.startswith("euc"):
-        dp = np.linalg.norm(va - vb)
-    elif d.startswith("man"):
-        dp = np.absolute(va - vb).sum()
-        
-    if file_pointer:
-        file_pointer.write("{:.4}\n".format(dp))
+def similarity(va, vb, d="cos"):
+    try:
+        if d.startswith("cos"):
+            dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+        elif d.startswith("euc"):
+            dp = np.linalg.norm(va - vb)
+        elif d.startswith("man"):
+            dp = np.absolute(va - vb).sum()
+    except:
+        dp = when_error
         
     return dp
 
@@ -46,20 +47,43 @@ def sts(i, pair, fo=None, dist='cos'):
         a, b = pair.split('\t')[:2]
     except IndexError:
         return i, None
-            
+
     try:
         va = series.transform(a)
         vb = series.transform(b)
     except TypeError:
-        return i, None
+        if not fo:
+            pass
+        else:
+            fo.write("{:.4}\n".format(when_error))
+        return i, when_error # None
+    else:
+        if not fo:
+            pass
+        else:
+            fo.write("{:.4}\n".format(when_error))
+        return i, when_error
 
     try:
-        return i, similarity(va, vb, fo, dist)
+        sim = similarity(va, vb, dist)
+        if file_pointer:
+            fo.write("{:.4}\n".format(sim))
+        return i, sim
     except TypeError:
-        return i, None
-            
+        if not fo:
+            pass
+        else:
+            fo.write("{:.4}\n".format(when_error))
+        return i, when_error # None
+
     except AttributeError:
-        return i, None
+        if not fo:
+            pass
+        else:
+            fo.write("{:.4}\n".format(when_error))
+        return i, when_error
+    else:
+        return i, when_error
 
 
 if __name__ == "__main__":
@@ -105,16 +129,16 @@ if __name__ == "__main__":
                                     "default = 'bin'.", default = "bin")
     parser.add_argument("--dist", help = "The similarity metric. Available options: "
                                          " {cosine, euclidean, manhattan}. "
-                                         "default = 'cosine'.", default = "cos")                                    
+                                         "default = 'cosine'.", default = "cos")
     parser.add_argument("--ngrams", help = "The n-gram limit specified as, "
                        "e.g., 3 for 1-grams, 2-grams and 3-grams, "
-                       "considered to obtain TF-IDF weights. Default = 1.", 
+                       "considered to obtain TF-IDF weights. Default = 1.",
                        default = 1, type=int)
     parser.add_argument("--njobs", help = "The number of jobs to compute "
                            "similarities of the input sentences, Default = 1.",
                            default = 1, type=int)
-    parser.add_argument("--verbose", help = "Toggle verbose.", 
-                                                        action="store_true") 
+    parser.add_argument("--verbose", help = "Toggle verbose.",
+                                                        action="store_true")
     args = parser.parse_args()
 
 
@@ -141,17 +165,17 @@ if __name__ == "__main__":
                         "%s\n ..." % args.format)
         exit()
 # ---------
-    
+
     vectorizer = TfidfVectorizer(min_df = 1,
                 ngram_range=(1, args.ngrams),
-                encoding = "latin-1",
+                #encoding = "latin-1",
                 decode_error = "replace",
                 lowercase = True,
                 binary = True if args.localw.startswith("bin") else False,
                 sublinear_tf = True if args.localw.startswith("subl") else False,
                 stop_words = "english" if args.stop == 'ost' else None)
 
-    start = time.time()                
+    start = time.time()
     if args.idfmodel.startswith("none") or args.idfmodel is None:
         if args.verbose:
             logging.info("The word embeddings will be combined unweighted.")
@@ -160,7 +184,7 @@ if __name__ == "__main__":
         logging.info("IDF model file does not exist (EXIT):"
                 "\n%s\n ..." % args.idfmodel)
         exit()
-        
+
     elif os.path.isfile(args.idfmodel):
         if args.verbose:
             logging.info("Loading global TFIDF weights from: %s ..." % args.idfmodel)
@@ -169,13 +193,13 @@ if __name__ == "__main__":
                 vectorizer = pickle.load(f)
             else:
                 vectorizer = pickle.load(f, encoding = 'latin-1')
-                
+
         if args.tfidf.startswith("tfidf"):
             tfidf = True
         elif args.tfidf.startswith("idf"):
             tfidf = False
         seg = 60.0
-                
+
     elif args.idfmodel.startswith("local"):
         if args.verbose:
             logging.info("The word embeddings will be combined and weighted.")
@@ -183,11 +207,11 @@ if __name__ == "__main__":
             tfidf = True
         elif args.tfidf.startswith("idf"):
             tfidf = False
-        if args.verbose:    
+        if args.verbose:
             logging.info("Fitting local TFIDF weights from: %s ..." % args.input)
         vectorizer.fit(pairs)
         seg = 1.0
-# --------        
+# --------
 
     if args.output != "" and args.output != "stdout":
         if os.path.dirname(args.output) != "":
@@ -232,10 +256,10 @@ if __name__ == "__main__":
             "Error while loading word embedding model. Verify if the file "
             "is broken (EXIT)...\n%s" % args.embedmodel)
         exit()
-        
+
     dss = ["cosine", "euclidean", "manhattan"]
     if not any([d.startswith(args.dist) for d in dss]):
-        logging.info("Badly specified similarity metric: %s" 
+        logging.info("Badly specified similarity metric: %s"
                         "... setting the default (cosine)." % args.dist)
         metric = "cosine"
     else:
@@ -246,32 +270,32 @@ if __name__ == "__main__":
     if args.verbose:
         logging.info("Embedding sentences ...")
     global series
-    series = wisse.wisse(embeddings=embedding, vectorizer=vectorizer, tf_tfidf=tfidf, 
-                         combiner=args.comb, return_missing=False, generate=True, 
+    series = wisse.wisse(embeddings=embedding, vectorizer=vectorizer, tf_tfidf=tfidf,
+                         combiner=args.comb, return_missing=False, generate=True,
                          verbose=args.verbose)
     if output_name != '':
-        fo = open(output_name, "w") 
+        fo = open(output_name, "w")
     else:
         fo = None
-    if args.verbose:    
+    if args.verbose:
         logging.info("Computing similarities...")
-        
+
     if args.njobs > 1:
-        similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair, fo, metric) 
+        similarities = Parallel(n_jobs=args.njobs)(delayed(sts)(i, pair, fo, metric)
                                             for i, pair in enumerate(pairs))
     else:
         similarities = []
         for i, pair in enumerate(pairs):
             similarities.append(sts(i, pair, fo, metric))
 
-#    if args.verbose:
-#        for i, s in similarities:
-#            if isinstance(s, numbers.Number):
-#                print("{:.4}".format(s))
-#            else:
-#                print(" ")
+    if args.verbose:
+        for i, s in similarities:
+            if isinstance(s, numbers.Number):
+                print("{:.4}".format(s))
+            else:
+                print("NONE")
 
-logging.info("FINISHED! in %f %s. See output: %s \n" % ((time.time() - start)/seg, 
-                                                        'm' if seg != 1.0 else 's' , 
+logging.info("FINISHED! in %f %s. See output: %s \n" % ((time.time() - start)/seg,
+                                                        'm' if seg != 1.0 else 's' ,
                                                         output_name))
 
