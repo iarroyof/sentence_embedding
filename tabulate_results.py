@@ -9,6 +9,8 @@ results = "results_revision/"
 #DATA = "/almac/ignacio/data"
 DATA = "../data"
 out = "out_tab.csv"
+# cat out_tab.csv | parallel -- > out_all.out
+
 #filters = ["local", "trts"]
 filters = []
 with open(out, "w") as of:
