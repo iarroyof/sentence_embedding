@@ -171,6 +171,7 @@ if __name__ == "__main__":
         if args.verbose:
             logging.info("The word embeddings will be combined unweighted.")
         tfidf = None
+        seg = 1.0
     elif not os.path.isfile(args.idfmodel) and not args.idfmodel.startswith("local"):
         logging.info("IDF model file does not exist (EXIT):"
                 "\n%s\n ..." % args.idfmodel)
