@@ -43794,3 +43794,1385 @@ Traceback (most recent call last):
   File "sts.py", line 289, in <module>
     logging.info("FINISHED! in %f %s. See output: %s \n" % ((time.time() - start)/seg,
 NameError: name 'seg' is not defined
+2018-07-21 12:35:58,586 : INFO : FINISHED! in 3.397296 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trial-sum-manha.out 
+
+2018-07-21 12:36:04,656 : INFO : FINISHED! in 3.494952 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trial-sum-cosine.out 
+
+2018-07-21 12:36:08,705 : INFO : FINISHED! in 3.565408 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trial-sum-euclid.out 
+
+2018-07-21 12:36:20,748 : INFO : FINISHED! in 3.760780 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trial-avg-cosine.out 
+
+2018-07-21 12:38:55,960 : INFO : FINISHED! in 2.513436 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trial-avg-euclid.out 
+
+2018-07-21 12:39:48,668 : INFO : FINISHED! in 7.227267 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-cosine.out 
+
+2018-07-21 12:39:54,754 : INFO : FINISHED! in 7.334487 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-manha.out 
+
+2018-07-21 12:39:56,711 : INFO : FINISHED! in 7.369742 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-cosine.out 
+
+2018-07-21 12:39:57,087 : INFO : FINISHED! in 7.368224 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_test-sum-euclid.out 
+
+2018-07-21 12:40:16,680 : INFO : FINISHED! in 7.699545 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_dev-sum-euclid.out 
+
+2018-07-21 12:40:20,040 : INFO : FINISHED! in 7.757428 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_dev-sum-cosine.out 
+
+2018-07-21 12:40:18,712 : INFO : FINISHED! in 7.732987 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_dev-sum-manha.out 
+
+2018-07-21 12:40:20,953 : INFO : FINISHED! in 7.769669 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_dev-avg-cosine.out 
+
+2018-07-21 12:42:48,533 : INFO : FINISHED! in 6.593424 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-euclid.out 
+
+2018-07-21 12:43:05,769 : INFO : FINISHED! in 3.064264 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trial-avg-manha.out 
+
+2018-07-21 12:43:26,139 : INFO : FINISHED! in 7.340085 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_dev-avg-euclid.out 
+
+2018-07-21 12:45:35,871 : INFO : FINISHED! in 2.662189 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trial-sum-cosine.out 
+
+2018-07-21 12:46:55,756 : INFO : FINISHED! in 6.917308 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_test-avg-manha.out 
+
+2018-07-21 12:48:04,089 : INFO : FINISHED! in 8.136846 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_dev-avg-manha.out 
+
+2018-07-21 12:48:12,372 : INFO : FINISHED! in 7.790845 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_test-sum-cosine.out 
+
+2018-07-21 12:48:19,201 : INFO : FINISHED! in 7.917431 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_dev-sum-cosine.out 
+
+2018-07-21 12:51:26,902 : INFO : FINISHED! in 7.901422 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_dev-sum-euclid.out 
+
+2018-07-21 12:51:27,447 : INFO : FINISHED! in 3.273191 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trial-sum-euclid.out 
+
+2018-07-21 12:53:43,678 : INFO : FINISHED! in 8.019866 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_test-sum-euclid.out 
+
+2018-07-21 12:57:16,372 : INFO : FINISHED! in 8.857193 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_dev-sum-manha.out 
+
+2018-07-21 12:57:52,317 : INFO : FINISHED! in 4.021811 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trial-sum-manha.out 
+
+2018-07-21 12:59:30,404 : INFO : FINISHED! in 7.932802 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_test-sum-manha.out 
+
+2018-07-21 13:01:06,272 : INFO : FINISHED! in 28.526608 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_train-sum-euclid.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+sts.py:37: RuntimeWarning: invalid value encountered in double_scalars
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 13:01:14,436 : INFO : FINISHED! in 28.662255 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_train-sum-cosine.out 
+
+2018-07-21 13:01:28,675 : INFO : FINISHED! in 28.899164 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_train-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 13:01:28,136 : INFO : FINISHED! in 28.884197 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_train-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 13:04:47,501 : INFO : FINISHED! in 28.555627 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_train-avg-euclid.out 
+
+2018-07-21 13:04:48,829 : INFO : FINISHED! in 3.480833 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trial-avg-cosine.out 
+
+2018-07-21 13:06:02,460 : INFO : FINISHED! in 8.059514 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_dev-avg-cosine.out 
+
+2018-07-21 13:07:43,232 : INFO : FINISHED! in 8.091779 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_test-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 13:09:18,803 : INFO : FINISHED! in 29.281970 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-bmk_train-avg-manha.out 
+
+2018-07-21 13:09:41,884 : INFO : FINISHED! in 3.522404 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trial-avg-euclid.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 13:10:45,676 : INFO : FINISHED! in 30.331557 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_train-sum-cosine.out 
+
+2018-07-21 13:11:03,887 : INFO : FINISHED! in 9.500237 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_dev-avg-euclid.out 
+
+2018-07-21 13:12:56,129 : INFO : FINISHED! in 8.041914 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_test-avg-euclid.out 
+
+2018-07-21 13:14:21,080 : INFO : FINISHED! in 3.179822 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trial-avg-manha.out 
+
+2018-07-21 13:17:33,139 : INFO : FINISHED! in 30.499874 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_train-sum-euclid.out 
+
+2018-07-21 13:17:48,592 : INFO : FINISHED! in 7.995481 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_test-avg-manha.out 
+
+2018-07-21 13:18:15,803 : INFO : FINISHED! in 8.816570 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_dev-avg-manha.out 
+
+2018-07-21 13:21:13,531 : INFO : FINISHED! in 48.643331 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trts-sum-euclid.out 
+
+2018-07-21 13:21:36,023 : INFO : FINISHED! in 49.015553 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trts-sum-manha.out 
+
+2018-07-21 13:21:43,473 : INFO : FINISHED! in 49.141772 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trts-sum-cosine.out 
+
+2018-07-21 13:21:50,702 : INFO : FINISHED! in 49.259120 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trts-avg-cosine.out 
+
+2018-07-21 13:21:52,995 : INFO : FINISHED! in 3.497052 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trial-sum-cosine.out 
+
+2018-07-21 13:22:16,437 : INFO : FINISHED! in 30.673117 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_train-sum-manha.out 
+
+2018-07-21 13:24:48,638 : INFO : FINISHED! in 10.348216 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_dev-sum-cosine.out 
+
+2018-07-21 13:25:42,961 : INFO : FINISHED! in 3.733317 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trial-sum-euclid.out 
+
+2018-07-21 13:25:45,575 : INFO : FINISHED! in 8.068157 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_test-sum-cosine.out 
+
+2018-07-21 13:28:32,277 : INFO : FINISHED! in 49.497954 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trts-avg-euclid.out 
+
+2018-07-21 13:29:49,219 : INFO : FINISHED! in 7.987338 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_test-sum-euclid.out 
+
+2018-07-21 13:30:01,349 : INFO : FINISHED! in 49.645691 m. See output: results_revision/global-tfidf-freq-ost-dep2vec-300d-sick_trts-avg-manha.out 
+
+2018-07-21 13:30:13,445 : INFO : FINISHED! in 8.521402 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_dev-sum-euclid.out 
+
+2018-07-21 13:32:08,385 : INFO : FINISHED! in 3.484923 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 13:32:41,830 : INFO : FINISHED! in 31.473957 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_train-avg-cosine.out 
+
+2018-07-21 13:32:57,257 : INFO : FINISHED! in 49.723144 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trts-sum-cosine.out 
+
+2018-07-21 13:33:12,260 : INFO : FINISHED! in 8.265093 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_dev-sum-manha.out 
+
+2018-07-21 13:33:28,810 : INFO : FINISHED! in 7.613872 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_test-sum-manha.out 
+
+2018-07-21 13:36:24,951 : INFO : FINISHED! in 3.603536 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trial-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 13:36:28,340 : INFO : FINISHED! in 31.539410 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_train-avg-euclid.out 
+
+2018-07-21 13:39:18,354 : INFO : FINISHED! in 8.958030 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_test-avg-cosine.out 
+
+2018-07-21 13:39:19,964 : INFO : FINISHED! in 9.186591 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_dev-avg-cosine.out 
+
+2018-07-21 13:39:28,449 : INFO : FINISHED! in 51.144917 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trts-sum-euclid.out 
+
+2018-07-21 13:39:49,173 : INFO : FINISHED! in 3.231711 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trial-avg-euclid.out 
+
+2018-07-21 13:41:34,688 : INFO : FINISHED! in 7.992228 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_test-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 13:42:29,183 : INFO : FINISHED! in 31.604873 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-bmk_train-avg-manha.out 
+
+2018-07-21 13:42:49,247 : INFO : FINISHED! in 9.500229 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_dev-avg-euclid.out 
+
+2018-07-21 13:45:22,649 : INFO : FINISHED! in 3.662640 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trial-avg-manha.out 
+
+2018-07-21 13:47:54,817 : INFO : FINISHED! in 8.328610 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_test-avg-manha.out 
+
+2018-07-21 13:47:58,515 : INFO : FINISHED! in 50.541796 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trts-sum-manha.out 
+
+2018-07-21 13:48:21,750 : INFO : FINISHED! in 8.907369 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_dev-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 13:48:28,512 : INFO : FINISHED! in 30.540814 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_train-sum-cosine.out 
+
+2018-07-21 13:50:55,081 : INFO : FINISHED! in 2.818997 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trial-sum-cosine.out 
+
+2018-07-21 13:51:14,825 : INFO : FINISHED! in 8.285640 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_dev-sum-cosine.out 
+
+2018-07-21 13:52:27,177 : INFO : FINISHED! in 30.503792 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_train-sum-euclid.out 
+
+2018-07-21 13:52:41,989 : INFO : FINISHED! in 51.115664 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trts-avg-cosine.out 
+
+2018-07-21 13:52:44,820 : INFO : FINISHED! in 7.232631 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_test-sum-cosine.out 
+
+2018-07-21 13:55:47,327 : INFO : FINISHED! in 29.910453 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_train-sum-manha.out 
+
+2018-07-21 13:56:07,133 : INFO : FINISHED! in 3.509315 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trial-sum-euclid.out 
+
+2018-07-21 13:56:36,232 : INFO : FINISHED! in 8.028736 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_dev-sum-euclid.out 
+
+2018-07-21 13:58:08,773 : INFO : FINISHED! in 50.311602 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trts-avg-euclid.out 
+
+2018-07-21 13:58:54,559 : INFO : FINISHED! in 7.863548 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_test-sum-euclid.out 
+
+2018-07-21 13:59:43,664 : INFO : FINISHED! in 3.013928 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trial-sum-manha.out 
+
+2018-07-21 14:01:06,367 : INFO : FINISHED! in 8.230403 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_dev-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 14:02:28,605 : INFO : FINISHED! in 30.192074 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_train-avg-cosine.out 
+
+2018-07-21 14:03:00,364 : INFO : FINISHED! in 49.962620 m. See output: results_revision/global-tfidf-freq-ost-fstx-1000d-sick_trts-avg-manha.out 
+
+2018-07-21 14:03:08,877 : INFO : FINISHED! in 7.231720 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_test-sum-manha.out 
+
+2018-07-21 14:06:04,477 : INFO : FINISHED! in 3.478283 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trial-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 14:06:31,333 : INFO : FINISHED! in 29.990955 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_train-avg-euclid.out 
+
+2018-07-21 14:07:54,990 : INFO : FINISHED! in 8.059211 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_test-avg-cosine.out 
+
+2018-07-21 14:07:55,875 : INFO : FINISHED! in 8.901667 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_dev-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 14:09:47,617 : INFO : FINISHED! in 29.871918 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-bmk_train-avg-manha.out 
+
+2018-07-21 14:10:24,354 : INFO : FINISHED! in 49.053678 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trts-sum-cosine.out 
+
+2018-07-21 14:10:48,430 : INFO : FINISHED! in 2.771303 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trial-avg-euclid.out 
+
+2018-07-21 14:11:14,566 : INFO : FINISHED! in 48.836723 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trts-sum-euclid.out 
+
+2018-07-21 14:11:32,539 : INFO : FINISHED! in 8.276693 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_dev-avg-euclid.out 
+
+2018-07-21 14:14:02,260 : INFO : FINISHED! in 7.822887 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_test-avg-euclid.out 
+
+2018-07-21 14:14:56,173 : INFO : FINISHED! in 3.552521 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trial-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 14:17:10,449 : INFO : FINISHED! in 29.137665 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_train-sum-cosine.out 
+
+2018-07-21 14:17:59,841 : INFO : FINISHED! in 8.068508 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_dev-avg-manha.out 
+
+2018-07-21 14:18:02,895 : INFO : FINISHED! in 7.523024 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_test-avg-manha.out 
+
+2018-07-21 14:19:26,765 : INFO : FINISHED! in 49.490306 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trts-sum-manha.out 
+
+2018-07-21 14:20:47,309 : INFO : FINISHED! in 29.422001 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_train-sum-euclid.out 
+
+2018-07-21 14:21:29,940 : INFO : FINISHED! in 3.377818 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trial-sum-cosine.out 
+
+2018-07-21 14:21:39,860 : INFO : FINISHED! in 48.600383 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trts-avg-cosine.out 
+
+2018-07-21 14:22:43,956 : INFO : FINISHED! in 7.683343 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_test-sum-cosine.out 
+
+2018-07-21 14:23:15,518 : INFO : FINISHED! in 9.109294 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_dev-sum-cosine.out 
+
+2018-07-21 14:24:48,005 : INFO : FINISHED! in 3.012646 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trial-sum-euclid.out 
+
+2018-07-21 14:25:53,266 : INFO : FINISHED! in 29.645593 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_train-sum-manha.out 
+
+2018-07-21 14:27:36,361 : INFO : FINISHED! in 48.170768 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trts-avg-euclid.out 
+
+2018-07-21 14:29:14,007 : INFO : FINISHED! in 8.334080 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_test-sum-euclid.out 
+
+2018-07-21 14:29:16,900 : INFO : FINISHED! in 9.710832 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_dev-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 14:31:16,175 : INFO : FINISHED! in 30.036675 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_train-avg-cosine.out 
+
+2018-07-21 14:31:28,540 : INFO : FINISHED! in 3.748436 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trial-sum-manha.out 
+
+2018-07-21 14:31:42,760 : INFO : FINISHED! in 49.108467 m. See output: results_revision/global-tfidf-freq-ost-fstx-100d-sick_trts-avg-manha.out 
+
+2018-07-21 14:33:37,324 : INFO : FINISHED! in 10.238997 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_dev-sum-manha.out 
+
+2018-07-21 14:33:44,170 : INFO : FINISHED! in 8.831033 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_test-sum-manha.out 
+
+2018-07-21 14:35:13,973 : INFO : FINISHED! in 3.400433 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trial-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 14:36:22,534 : INFO : FINISHED! in 29.738862 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_train-avg-euclid.out 
+
+2018-07-21 14:38:30,291 : INFO : FINISHED! in 50.020986 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trts-sum-cosine.out 
+
+2018-07-21 14:39:03,433 : INFO : FINISHED! in 9.641888 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_dev-avg-cosine.out 
+
+2018-07-21 14:39:49,149 : INFO : FINISHED! in 8.432183 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_test-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 14:42:09,933 : INFO : FINISHED! in 31.249456 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-bmk_train-avg-manha.out 
+
+2018-07-21 14:42:32,674 : INFO : FINISHED! in 3.882762 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trial-avg-euclid.out 
+
+2018-07-21 14:42:50,653 : INFO : FINISHED! in 50.022817 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trts-sum-euclid.out 
+
+2018-07-21 14:43:00,249 : INFO : FINISHED! in 9.149291 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_dev-avg-euclid.out 
+
+2018-07-21 14:43:59,937 : INFO : FINISHED! in 8.638509 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_test-avg-euclid.out 
+
+2018-07-21 14:46:32,095 : INFO : FINISHED! in 3.582049 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trial-avg-manha.out 
+
+2018-07-21 14:48:09,680 : INFO : FINISHED! in 8.201549 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_dev-avg-manha.out 
+
+2018-07-21 14:48:40,786 : INFO : FINISHED! in 50.412159 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trts-sum-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 14:49:03,223 : INFO : FINISHED! in 31.760962 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_train-sum-cosine.out 
+
+2018-07-21 14:49:07,176 : INFO : FINISHED! in 6.816818 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_test-avg-manha.out 
+
+2018-07-21 14:52:38,718 : INFO : FINISHED! in 30.989066 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_train-sum-euclid.out 
+
+2018-07-21 14:52:50,080 : INFO : FINISHED! in 8.716700 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_dev-sum-cosine.out 
+
+2018-07-21 14:52:59,350 : INFO : FINISHED! in 4.192637 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trial-sum-cosine.out 
+
+2018-07-21 14:53:59,365 : INFO : FINISHED! in 7.321806 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_test-sum-cosine.out 
+
+2018-07-21 14:54:34,604 : INFO : FINISHED! in 51.455881 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trts-avg-cosine.out 
+
+2018-07-21 14:57:18,167 : INFO : FINISHED! in 4.216231 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trial-sum-euclid.out 
+
+2018-07-21 14:58:27,566 : INFO : FINISHED! in 32.448248 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_train-sum-manha.out 
+
+2018-07-21 14:59:18,569 : INFO : FINISHED! in 51.259248 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trts-avg-euclid.out 
+
+2018-07-21 14:59:24,840 : INFO : FINISHED! in 10.177169 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_dev-sum-euclid.out 
+
+2018-07-21 15:01:55,357 : INFO : FINISHED! in 9.125882 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_test-sum-euclid.out 
+
+2018-07-21 15:02:30,736 : INFO : FINISHED! in 50.858989 m. See output: results_revision/global-tfidf-freq-ost-fstx-200d-sick_trts-avg-manha.out 
+
+2018-07-21 15:02:58,039 : INFO : FINISHED! in 3.521032 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:03:03,148 : INFO : FINISHED! in 31.434289 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_train-avg-cosine.out 
+
+2018-07-21 15:03:43,869 : INFO : FINISHED! in 9.041684 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_dev-sum-manha.out 
+
+2018-07-21 15:06:13,315 : INFO : FINISHED! in 8.815616 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_test-sum-manha.out 
+
+2018-07-21 15:07:00,508 : INFO : FINISHED! in 3.852279 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trial-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:07:53,148 : INFO : FINISHED! in 31.396613 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_train-avg-euclid.out 
+
+2018-07-21 15:08:39,671 : INFO : FINISHED! in 50.505921 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trts-sum-cosine.out 
+
+2018-07-21 15:09:19,396 : INFO : FINISHED! in 6.713472 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_test-avg-cosine.out 
+
+2018-07-21 15:09:26,122 : INFO : FINISHED! in 7.396054 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_dev-avg-cosine.out 
+
+2018-07-21 15:11:03,212 : INFO : FINISHED! in 2.273318 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trial-avg-euclid.out 
+
+2018-07-21 15:11:43,023 : INFO : FINISHED! in 48.880659 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trts-sum-euclid.out 
+
+2018-07-21 15:12:17,533 : INFO : FINISHED! in 5.954521 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_dev-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:12:35,859 : INFO : FINISHED! in 29.929609 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-bmk_train-avg-manha.out 
+
+2018-07-21 15:13:58,809 : INFO : FINISHED! in 6.843966 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_test-avg-euclid.out 
+
+2018-07-21 15:15:24,397 : INFO : FINISHED! in 2.998332 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trial-avg-manha.out 
+
+2018-07-21 15:15:57,484 : INFO : FINISHED! in 6.411140 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_dev-avg-manha.out 
+
+2018-07-21 15:16:31,531 : INFO : FINISHED! in 47.183978 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trts-sum-manha.out 
+
+2018-07-21 15:17:04,149 : INFO : FINISHED! in 5.914173 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_test-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 15:18:37,276 : INFO : FINISHED! in 30.339153 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_train-sum-cosine.out 
+
+2018-07-21 15:19:58,258 : INFO : FINISHED! in 3.333051 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trial-sum-cosine.out 
+
+2018-07-21 15:20:36,982 : INFO : FINISHED! in 27.659821 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_train-sum-euclid.out 
+
+2018-07-21 15:23:42,642 : INFO : FINISHED! in 9.617430 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_dev-sum-cosine.out 
+
+2018-07-21 15:23:45,731 : INFO : FINISHED! in 49.995647 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trts-avg-cosine.out 
+
+2018-07-21 15:24:22,653 : INFO : FINISHED! in 8.837079 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_test-sum-cosine.out 
+
+2018-07-21 15:26:40,055 : INFO : FINISHED! in 2.869393 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trial-sum-euclid.out 
+
+2018-07-21 15:27:20,370 : INFO : FINISHED! in 28.712810 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_train-sum-manha.out 
+
+2018-07-21 15:27:27,004 : INFO : FINISHED! in 7.349165 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_test-sum-euclid.out 
+
+2018-07-21 15:27:47,623 : INFO : FINISHED! in 9.053130 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_dev-sum-euclid.out 
+
+2018-07-21 15:28:12,562 : INFO : FINISHED! in 49.009666 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trts-avg-euclid.out 
+
+2018-07-21 15:29:00,138 : INFO : FINISHED! in 45.863671 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-sick_trts-avg-manha.out 
+
+2018-07-21 15:30:05,630 : INFO : FINISHED! in 2.551066 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:30:42,049 : INFO : FINISHED! in 27.607567 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_train-avg-cosine.out 
+
+2018-07-21 15:31:27,263 : INFO : FINISHED! in 6.952154 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_dev-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:32:58,767 : INFO : FINISHED! in 24.980117 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_train-avg-euclid.out 
+
+2018-07-21 15:33:00,135 : INFO : FINISHED! in 6.200224 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_test-sum-manha.out 
+
+2018-07-21 15:33:37,747 : INFO : FINISHED! in 2.805209 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trial-avg-cosine.out 
+
+2018-07-21 15:35:19,666 : INFO : FINISHED! in 7.001686 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_dev-avg-cosine.out 
+
+2018-07-21 15:35:24,316 : INFO : FINISHED! in 6.283367 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_test-avg-cosine.out 
+
+2018-07-21 15:36:15,557 : INFO : FINISHED! in 47.079189 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trts-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:37:56,542 : INFO : FINISHED! in 26.122055 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-bmk_train-avg-manha.out 
+
+2018-07-21 15:38:09,883 : INFO : FINISHED! in 2.717986 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trial-avg-euclid.out 
+
+2018-07-21 15:39:13,965 : INFO : FINISHED! in 45.086862 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trts-sum-euclid.out 
+
+2018-07-21 15:39:36,312 : INFO : FINISHED! in 6.495002 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_test-avg-euclid.out 
+
+2018-07-21 15:40:02,987 : INFO : FINISHED! in 6.963420 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_dev-avg-euclid.out 
+
+2018-07-21 15:42:06,215 : INFO : FINISHED! in 2.747795 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trial-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 15:43:04,412 : INFO : FINISHED! in 27.016039 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_train-sum-cosine.out 
+
+2018-07-21 15:43:29,666 : INFO : FINISHED! in 43.944130 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trts-sum-manha.out 
+
+2018-07-21 15:43:31,298 : INFO : FINISHED! in 7.151379 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_dev-avg-manha.out 
+
+2018-07-21 15:44:11,480 : INFO : FINISHED! in 6.136804 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_test-avg-manha.out 
+
+2018-07-21 15:45:52,778 : INFO : FINISHED! in 25.131914 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_train-sum-euclid.out 
+
+2018-07-21 15:46:22,763 : INFO : FINISHED! in 2.772667 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trial-sum-cosine.out 
+
+2018-07-21 15:46:48,742 : INFO : FINISHED! in 6.648890 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_dev-sum-cosine.out 
+
+2018-07-21 15:47:20,855 : INFO : FINISHED! in 43.468866 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trts-avg-cosine.out 
+
+2018-07-21 15:48:24,039 : INFO : FINISHED! in 6.170410 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_test-sum-cosine.out 
+
+2018-07-21 15:49:32,985 : INFO : FINISHED! in 2.631352 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trial-sum-euclid.out 
+
+2018-07-21 15:49:52,198 : INFO : FINISHED! in 40.437436 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trts-avg-euclid.out 
+
+2018-07-21 15:50:39,979 : INFO : FINISHED! in 6.374365 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_dev-sum-euclid.out 
+
+2018-07-21 15:51:12,974 : INFO : FINISHED! in 23.759272 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_train-sum-manha.out 
+
+2018-07-21 15:51:48,645 : INFO : FINISHED! in 5.823447 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_test-sum-euclid.out 
+
+2018-07-21 15:53:08,149 : INFO : FINISHED! in 40.429392 m. See output: results_revision/global-tfidf-freq-ost-fstx-500d-sick_trts-avg-manha.out 
+
+2018-07-21 15:53:17,108 : INFO : FINISHED! in 2.518667 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:53:40,812 : INFO : FINISHED! in 23.451436 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_train-avg-cosine.out 
+
+2018-07-21 15:55:12,396 : INFO : FINISHED! in 5.535421 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_test-sum-manha.out 
+
+2018-07-21 15:55:40,512 : INFO : FINISHED! in 7.146761 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_dev-sum-manha.out 
+
+2018-07-21 15:56:16,475 : INFO : FINISHED! in 2.502542 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trial-avg-cosine.out 
+
+2018-07-21 15:57:01,786 : INFO : FINISHED! in 39.844159 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trts-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 15:57:56,141 : INFO : FINISHED! in 24.181886 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_train-avg-euclid.out 
+
+2018-07-21 15:58:00,626 : INFO : FINISHED! in 6.078582 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_dev-avg-cosine.out 
+
+2018-07-21 15:58:46,532 : INFO : FINISHED! in 5.525667 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_test-avg-cosine.out 
+
+2018-07-21 16:00:44,923 : INFO : FINISHED! in 2.681395 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trial-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:00:51,816 : INFO : FINISHED! in 22.565208 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-bmk_train-avg-manha.out 
+
+2018-07-21 16:01:55,046 : INFO : FINISHED! in 5.531783 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_test-avg-euclid.out 
+
+2018-07-21 16:02:57,412 : INFO : FINISHED! in 7.165042 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_dev-avg-euclid.out 
+
+2018-07-21 16:03:30,230 : INFO : FINISHED! in 39.602361 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trts-sum-euclid.out 
+
+2018-07-21 16:04:25,065 : INFO : FINISHED! in 2.385575 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trial-avg-manha.out 
+
+2018-07-21 16:04:58,243 : INFO : FINISHED! in 6.092708 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_dev-avg-manha.out 
+
+2018-07-21 16:05:04,630 : INFO : FINISHED! in 37.172790 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trts-sum-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 16:05:10,588 : INFO : FINISHED! in 21.969674 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_train-sum-cosine.out 
+
+2018-07-21 16:07:21,748 : INFO : FINISHED! in 6.479693 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_test-avg-manha.out 
+
+2018-07-21 16:07:33,134 : INFO : FINISHED! in 2.377362 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trial-sum-cosine.out 
+
+2018-07-21 16:10:57,576 : INFO : FINISHED! in 7.335847 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_dev-sum-cosine.out 
+
+2018-07-21 16:11:01,560 : INFO : FINISHED! in 39.458150 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trts-avg-cosine.out 
+
+2018-07-21 16:11:09,164 : INFO : FINISHED! in 6.609132 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_test-sum-cosine.out 
+
+2018-07-21 16:11:18,658 : INFO : FINISHED! in 24.803872 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_train-sum-euclid.out 
+
+2018-07-21 16:11:36,153 : INFO : FINISHED! in 21.630493 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_train-sum-manha.out 
+
+2018-07-21 16:13:46,742 : INFO : FINISHED! in 6.134479 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_test-sum-euclid.out 
+
+2018-07-21 16:13:51,625 : INFO : FINISHED! in 2.712943 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trial-sum-euclid.out 
+
+2018-07-21 16:14:11,325 : INFO : FINISHED! in 6.687928 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_dev-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:14:58,097 : INFO : FINISHED! in 21.576670 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_train-avg-cosine.out 
+
+2018-07-21 16:15:15,466 : INFO : FINISHED! in 39.733723 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trts-avg-euclid.out 
+
+2018-07-21 16:16:44,117 : INFO : FINISHED! in 2.750028 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trial-sum-manha.out 
+
+2018-07-21 16:17:38,370 : INFO : FINISHED! in 5.927766 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_test-sum-manha.out 
+
+2018-07-21 16:18:16,487 : INFO : FINISHED! in 6.864912 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_dev-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:18:55,445 : INFO : FINISHED! in 21.775631 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_train-avg-euclid.out 
+
+2018-07-21 16:18:59,019 : INFO : FINISHED! in 39.252052 m. See output: results_revision/global-tfidf-freq-ost-fstx-50d-sick_trts-avg-manha.out 
+
+2018-07-21 16:20:32,692 : INFO : FINISHED! in 2.789133 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trial-avg-cosine.out 
+
+2018-07-21 16:22:14,711 : INFO : FINISHED! in 6.854012 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_test-avg-cosine.out 
+
+2018-07-21 16:22:20,263 : INFO : FINISHED! in 7.253437 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_dev-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:24:00,366 : INFO : FINISHED! in 23.048813 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-bmk_train-avg-manha.out 
+
+2018-07-21 16:24:06,225 : INFO : FINISHED! in 40.477806 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trts-sum-cosine.out 
+
+2018-07-21 16:25:34,569 : INFO : FINISHED! in 3.214967 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trial-avg-euclid.out 
+
+2018-07-21 16:26:28,287 : INFO : FINISHED! in 7.372354 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_test-avg-euclid.out 
+
+2018-07-21 16:27:17,721 : INFO : FINISHED! in 8.247340 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_dev-avg-euclid.out 
+
+2018-07-21 16:27:58,086 : INFO : FINISHED! in 40.510688 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trts-sum-euclid.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 16:29:45,763 : INFO : FINISHED! in 24.688863 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_train-sum-cosine.out 
+
+2018-07-21 16:30:25,900 : INFO : FINISHED! in 3.829503 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trial-avg-manha.out 
+
+2018-07-21 16:31:23,639 : INFO : FINISHED! in 7.188158 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_test-avg-manha.out 
+
+2018-07-21 16:32:21,061 : INFO : FINISHED! in 8.204170 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_dev-avg-manha.out 
+
+2018-07-21 16:33:30,799 : INFO : FINISHED! in 42.173583 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trts-sum-manha.out 
+
+2018-07-21 16:34:19,710 : INFO : FINISHED! in 39.009114 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trts-avg-cosine.out 
+
+2018-07-21 16:34:51,657 : INFO : FINISHED! in 3.356765 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trial-sum-cosine.out 
+
+2018-07-21 16:36:44,220 : INFO : FINISHED! in 8.645106 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_dev-sum-cosine.out 
+
+2018-07-21 16:36:55,238 : INFO : FINISHED! in 7.046371 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_test-sum-cosine.out 
+
+2018-07-21 16:37:51,838 : INFO : FINISHED! in 26.786681 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_train-sum-euclid.out 
+
+2018-07-21 16:40:28,836 : INFO : FINISHED! in 3.574581 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trial-sum-euclid.out 
+
+2018-07-21 16:40:36,450 : INFO : FINISHED! in 26.722156 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_train-sum-manha.out 
+
+2018-07-21 16:41:07,957 : INFO : FINISHED! in 43.001912 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trts-avg-euclid.out 
+
+2018-07-21 16:41:25,465 : INFO : FINISHED! in 6.997806 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_test-sum-euclid.out 
+
+2018-07-21 16:41:48,321 : INFO : FINISHED! in 8.146192 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_dev-sum-euclid.out 
+
+2018-07-21 16:44:25,641 : INFO : FINISHED! in 41.348991 m. See output: results_revision/global-tfidf-freq-ost-glove-200d-sick_trts-avg-manha.out 
+
+2018-07-21 16:44:52,660 : INFO : FINISHED! in 3.628710 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:45:59,882 : INFO : FINISHED! in 29.134217 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_train-avg-cosine.out 
+
+2018-07-21 16:47:19,522 : INFO : FINISHED! in 9.345699 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_dev-sum-manha.out 
+
+2018-07-21 16:47:55,589 : INFO : FINISHED! in 42.647223 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trts-sum-cosine.out 
+
+2018-07-21 16:48:25,314 : INFO : FINISHED! in 7.801714 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:48:51,005 : INFO : FINISHED! in 28.176290 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_train-avg-euclid.out 
+
+2018-07-21 16:49:17,837 : INFO : FINISHED! in 3.163246 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trial-avg-cosine.out 
+
+2018-07-21 16:51:03,457 : INFO : FINISHED! in 9.142360 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_dev-avg-cosine.out 
+
+2018-07-21 16:52:38,689 : INFO : FINISHED! in 8.111737 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_test-avg-cosine.out 
+
+2018-07-21 16:53:15,067 : INFO : FINISHED! in 3.833301 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trial-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 16:54:37,442 : INFO : FINISHED! in 28.929652 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-bmk_train-avg-manha.out 
+
+2018-07-21 16:56:22,100 : INFO : FINISHED! in 7.852693 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_test-avg-euclid.out 
+
+2018-07-21 16:56:23,957 : INFO : FINISHED! in 8.373752 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_dev-avg-euclid.out 
+
+2018-07-21 16:58:09,307 : INFO : FINISHED! in 46.900616 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trts-sum-euclid.out 
+
+2018-07-21 16:59:49,285 : INFO : FINISHED! in 3.346253 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trial-avg-manha.out 
+
+2018-07-21 16:59:50,246 : INFO : FINISHED! in 45.527478 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trts-sum-manha.out 
+
+2018-07-21 17:00:33,201 : INFO : FINISHED! in 7.806773 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_dev-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 17:01:36,056 : INFO : FINISHED! in 31.023312 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_train-sum-cosine.out 
+
+2018-07-21 17:01:53,033 : INFO : FINISHED! in 8.485622 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_test-avg-manha.out 
+
+2018-07-21 17:03:51,635 : INFO : FINISHED! in 3.189456 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trial-sum-cosine.out 
+
+2018-07-21 17:04:17,702 : INFO : FINISHED! in 29.330148 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_train-sum-euclid.out 
+
+2018-07-21 17:08:08,842 : INFO : FINISHED! in 9.838017 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_dev-sum-cosine.out 
+
+2018-07-21 17:08:47,720 : INFO : FINISHED! in 50.397284 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trts-avg-cosine.out 
+
+2018-07-21 17:08:57,761 : INFO : FINISHED! in 9.022939 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_test-sum-cosine.out 
+
+2018-07-21 17:09:21,654 : INFO : FINISHED! in 46.909539 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trts-avg-euclid.out 
+
+2018-07-21 17:10:35,670 : INFO : FINISHED! in 29.865270 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_train-sum-manha.out 
+
+2018-07-21 17:11:08,419 : INFO : FINISHED! in 2.869273 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trial-sum-euclid.out 
+
+2018-07-21 17:11:22,343 : INFO : FINISHED! in 7.369618 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_test-sum-euclid.out 
+
+2018-07-21 17:11:33,998 : INFO : FINISHED! in 9.552471 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_dev-sum-euclid.out 
+
+2018-07-21 17:13:51,253 : INFO : FINISHED! in 2.591587 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trial-sum-manha.out 
+
+2018-07-21 17:15:30,777 : INFO : FINISHED! in 6.037031 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 17:15:45,289 : INFO : FINISHED! in 30.752836 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_train-avg-cosine.out 
+
+2018-07-21 17:16:22,171 : INFO : FINISHED! in 7.291784 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_dev-sum-manha.out 
+
+2018-07-21 17:16:39,549 : INFO : FINISHED! in 49.213451 m. See output: results_revision/global-tfidf-freq-ost-glove-300d-sick_trts-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 17:16:57,945 : INFO : FINISHED! in 28.017819 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_train-avg-euclid.out 
+
+2018-07-21 17:18:30,679 : INFO : FINISHED! in 2.621382 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trial-avg-cosine.out 
+
+2018-07-21 17:18:46,638 : INFO : FINISHED! in 7.083187 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_dev-avg-cosine.out 
+
+2018-07-21 17:19:52,912 : INFO : FINISHED! in 5.917561 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_test-avg-cosine.out 
+
+2018-07-21 17:20:46,704 : INFO : FINISHED! in 48.285084 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trts-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 17:21:00,396 : INFO : FINISHED! in 26.274358 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-bmk_train-avg-manha.out 
+
+2018-07-21 17:21:42,010 : INFO : FINISHED! in 2.807580 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trial-avg-euclid.out 
+
+2018-07-21 17:23:23,765 : INFO : FINISHED! in 6.319777 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_test-avg-euclid.out 
+
+2018-07-21 17:23:36,002 : INFO : FINISHED! in 6.825404 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_dev-avg-euclid.out 
+
+2018-07-21 17:24:26,614 : INFO : FINISHED! in 47.389376 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trts-sum-euclid.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 17:25:14,644 : INFO : FINISHED! in 25.302266 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_train-sum-cosine.out 
+
+2018-07-21 17:26:07,751 : INFO : FINISHED! in 44.613073 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trts-sum-manha.out 
+
+2018-07-21 17:26:07,718 : INFO : FINISHED! in 2.618324 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trial-avg-manha.out 
+
+2018-07-21 17:27:09,694 : INFO : FINISHED! in 6.032536 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_test-avg-manha.out 
+
+2018-07-21 17:27:28,258 : INFO : FINISHED! in 6.556247 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_dev-avg-manha.out 
+
+2018-07-21 17:29:02,915 : INFO : FINISHED! in 2.797581 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trial-sum-cosine.out 
+
+2018-07-21 17:29:06,377 : INFO : FINISHED! in 24.676446 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_train-sum-euclid.out 
+
+2018-07-21 17:31:39,284 : INFO : FINISHED! in 6.285230 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_test-sum-cosine.out 
+
+2018-07-21 17:31:49,629 : INFO : FINISHED! in 7.265206 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_dev-sum-cosine.out 
+
+2018-07-21 17:32:34,479 : INFO : FINISHED! in 45.110567 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trts-avg-cosine.out 
+
+2018-07-21 17:34:26,364 : INFO : FINISHED! in 2.669798 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trial-sum-euclid.out 
+
+2018-07-21 17:34:31,735 : INFO : FINISHED! in 6.933307 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_dev-sum-euclid.out 
+
+2018-07-21 17:35:00,215 : INFO : FINISHED! in 24.282852 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_train-sum-manha.out 
+
+2018-07-21 17:35:21,459 : INFO : FINISHED! in 44.153911 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trts-avg-euclid.out 
+
+2018-07-21 17:35:24,547 : INFO : FINISHED! in 6.240776 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_test-sum-euclid.out 
+
+2018-07-21 17:37:05,650 : INFO : FINISHED! in 40.588311 m. See output: results_revision/global-tfidf-freq-ost-w2v-1000d-sick_trts-avg-manha.out 
+
+2018-07-21 17:37:48,613 : INFO : FINISHED! in 2.675134 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 17:39:06,650 : INFO : FINISHED! in 23.478213 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_train-avg-cosine.out 
+
+2018-07-21 17:39:22,682 : INFO : FINISHED! in 6.670415 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_dev-sum-manha.out 
+
+2018-07-21 17:40:29,420 : INFO : FINISHED! in 5.941770 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 17:41:57,520 : INFO : FINISHED! in 23.324926 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_train-avg-euclid.out 
+
+2018-07-21 17:42:04,253 : INFO : FINISHED! in 2.839509 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trial-avg-cosine.out 
+
+2018-07-21 17:42:22,122 : INFO : FINISHED! in 6.858409 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_dev-avg-cosine.out 
+
+2018-07-21 17:43:00,311 : INFO : FINISHED! in 41.262113 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trts-sum-cosine.out 
+
+2018-07-21 17:43:03,362 : INFO : FINISHED! in 5.846621 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_test-avg-cosine.out 
+
+2018-07-21 17:45:17,862 : INFO : FINISHED! in 2.805588 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trial-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 17:45:46,276 : INFO : FINISHED! in 23.942478 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-bmk_train-avg-manha.out 
+
+2018-07-21 17:47:28,533 : INFO : FINISHED! in 38.561935 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trts-sum-euclid.out 
+
+2018-07-21 17:47:28,507 : INFO : FINISHED! in 6.871741 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_dev-avg-euclid.out 
+
+2018-07-21 17:48:17,846 : INFO : FINISHED! in 6.229020 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_test-avg-euclid.out 
+
+2018-07-21 17:49:13,935 : INFO : FINISHED! in 37.766967 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trts-sum-manha.out 
+
+2018-07-21 17:49:53,382 : INFO : FINISHED! in 6.723241 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_dev-avg-manha.out 
+
+2018-07-21 17:49:55,273 : INFO : FINISHED! in 2.347132 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trial-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 17:50:38,775 : INFO : FINISHED! in 24.399377 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_train-sum-cosine.out 
+
+2018-07-21 17:52:11,021 : INFO : FINISHED! in 22.962601 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_train-sum-euclid.out 
+
+2018-07-21 17:52:12,330 : INFO : FINISHED! in 6.770418 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_test-avg-manha.out 
+
+2018-07-21 17:52:32,689 : INFO : FINISHED! in 2.533023 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trial-sum-cosine.out 
+
+2018-07-21 17:54:44,550 : INFO : FINISHED! in 6.338780 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_dev-sum-cosine.out 
+
+2018-07-21 17:55:07,233 : INFO : FINISHED! in 5.776445 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_test-sum-cosine.out 
+
+2018-07-21 17:55:25,964 : INFO : FINISHED! in 38.952285 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trts-avg-cosine.out 
+
+2018-07-21 17:57:44,918 : INFO : FINISHED! in 23.102676 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_train-sum-manha.out 
+
+2018-07-21 17:57:53,619 : INFO : FINISHED! in 37.894340 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trts-avg-euclid.out 
+
+2018-07-21 17:57:55,787 : INFO : FINISHED! in 3.060358 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trial-sum-euclid.out 
+
+2018-07-21 17:58:17,828 : INFO : FINISHED! in 5.977291 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_test-sum-euclid.out 
+
+2018-07-21 17:58:46,214 : INFO : FINISHED! in 6.457510 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_dev-sum-euclid.out 
+
+2018-07-21 18:01:01,162 : INFO : FINISHED! in 2.985994 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trial-sum-manha.out 
+
+2018-07-21 18:03:57,916 : INFO : FINISHED! in 8.428639 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_dev-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:04:04,819 : INFO : FINISHED! in 26.148284 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_train-avg-cosine.out 
+
+2018-07-21 18:04:07,680 : INFO : FINISHED! in 40.410599 m. See output: results_revision/global-tfidf-freq-ost-w2v-100d-sick_trts-avg-manha.out 
+
+2018-07-21 18:04:40,371 : INFO : FINISHED! in 6.798298 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_test-sum-manha.out 
+
+2018-07-21 18:05:37,202 : INFO : FINISHED! in 38.346801 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trts-sum-cosine.out 
+
+2018-07-21 18:06:36,988 : INFO : FINISHED! in 2.429766 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trial-avg-cosine.out 
+
+2018-07-21 18:07:19,260 : INFO : FINISHED! in 6.185531 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_test-avg-cosine.out 
+
+2018-07-21 18:07:20,648 : INFO : FINISHED! in 8.431817 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_dev-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:08:17,942 : INFO : FINISHED! in 26.110949 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_train-avg-euclid.out 
+
+2018-07-21 18:10:15,745 : INFO : FINISHED! in 2.819787 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trial-avg-euclid.out 
+
+2018-07-21 18:11:24,580 : INFO : FINISHED! in 6.647596 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_dev-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:11:40,519 : INFO : FINISHED! in 25.777790 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-bmk_train-avg-manha.out 
+
+2018-07-21 18:11:42,874 : INFO : FINISHED! in 5.977555 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_test-avg-euclid.out 
+
+2018-07-21 18:12:48,262 : INFO : FINISHED! in 40.848050 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trts-sum-euclid.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 18:13:49,774 : INFO : FINISHED! in 23.850542 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_train-sum-cosine.out 
+
+2018-07-21 18:14:26,835 : INFO : FINISHED! in 2.645999 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trial-avg-manha.out 
+
+2018-07-21 18:15:04,143 : INFO : FINISHED! in 6.642249 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_dev-avg-manha.out 
+
+2018-07-21 18:16:23,633 : INFO : FINISHED! in 6.011868 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_test-avg-manha.out 
+
+2018-07-21 18:16:39,494 : INFO : FINISHED! in 41.190393 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trts-sum-manha.out 
+
+2018-07-21 18:17:56,574 : INFO : FINISHED! in 2.760693 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trial-sum-cosine.out 
+
+2018-07-21 18:17:56,775 : INFO : FINISHED! in 25.300828 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_train-sum-euclid.out 
+
+2018-07-21 18:18:04,263 : INFO : FINISHED! in 38.572727 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trts-avg-cosine.out 
+
+2018-07-21 18:19:39,160 : INFO : FINISHED! in 6.735492 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_dev-sum-cosine.out 
+
+2018-07-21 18:19:53,722 : INFO : FINISHED! in 5.955576 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_test-sum-cosine.out 
+
+2018-07-21 18:20:47,141 : INFO : FINISHED! in 2.618699 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trial-sum-euclid.out 
+
+2018-07-21 18:23:13,217 : INFO : FINISHED! in 25.210535 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_train-sum-manha.out 
+
+2018-07-21 18:23:35,726 : INFO : FINISHED! in 6.815810 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_dev-sum-euclid.out 
+
+2018-07-21 18:23:47,765 : INFO : FINISHED! in 40.677551 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trts-avg-euclid.out 
+
+2018-07-21 18:24:10,951 : INFO : FINISHED! in 6.116965 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_test-sum-euclid.out 
+
+2018-07-21 18:25:50,939 : INFO : FINISHED! in 38.283464 m. See output: results_revision/global-tfidf-freq-ost-w2v-200d-sick_trts-avg-manha.out 
+
+2018-07-21 18:26:25,515 : INFO : FINISHED! in 2.730854 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trial-sum-manha.out 
+
+2018-07-21 18:26:39,585 : INFO : FINISHED! in 6.654777 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_dev-sum-manha.out 
+
+2018-07-21 18:27:06,469 : INFO : FINISHED! in 6.189421 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:27:32,514 : INFO : FINISHED! in 23.453554 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_train-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:30:53,450 : INFO : FINISHED! in 24.171156 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_train-avg-euclid.out 
+
+2018-07-21 18:30:53,542 : INFO : FINISHED! in 4.097458 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trial-avg-cosine.out 
+
+2018-07-21 18:31:56,739 : INFO : FINISHED! in 41.186175 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trts-sum-cosine.out 
+
+2018-07-21 18:32:20,048 : INFO : FINISHED! in 8.053119 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_dev-avg-cosine.out 
+
+2018-07-21 18:33:24,824 : INFO : FINISHED! in 7.461508 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_test-avg-cosine.out 
+
+2018-07-21 18:35:15,223 : INFO : FINISHED! in 40.025447 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trts-sum-euclid.out 
+
+2018-07-21 18:35:31,402 : INFO : FINISHED! in 3.453020 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trial-avg-euclid.out 
+
+2018-07-21 18:36:26,319 : INFO : FINISHED! in 8.778486 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_dev-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:36:36,703 : INFO : FINISHED! in 25.090462 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-bmk_train-avg-manha.out 
+
+2018-07-21 18:38:10,301 : INFO : FINISHED! in 7.184407 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_test-avg-euclid.out 
+
+2018-07-21 18:38:43,242 : INFO : FINISHED! in 40.326189 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trts-sum-manha.out 
+
+2018-07-21 18:39:20,038 : INFO : FINISHED! in 2.746678 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trial-avg-manha.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 18:40:30,193 : INFO : FINISHED! in 25.923672 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_train-sum-cosine.out 
+
+2018-07-21 18:41:46,092 : INFO : FINISHED! in 6.373257 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_test-avg-manha.out 
+
+2018-07-21 18:41:51,227 : INFO : FINISHED! in 8.324760 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_dev-avg-manha.out 
+
+2018-07-21 18:43:09,142 : INFO : FINISHED! in 25.078483 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_train-sum-euclid.out 
+
+2018-07-21 18:43:29,124 : INFO : FINISHED! in 2.848267 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trial-sum-cosine.out 
+
+2018-07-21 18:43:58,547 : INFO : FINISHED! in 39.744464 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trts-avg-cosine.out 
+
+2018-07-21 18:44:46,122 : INFO : FINISHED! in 5.928192 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_test-sum-cosine.out 
+
+2018-07-21 18:44:49,624 : INFO : FINISHED! in 6.533709 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_dev-sum-cosine.out 
+
+2018-07-21 18:46:30,354 : INFO : FINISHED! in 2.427170 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trial-sum-euclid.out 
+
+2018-07-21 18:48:37,449 : INFO : FINISHED! in 41.156342 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trts-avg-euclid.out 
+
+2018-07-21 18:49:01,585 : INFO : FINISHED! in 7.037630 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_dev-sum-euclid.out 
+
+2018-07-21 18:49:04,407 : INFO : FINISHED! in 5.805916 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_test-sum-euclid.out 
+
+2018-07-21 18:49:45,700 : INFO : FINISHED! in 26.404687 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_train-sum-manha.out 
+
+2018-07-21 18:51:27,622 : INFO : FINISHED! in 39.638372 m. See output: results_revision/global-tfidf-freq-ost-w2v-300d-sick_trts-avg-manha.out 
+
+2018-07-21 18:51:29,979 : INFO : FINISHED! in 6.565242 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_dev-sum-manha.out 
+
+2018-07-21 18:51:53,247 : INFO : FINISHED! in 2.747695 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trial-sum-manha.out 
+
+2018-07-21 18:52:30,894 : INFO : FINISHED! in 5.902047 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:53:25,320 : INFO : FINISHED! in 26.853665 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_train-avg-cosine.out 
+
+2018-07-21 18:55:17,010 : INFO : FINISHED! in 3.287421 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trial-avg-cosine.out 
+
+2018-07-21 18:57:34,675 : INFO : FINISHED! in 7.692951 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_dev-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 18:57:38,089 : INFO : FINISHED! in 26.613253 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_train-avg-euclid.out 
+
+2018-07-21 18:58:08,525 : INFO : FINISHED! in 41.626580 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trts-sum-cosine.out 
+
+2018-07-21 18:58:44,756 : INFO : FINISHED! in 7.179349 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_test-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 19:00:15,039 : INFO : FINISHED! in 24.592612 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-bmk_train-avg-manha.out 
+
+2018-07-21 19:00:26,973 : INFO : FINISHED! in 2.696549 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trial-avg-euclid.out 
+
+2018-07-21 19:01:21,568 : INFO : FINISHED! in 7.801426 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_dev-avg-euclid.out 
+
+2018-07-21 19:01:42,217 : INFO : FINISHED! in 6.300077 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_test-avg-euclid.out 
+
+2018-07-21 19:01:55,045 : INFO : FINISHED! in 42.138297 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trts-sum-euclid.out 
+
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-21 19:03:51,384 : INFO : FINISHED! in 24.416473 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_train-sum-cosine.out 
+
+2018-07-21 19:04:13,861 : INFO : FINISHED! in 2.748993 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trial-avg-manha.out 
+
+2018-07-21 19:05:34,070 : INFO : FINISHED! in 6.703520 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_dev-avg-manha.out 
+
+2018-07-21 19:06:19,553 : INFO : FINISHED! in 5.967904 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_test-avg-manha.out 
+
+2018-07-21 19:06:24,099 : INFO : FINISHED! in 42.503626 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trts-sum-manha.out 
+
+2018-07-21 19:08:26,130 : INFO : FINISHED! in 41.210906 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trts-avg-cosine.out 
+
+2018-07-21 19:08:31,663 : INFO : FINISHED! in 24.917011 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_train-sum-euclid.out 
+
+2018-07-21 19:13:53,778 : INFO : FINISHED! in 25.151607 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_train-sum-manha.out 
+
+2018-07-21 19:13:59,355 : INFO : FINISHED! in 41.550809 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trts-avg-euclid.out 
+
+2018-07-21 19:15:21,998 : INFO : FINISHED! in 38.655161 m. See output: results_revision/global-tfidf-freq-ost-w2v-500d-sick_trts-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 19:15:43,246 : INFO : FINISHED! in 24.124252 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_train-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:16:45,942 : INFO : FINISHED! in 11.094523 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-sick_trial-sum-cosine.out 
+
+2018-07-21 19:19:51,588 : INFO : FINISHED! in 37.973240 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trts-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 19:22:14,607 : INFO : FINISHED! in 24.549007 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_train-avg-euclid.out 
+
+2018-07-21 19:22:46,146 : INFO : FINISHED! in 37.883594 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trts-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2909: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+2018-07-21 19:24:32,272 : INFO : FINISHED! in 23.964967 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-bmk_train-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:25:58,934 : INFO : FINISHED! in 11.962084 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-sick_trial-sum-euclid.out 
+
+2018-07-21 19:26:59,679 : INFO : FINISHED! in 37.801732 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trts-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:30:06,277 : INFO : FINISHED! in 10.147940 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-sick_trial-sum-manha.out 
+
+2018-07-21 19:31:27,075 : INFO : FINISHED! in 38.823502 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trts-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:33:02,746 : INFO : FINISHED! in 29.074495 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_test-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:33:47,842 : INFO : FINISHED! in 31.778597 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_dev-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:36:28,086 : INFO : FINISHED! in 27.925364 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_test-sum-euclid.out 
+
+2018-07-21 19:36:54,422 : INFO : FINISHED! in 38.658528 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trts-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:37:16,546 : INFO : FINISHED! in 10.168514 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-sick_trial-avg-cosine.out 
+
+2018-07-21 19:40:07,372 : INFO : FINISHED! in 38.302809 m. See output: results_revision/global-tfidf-freq-ost-w2v-50d-sick_trts-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:41:33,360 : INFO : FINISHED! in 35.022245 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_dev-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:43:16,987 : INFO : FINISHED! in 27.461566 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:45:22,785 : INFO : FINISHED! in 29.900722 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_dev-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:47:04,737 : INFO : FINISHED! in 10.458398 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-sick_trial-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:54:17,292 : INFO : FINISHED! in 31.399881 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_dev-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:54:51,163 : INFO : FINISHED! in 11.426935 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-sick_trial-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 19:59:09,027 : INFO : FINISHED! in 34.495403 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_test-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:06:41,978 : INFO : FINISHED! in 33.478670 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_test-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:10:47,987 : INFO : FINISHED! in 33.387612 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_dev-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:11:56,161 : INFO : FINISHED! in 40.372461 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_dev-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:13:47,716 : INFO : FINISHED! in 14.424411 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-sick_trial-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:17:06,765 : INFO : FINISHED! in 36.872432 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_test-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:22:46,261 : INFO : FINISHED! in 35.545177 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_dev-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:28:40,471 : INFO : FINISHED! in 34.270020 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_test-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:30:31,795 : INFO : FINISHED! in 13.240926 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-sick_trial-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:46:12,599 : INFO : FINISHED! in 34.054045 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_test-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 20:52:26,258 : INFO : FINISHED! in 41.479004 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_dev-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:02:59,054 : INFO : FINISHED! in 32.314103 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_test-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:03:45,659 : INFO : FINISHED! in 11.107889 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-sick_trial-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:07:38,752 : INFO : FINISHED! in 38.762467 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_dev-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:19:10,512 : INFO : FINISHED! in 134.810394 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_train-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:22:30,590 : INFO : FINISHED! in 133.858172 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_train-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:27:22,949 : INFO : FINISHED! in 130.466126 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_train-sum-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:34:16,652 : INFO : FINISHED! in 11.633091 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-sick_trial-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:37:36,577 : INFO : FINISHED! in 29.783700 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_test-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:37:46,337 : INFO : FINISHED! in 131.610214 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_train-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:38:17,391 : INFO : FINISHED! in 34.346870 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_dev-avg-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:45:35,747 : INFO : FINISHED! in 131.625649 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_train-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:48:39,964 : INFO : FINISHED! in 10.214679 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-sick_trial-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 21:56:35,032 : INFO : FINISHED! in 134.846572 m. See output: results_revision/global-tfidf-freq-wst-dep2vec-300d-bmk_train-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:04:14,997 : INFO : FINISHED! in 29.798869 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_dev-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:04:51,664 : INFO : FINISHED! in 27.090359 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_test-avg-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:12:18,950 : INFO : FINISHED! in 137.343437 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_train-sum-cosine.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:16:40,506 : INFO : FINISHED! in 11.676406 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-sick_trial-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:17:34,403 : INFO : FINISHED! in 123.589871 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_train-sum-euclid.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:20:49,268 : INFO : FINISHED! in 31.985175 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_dev-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:30:15,873 : INFO : FINISHED! in 33.536815 m. See output: results_revision/global-tfidf-freq-wst-fstx-1000d-bmk_test-avg-manha.out 
+
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/almac/ignacio/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+2018-07-21 22:41:40,664 : INFO : FINISHED! in 11.228079 m. See output: results_revision/global-tfidf-freq-wst-fstx-100d-sick_trial-sum-cosine.out 
+
