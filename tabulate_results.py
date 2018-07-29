@@ -6,8 +6,8 @@ import sys
 
 printfile = True
 results = "results_revision/"
-#DATA = "/almac/ignacio/data"
-DATA = "../data"
+DATA = "/almac/ignacio/data"
+#DATA = "../data"
 out = "out_tab.csv"
 # cat out_tab.csv | parallel -- > out_all.out
 
@@ -36,15 +36,15 @@ with open(out, "w") as of:
         elif f == "sick_trts" and not "sick" in filters: # and not "trts" in filters:
             gs = DATA + "/sts/sick/sts.gs.zick.txt"
         elif f == "answer-answer" and not "answer" in filters: # and not "trts" in filters:
-            gs = DATA + "/sts_all/sts2016-english-with-gs-v1.0/STS2016.gs.answer-answer.txt"
+            gs = DATA + "/sts/sts2016-english-with-gs-v1.0/STS2016.gs.answer-answer.txt"
         elif f == "headlines" and not "headlines" in filters: # and not "trts" in filters:
-            gs = DATA + "/sts_all/sts2016-english-with-gs-v1.0/STS2016.gs.headlines.txt"
+            gs = DATA + "/sts/sts2016-english-with-gs-v1.0/STS2016.gs.headlines.txt"
         elif f == "plagiarism" and not "plagiarism" in filters: # and not "trts" in filters:
-            gs = DATA + "/sts_all/sts2016-english-with-gs-v1.0/STS2016.gs.plagiarism.txt"
+            gs = DATA + "/sts/sts2016-english-with-gs-v1.0/STS2016.gs.plagiarism.txt"
         elif f == "postediting" and not "postediting" in filters: # and not "trts" in filters:
-            gs = DATA + "/sts_all/sts2016-english-with-gs-v1.0/STS2016.gs.postediting.txt"
+            gs = DATA + "/sts/sts2016-english-with-gs-v1.0/STS2016.gs.postediting.txt"
         elif f == "question-question" and not "question" in filters: # and not "trts" in filters:
-            gs = DATA + "/sts_all/sts2016-english-with-gs-v1.0/STS2016.gs.question-question.txt"
+            gs = DATA + "/sts/sts2016-english-with-gs-v1.0/STS2016.gs.question-question.txt"
         else:
             gs = ""
 
