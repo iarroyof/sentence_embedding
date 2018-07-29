@@ -1,0 +1,84 @@
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-28 19:13:09,193 : INFO : FINISHED! in 2.191297 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-question_question-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:13:20,830 : INFO : FINISHED! in 2.381684 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-answer_answer-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:13:25,209 : INFO : FINISHED! in 2.455027 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-headlines-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:13:32,125 : INFO : FINISHED! in 2.572294 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-plagiarism-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version 0.18.1 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+sts.py:37: RuntimeWarning: invalid value encountered in true_divide
+  dp = np.dot(va, vb.T) / (np.linalg.norm(va) * np.linalg.norm(vb))
+2018-07-28 19:15:20,956 : INFO : FINISHED! in 4.386193 m. See output: results_revision/global-tfidf-freq-ost-fstx-300d-postediting-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:19:02,058 : INFO : FINISHED! in 8.072382 m. See output: results_revision/global-tfidf-freq-wst-fstx-300d-plagiarism-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:19:25,209 : INFO : FINISHED! in 8.458243 m. See output: results_revision/global-tfidf-freq-wst-fstx-300d-headlines-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:20:28,734 : INFO : FINISHED! in 9.514667 m. See output: results_revision/global-tfidf-freq-wst-fstx-300d-answer_answer-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:20:28,024 : INFO : FINISHED! in 9.502211 m. See output: results_revision/global-tfidf-freq-wst-fstx-300d-question_question-sum-cosine.out 
+
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfTransformer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/base.py:315: UserWarning: Trying to unpickle estimator TfidfVectorizer from version pre-0.18 when using version 0.18. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.4/dist-packages/sklearn/feature_extraction/text.py:1039: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if hasattr(X, 'dtype') and np.issubdtype(X.dtype, np.float):
+2018-07-28 19:27:56,263 : INFO : FINISHED! in 16.974151 m. See output: results_revision/global-tfidf-freq-wst-fstx-300d-postediting-sum-cosine.out 
+
