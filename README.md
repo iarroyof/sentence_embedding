@@ -9,18 +9,20 @@ the whole embeddings into memory. This is useful for accelerating several tests 
 is limited.
 
 ```python
-# IMPORTANT: versions of sklearn > 0.18.1 are not supported
 
 import wisse
+# Do this for gensim keyed vectors:
 from gensim.models.keyedvectors import KeyedVectors as vDB
 load_vectors = vDB.load_word2vec_format
-
 embedding = load_vectors("/path/to/the/embeddings.bin", binary=True, encoding="latin-1")
-
+# One may convert keyed format into indexed format by using:
 wisse.keyed2indexed(embedding, "/path/for/saving/the/embeddings/")
+
+# Once format conversion is done or if you already have indexed directory,
+# simply load the indexed vector space:
 embedding = wisse.vector_space("/path/for/saving/the/embeddings/")
 
-# Print a word representation:
+# Print a word representation to test:
 
 embedding["word"]
 # array([ 0.31054 ,  0.56376 ,  0.024153,  0.33126 , -0.079045,  1.0207  ,
@@ -41,14 +43,17 @@ Decompress the needed directory and load the index with `wisse.vector_space()` f
 Either you have been converted the embeddings to abovementioned new format or not, the use of wisse is simple:
 
 ```python
-# Loading a pretrained sklearn IDF model saved with pickle
+# If you simply want to get vanilla vector summation to represent a sentence,
+# simply type (the returned value is a generator of sentence embeddings):
+series = wisse.wisse(embedding, tf_tfidf=False, generate=True)
+
+# However, state of the art sentence embeddings can be obtained by loading a
+# pretrained sklearn IDF model saved with pickle
 
 import _pickle as pickle
-# import cPickle as pickle # Python 2.7
 
 with open("/path/to/pretrained_idf.pk", 'rb') as f:
             idf_model = pickle.load(f, enconding="latin-1")
-            # idf_model = pickle.load(f) # Python 2.7
 
 # Fit the wisse model:
 series = wisse.wisse(embedding, idf_model, tf_tfidf=True, 
