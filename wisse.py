@@ -5,6 +5,7 @@ import numpy as np
 import logging
 import os
 from functools import partial
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 from pdb import set_trace as st
 
@@ -17,12 +18,20 @@ class wisse(object):
     """ Both the TFIDFVectorizer and the word embedding model must be
     pretrained, either from the local sentence corpus or from model persintence.
     """
-    def __init__(self, embeddings, vectorizer, tf_tfidf=None, combiner="sum",
-                                      verbose=False, return_missing=False, generate=False):
-        self.tokenize = vectorizer.build_tokenizer()
+    def __init__(self, embeddings, vectorizer=None, tf_tfidf=None,
+                        combiner="sum", verbose=False,
+                        return_missing=False, generate=False):
+        if not vectorizer is None:
+            self.tokenize = vectorizer.build_tokenizer()
+        else:
+            self.tokenize = TfidfVectorizer().build_tokenizer()
+
         self.tfidf = vectorizer
         self.embedding = embeddings
-        self.tf_tfidf = tf_tfidf
+        if not vectorizer is None:
+            self.tf_tfidf = tf_tfidf
+        else:
+            self.tf_tfidf = False
         self.rm = return_missing
         self.generate = generate
         if combiner.startswith("avg"):
@@ -68,7 +77,7 @@ class wisse(object):
             if self.tfidf.lowercase:
                 sent = sent.lower()
         except:
-            pass
+            sent = sent.lower()
         
         ss = self.tokenize(sent)
         self.missing_bow = []
@@ -76,7 +85,7 @@ class wisse(object):
         series = {}
         
         if not ss == []:
-            if self.tf_tfidf is None:
+            if not self.tf_tfidf:
                 self.weights, m = dict(zip(ss,  [1.0]*len(ss))), []
             else:
                 self.weights, m = self.infer_tfidf_weights(ss)
@@ -119,7 +128,7 @@ class wisse(object):
                 except KeyError:
                     missing.append(word)
                     continue
-        else:
+        elif not self.tfidf is None:
             for word in sentence:
                 try:
                     existent[word] = self.tfidf.idf_[self.tfidf.vocabulary_[word]]
