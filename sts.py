@@ -204,6 +204,7 @@ if __name__ == "__main__":
         vectorizer.fit(pairs)
         seg = 1.0
 # --------
+    tfidf_name = "none_idf" if args.idfmodel is None or "none" in args.idfmodel.lower() else os.path.basename(args.idfmodel).split(".")[0]
 
     if args.output != "" and args.output != "stdout":
         if os.path.dirname(args.output) != "":
@@ -258,7 +259,6 @@ if __name__ == "__main__":
         metric = args.dist
 
     embedding_name = os.path.basename(args.embedmodel).split(".")[0]
-    tfidf_name = os.path.basename(args.idfmodel).split(".")[0]
     if args.verbose:
         logging.info("Embedding sentences ...")
     global series
