@@ -21,7 +21,8 @@ import os
 from functools import partial
 import numpy as np
 from joblib import Parallel, delayed
-import wisse
+from .wisse_module import wisse
+from .wisse_module.wisse import streamer, vector_space
 from pdb import set_trace as st
 when_error = 0.5
 
@@ -77,8 +78,7 @@ def sts(i, pair, fo=None, dist='cos'):
         return i, "Error desconocido al calcular similitud."
 
 
-if __name__ == "__main__":
-
+def main():
     parser = argparse.ArgumentParser(description="This use example shows sentence "
         "embedding by using WISSE. The input is a text file which has a sentece in "
         "each of its rows. The output file has two tab-separated columns: the index "
@@ -138,7 +138,7 @@ if __name__ == "__main__":
                         "%s\n" % args.input)
         exit()
     else:
-        pairs = wisse.streamer(args.input)
+        pairs = streamer(args.input)
 
     if not args.format.startswith("wisse") and (args.format.startswith("bin") or args.format.startswith("txt") ):
         if not os.path.isfile(args.embedmodel):
@@ -242,7 +242,7 @@ if __name__ == "__main__":
         else:
             if args.verbose:
                 logging.info("Loading word embeddings index from: %s ..." % args.embedmodel)
-            embedding = wisse.vector_space(args.embedmodel, sparse = False)
+            embedding = vector_space(args.embedmodel, sparse = False)
 
     except:
         logging.info(
@@ -262,9 +262,8 @@ if __name__ == "__main__":
     if args.verbose:
         logging.info("Embedding sentences ...")
     global series
-    series = wisse.wisse(embeddings=embedding, vectorizer=vectorizer, tf_tfidf=tfidf,
-                         combiner=args.comb, return_missing=False, generate=True,
-                         verbose=args.verbose)
+    series = wisse(embeddings=embedding, vectorizer=vectorizer, tf_tfidf=tfidf,
+                   combiner=args.comb) # return_missing and generate were removed as they are not in the constructor
     if output_name != '':
         fo = open(output_name, "w")
     else:
@@ -287,7 +286,10 @@ if __name__ == "__main__":
             else:
                 print("NONE")
 
-logging.info("FINISHED! in %f %s. See output: %s \n" % ((time.time() - start)/seg,
-                                                        'm' if seg != 1.0 else 's' ,
-                                                        output_name))
+    logging.info("FINISHED! in %f %s. See output: %s \n" % ((time.time() - start)/seg,
+                                                            'm' if seg != 1.0 else 's' ,
+                                                            output_name))
+# Removed duplicate logging line that was here at module level
 
+if __name__ == "__main__":
+    main()

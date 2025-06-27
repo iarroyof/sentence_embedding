@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+sts_package/__init__.py
+sts_package/sts.py
+sts_package.egg-info/PKG-INFO
+sts_package.egg-info/SOURCES.txt
+sts_package.egg-info/dependency_links.txt
+sts_package.egg-info/entry_points.txt
+sts_package.egg-info/requires.txt
+sts_package.egg-info/top_level.txt
+sts_package/wisse_module/__init__.py
+sts_package/wisse_module/wisse.py

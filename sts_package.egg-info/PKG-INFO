@@ -1,3 +1,31 @@
+Metadata-Version: 2.4
+Name: sts_package
+Version: 0.1.0
+Summary: A package for calculating sentence similarity using word embeddings.
+Home-page: https://github.com/yourusername/sts_package
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gensim>=4.0.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: joblib>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
 # STS Package
 
 This package calculates sentence similarity using word embeddings. The main script `sts.py` loads word embeddings from a directory, builds sentence embeddings from an input file with pairs of text sentences, and provides their corresponding cosine similarities.

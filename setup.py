@@ -1,40 +1,31 @@
-from distutils.core import setup
-import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
-# Utility function to read the README file.
-# Used for the long_description.  It's nice, because now 1) we have a top level
-# README file and 2) it's easier to type in the README file than to put a raw
-# string in below ...
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+with open("requirements.txt", "r", encoding="utf-8") as f:
+    requirements = f.read().splitlines()
 
 setup(
-    name = "wisse",
-    description='Package for building sentence vector representations (sentence embeddings) from text.',
-    version = "0.0.4",
-    author = "Ignacio Arroyo-Fernandez",
-    author_email='iaf@ciencias.unam.mx',
-    url='https://github.com/iarroyof/sentence_embedding',
-    license = "BSD",
-    keywords = "example documentation tutorial",
-    packages=['wisse'],
-    long_description=read('README.md'),
+    name="sts_package",
+    version="0.1.0",
+    author="Your Name", # Replace with actual author
+    author_email="your.email@example.com", # Replace with actual email
+    description="A package for calculating sentence similarity using word embeddings.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/yourusername/sts_package", # Replace with actual URL
+    packages=find_packages(),
     classifiers=[
-        "Development Status :: 3 - Alpha",
-        "Topic :: Utilities",
-        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License", # Assuming MIT, change if different
+        "Operating System :: OS Independent",
     ],
+    python_requires=">=3.6",
+    install_requires=requirements,
+    entry_points={
+        "console_scripts": [
+            "sts=sts_package.sts:main",
+        ],
+    },
 )
-
-
-#setup(name='wisse',
-#  version='1.0',
-#  description='Package for building sentence vector representations (sentence embeddings) from text.',
-#  author='Ignacio Arroyo-Fernandez',
-#  author_email='iaf@ciencias.unam.mx',
-#  url='https://github.com/iarroyof/sentence_embedding',
-  #packages=['gensim', 'sklearn'],
-#  py_modules = ['wisse', 'wisse.wisse'],
-#  scripts=['wisse_example.py', 'keyed2indexed.py']
-# )

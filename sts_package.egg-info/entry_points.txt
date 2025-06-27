@@ -1,0 +1,2 @@
+[console_scripts]
+sts = sts_package.sts:main
