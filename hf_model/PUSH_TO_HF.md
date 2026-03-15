@@ -7,14 +7,25 @@ This folder mirrors the **Hugging Face model repo** [iarroyof/wisse-models](http
 - Go to [huggingface.co/new](https://huggingface.co/new) and create a model repo (e.g. `iarroyof/wisse-models`).
 - Optionally make it a dataset repo if you prefer; the `wisse` package uses the same resolve URLs for datasets.
 
-## 2. Clone and add this folder’s content
+## 2. Push the model card (README) only
+
+From the **sentence_embedding** repo root, after `huggingface-cli login`:
+
+```bash
+pip install huggingface_hub
+python hf_model/push_model_card_to_hf.py
+```
+
+This uploads `hf_model/README.md` to the Hub. To use a different repo: `WISSE_HF_REPO=org/repo python hf_model/push_model_card_to_hf.py`.
+
+## 2b. Or clone and add this folder’s content (git workflow)
 
 ```bash
 # Install Hugging Face CLI: pip install huggingface_hub
 huggingface-cli login
 
-# Clone the empty repo (replace with your repo id)
-git clone https://huggingface.co/iarroyof/wisse-models hf_wisse_models
+# Clone the repo (replace with your repo id)
+git clone https://huggingface.co/datasets/iarroyof/wisse-models hf_wisse_models
 cd hf_wisse_models
 ```
 
