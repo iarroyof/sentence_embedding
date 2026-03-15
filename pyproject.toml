@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wisse"
+version = "0.1.0"
+description = "Sentence embeddings (WISSE) with SBERT-like API for downstream NLP applications."
+readme = "README.md"
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Ignacio Arroyo-Fernandez", email = "iaf@ciencias.unam.mx" }
+]
+keywords = ["sentence-embeddings", "nlp", "wisse", "tfidf", "word-embeddings"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "numpy>=1.20",
+    "scikit-learn>=1.0",
+    "gensim>=4.0",
+    "joblib>=1.0",
+    "requests>=2.25",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/iarroyof/sentence_embedding"
+Documentation = "https://github.com/iarroyof/sentence_embedding#readme"
+Repository = "https://github.com/iarroyof/sentence_embedding"
+
+[project.scripts]
+wisse-encode = "wisse.cli:main_encode"
+keyed2indexed = "wisse.cli:main_keyed2indexed"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wisse*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

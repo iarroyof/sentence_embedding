@@ -1,31 +1,43 @@
-import wisse
-from gensim.models.keyedvectors import KeyedVectors as vDB
+#!/usr/bin/env python3
+"""
+Convert word2vec KeyedVectors to WISSE indexed format.
+Use: python keyed2indexed.py --input model.bin --output output_indexed
+     python keyed2indexed.py --input model.vec --txt --output output_indexed
+"""
 import argparse
 import logging
+import sys
 
-# sys.argv[1]: Input embeddings model (w2v format)
-# sys.argv[2]: Output direcory for indexed format
-# sys.argv[3]: Input format (default: binary)
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
-        level=logging.INFO)
+logging.basicConfig(
+    format="%(asctime)s : %(levelname)s : %(message)s",
+    level=logging.INFO,
+)
 
-load_vectors = vDB.load_word2vec_format
+parser = argparse.ArgumentParser(
+    description="Convert word2vec embeddings to WISSE indexed (.npy per word) format."
+)
+parser.add_argument("--input", "-i", required=True, help="Input embeddings (word2vec .bin or .vec)")
+parser.add_argument("--output", "-o", default="output_indexed", help="Output directory")
+parser.add_argument(
+    "--txt",
+    action="store_true",
+    help="Input is text .vec format (default: binary .bin)",
+)
+args = parser.parse_args()
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--input", help = "Input embeddings model (w2v format)", 
-                                    required = True)
-parser.add_argument("--output", help = "Output direcory for indexed format", 
-                                    default = 'output_indexed')
-parser.add_argument("--txt", help = "Toggles text word2vec format input format "
-                                    "(default: binary)", 
-                                    action='store_false')
-args = parser.parse_args()                                 
+import wisse
+from gensim.models.keyedvectors import KeyedVectors
 
-binary = args.binary
-embedding = load_vectors(args.input, binary=binary, encoding = "latin-1")
-logging.info("Indexing embeddings, this will take a while...\n")
+binary = not args.txt
+try:
+    embedding = KeyedVectors.load_word2vec_format(
+        args.input, binary=binary, encoding="utf-8"
+    )
+except Exception:
+    embedding = KeyedVectors.load_word2vec_format(
+        args.input, binary=binary, encoding="latin-1"
+    )
 
+logging.info("Indexing embeddings, this may take a while...")
 wisse.keyed2indexed(embedding, args.output)
-
-logging.info("Embeddings indexed, please verify the contents of the output "
-                "directory:\n %s\n" % args.output)
+logging.info("Embeddings indexed: %s", args.output)
