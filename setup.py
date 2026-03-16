@@ -34,15 +34,3 @@ setup(
         "Topic :: Text Processing :: Linguistic",
     ],
 )
-
-
-#setup(name='wisse',
-#  version='1.0',
-#  description='Package for building sentence vector representations (sentence embeddings) from text.',
-#  author='Ignacio Arroyo-Fernandez',
-#  author_email='iaf@ciencias.unam.mx',
-#  url='https://github.com/iarroyof/sentence_embedding',
-  #packages=['gensim', 'sklearn'],
-#  py_modules = ['wisse', 'wisse.wisse'],
-#  scripts=['wisse_example.py', 'keyed2indexed.py']
-# )

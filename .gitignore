@@ -31,5 +31,13 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+# Old / local data (do not commit)
+*.l
+*.vec
+*.pyc
+results*.csv
+toy_pairs*.csv*
+embeddings.list
+
 # WISSE cache (user data, not repo)
 # ~/.wisse is in user home

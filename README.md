@@ -64,6 +64,8 @@ Wikipedia-trained **FastText (300d)** and **TF-IDF weights** (full TF-IDF, best 
 
 ## Repository layout
 
+Clean Python package layout:
+
 ```
 sentence_embedding/
 ├── wisse/                 # Package
@@ -73,13 +75,15 @@ sentence_embedding/
 │   ├── similarity.py      # Pairwise similarity helpers
 │   ├── download.py        # HF registry and autodownload
 │   └── cli.py             # wisse-encode, keyed2indexed entry points
-├── tests/
-├── hf_model/              # Hugging Face model card and push instructions
+├── tests/                 # Pytest suite
+├── hf_model/              # Hugging Face model card (README.md) and push script
 ├── setup.py
 ├── pyproject.toml
 ├── requirements.txt
 ├── run_tests.py
-├── keyed2indexed.py       # Standalone script (or use: keyed2indexed after install)
+├── keyed2indexed.py      # Standalone script (or use CLI after install)
+├── LICENSE
+├── .gitignore
 └── README.md
 ```
 

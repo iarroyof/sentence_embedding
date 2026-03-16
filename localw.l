@@ -1,3 +1,0 @@
-freq
-binary
-sublinear
