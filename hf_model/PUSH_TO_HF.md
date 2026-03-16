@@ -34,28 +34,34 @@ Copy the contents of this folder (`hf_model/`) into the cloned repo root:
 - `README.md` → model card
 - (Optional) `.gitattributes` for Git LFS if you add large files
 
-## 3. Upload artifact files
+## 3. Upload artifact files (required for autodownload)
 
-Upload the actual files (e.g. from your build or external URLs):
+The **wisse** package has no synthetic “minimal” defaults. Autodownload works only with the **paper’s real assets** (Wikipedia FastText + TF-IDF). Upload these to the Hub so `SentenceEmbedding()` can autodownload on first use:
 
-- `glove-300-indexed.tar.gz`
-- `fasttext-300-indexed.tar.gz`
-- `idf-en.pkl`
+- `fasttext-300-indexed.tar.gz` — Wikipedia 300d FastText in indexed (WISSE) format
+- `idf-en.pkl` — TF-IDF weights (fitted TfidfVectorizer) from Wikipedia
 
-Using the Hub web UI (drag & drop) or CLI:
+**Option A — From local files** (recommended: download from MEGA first, then upload):
 
 ```bash
-huggingface-cli upload iarroyof/wisse-models glove-300-indexed.tar.gz .
-huggingface-cli upload iarroyof/wisse-models fasttext-300-indexed.tar.gz .
-huggingface-cli upload iarroyof/wisse-models idf-en.pkl .
+# 1) Download from MEGA (see README “Pretrained assets” for links), then:
+huggingface-cli login
+python hf_model/upload_assets_to_hf.py --fasttext /path/to/fasttext-300-indexed.tar.gz --idf /path/to/idf-en.pkl
 ```
 
-Or from Python:
+**Option B — From MEGA directly** (requires mega.py; may fail on some networks):
 
-```python
-from huggingface_hub import HfApi
-api = HfApi()
-api.upload_file(path_or_fileobj="path/to/glove-300-indexed.tar.gz", path_in_repo="glove-300-indexed.tar.gz", repo_id="iarroyof/wisse-models", repo_type="model")
+```bash
+pip install mega.py huggingface_hub
+huggingface-cli login
+python hf_model/upload_assets_to_hf.py --from-mega
+```
+
+**Option C — Hub UI or CLI:** Upload the two files via [huggingface.co/datasets/iarroyof/wisse-models](https://huggingface.co/datasets/iarroyof/wisse-models) (drag & drop) or:
+
+```bash
+huggingface-cli upload iarroyof/wisse-models fasttext-300-indexed.tar.gz . --repo-type dataset
+huggingface-cli upload iarroyof/wisse-models idf-en.pkl . --repo-type dataset
 ```
 
 ## 4. Keep in sync with GitHub

@@ -2,6 +2,7 @@
 build/
 dist/
 *.egg-info/
+wisse_sentence.egg-info/
 *.egg
 
 # Virtual environments
@@ -41,3 +42,7 @@ embeddings.list
 
 # WISSE cache (user data, not repo)
 # ~/.wisse is in user home
+
+# PyPI upload (keep token out of repo)
+.pypirc
+[pypi].txt

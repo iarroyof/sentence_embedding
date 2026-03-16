@@ -88,9 +88,112 @@ def main_encode() -> None:
     print(f"Saved {len(embeddings)} vectors to {args.output}")
 
 
+def main_train() -> None:
+    parser = argparse.ArgumentParser(
+        description="Train IDF (TF-IDF) and FastText from a text directory or Wikipedia (HF), "
+        "producing WISSE-ready IDF pickle and indexed embeddings."
+    )
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--corpus-dir", type=str, help="Directory of plain text files")
+    group.add_argument(
+        "--wikipedia",
+        type=str,
+        metavar="LANG",
+        help="Wikipedia via Hugging Face (e.g. en, es). Requires: pip install datasets",
+    )
+    parser.add_argument(
+        "--document-unit",
+        choices=("article", "paragraph"),
+        default="article",
+        help="Document unit for IDF: one file/article per doc, or split by paragraph (default: article)",
+    )
+    parser.add_argument(
+        "--idf-out",
+        type=str,
+        default=None,
+        help="Output path for IDF pickle (default: idf-<lang>.pkl with --wikipedia, else idf-en.pkl)",
+    )
+    parser.add_argument(
+        "--embeddings-out",
+        type=str,
+        default=None,
+        help="Output directory for indexed FastText .npy files (default: fasttext-300-indexed)",
+    )
+    parser.add_argument(
+        "--binary-out",
+        type=str,
+        default=None,
+        help="Optional path to save FastText in Word2Vec binary format",
+    )
+    parser.add_argument("--dim", type=int, default=300, help="Embedding dimension (default: 300)")
+    parser.add_argument("--window", type=int, default=5, help="FastText window (default: 5)")
+    parser.add_argument("--min-count", type=int, default=5, help="FastText min_count (default: 5)")
+    parser.add_argument("--epochs", type=int, default=5, help="FastText epochs (default: 5)")
+    parser.add_argument("--workers", type=int, default=1, help="FastText workers (default: 1)")
+    parser.add_argument(
+        "--cap-articles",
+        type=int,
+        default=None,
+        help="Max documents (efficient random sampling). Default for Wikipedia: 500000",
+    )
+    parser.add_argument(
+        "--cap-tokens",
+        type=int,
+        default=None,
+        help="Max tokens to use. Default for Wikipedia: 100000000",
+    )
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for sampling (default: 42)")
+    args = parser.parse_args()
+
+    from .train import (
+        DEFAULT_CAP_ARTICLES,
+        DEFAULT_CAP_TOKENS,
+        run_train,
+    )
+
+    lang = (args.wikipedia or "en").strip().lower() if args.wikipedia else "en"
+    idf_out = args.idf_out if args.idf_out is not None else f"idf-{lang}.pkl"
+    embeddings_out = args.embeddings_out if args.embeddings_out is not None else "fasttext-300-indexed"
+
+    cap_articles = args.cap_articles
+    cap_tokens = args.cap_tokens
+    if args.wikipedia and cap_articles is None and cap_tokens is None:
+        cap_articles = DEFAULT_CAP_ARTICLES
+        cap_tokens = DEFAULT_CAP_TOKENS
+
+    import logging
+    logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
+
+    try:
+        idf_path, emb_path = run_train(
+            corpus_dir=args.corpus_dir,
+            wikipedia_lang=args.wikipedia,
+            document_unit=args.document_unit,
+            idf_out=idf_out,
+            embeddings_out=embeddings_out,
+            binary_out=args.binary_out,
+            dim=args.dim,
+            window=args.window,
+            min_count=args.min_count,
+            epochs=args.epochs,
+            workers=args.workers,
+            cap_articles=cap_articles,
+            cap_tokens=cap_tokens,
+            seed=args.seed,
+        )
+        print(f"IDF: {idf_path}")
+        print(f"Embeddings: {emb_path}")
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "keyed2indexed":
         sys.argv.pop(1)
         main_keyed2indexed()
+    elif len(sys.argv) > 1 and sys.argv[1] == "train":
+        sys.argv.pop(1)
+        main_train()
     else:
         main_encode()

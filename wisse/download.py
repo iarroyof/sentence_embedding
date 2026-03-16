@@ -142,10 +142,12 @@ def get_idf_path(name_or_path: str) -> Path:
 
     if name_or_path in IDF_REGISTRY:
         entry = IDF_REGISTRY[name_or_path]
-        url = entry.get("url") or _idf_url(entry)
         cache = _cache_dir() / "idf" / name_or_path
         cache.parent.mkdir(parents=True, exist_ok=True)
         dest = cache.with_suffix(Path(entry["filename"]).suffix or ".pkl")
+        if dest.exists():
+            return dest
+        url = entry.get("url") or _idf_url(entry)
         _download_file(url, dest, desc=name_or_path)
         return dest
 

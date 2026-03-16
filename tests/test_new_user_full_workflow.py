@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Full workflow test simulating a completely new user from anywhere on the internet:
-- Empty cache (no pre-existing ~/.wisse)
-- Model and TF-IDF weights are obtained via "download" (mocked to serve toy data)
-- Same toy sentences as in test_01; full TF-IDF weighting (best performing).
+Full workflow test simulating a new user: empty cache, default model keys.
+Uses MOCKED download (toy data only). This does NOT use real pretrained FastText/IDF.
+For tests with real paper assets, see test_02_paper_wikipedia_assets (requires env or HF).
 """
 import pickle
 import shutil

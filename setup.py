@@ -7,7 +7,7 @@ def read(fname):
         return f.read()
 
 setup(
-    name="wisse",
+    name="wisse-sentence",
     version="0.1.0",
     description="Sentence embeddings (WISSE) with SBERT-like API for downstream NLP.",
     long_description=read("README.md"),
@@ -33,4 +33,11 @@ setup(
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Text Processing :: Linguistic",
     ],
+    entry_points={
+        "console_scripts": [
+            "wisse-encode=wisse.cli:main_encode",
+            "wisse-train=wisse.cli:main_train",
+            "keyed2indexed=wisse.cli:main_keyed2indexed",
+        ],
+    },
 )

@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "wisse"
+name = "wisse-sentence"
 version = "0.1.0"
 description = "Sentence embeddings (WISSE) with SBERT-like API for downstream NLP applications."
 readme = "README.md"
@@ -36,6 +36,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7", "pytest-cov"]
+train = ["datasets>=2.14", "huggingface_hub>=0.17"]
 
 [project.urls]
 Homepage = "https://github.com/iarroyof/sentence_embedding"
@@ -44,6 +45,7 @@ Repository = "https://github.com/iarroyof/sentence_embedding"
 
 [project.scripts]
 wisse-encode = "wisse.cli:main_encode"
+wisse-train = "wisse.cli:main_train"
 keyed2indexed = "wisse.cli:main_keyed2indexed"
 
 [tool.setuptools.packages.find]

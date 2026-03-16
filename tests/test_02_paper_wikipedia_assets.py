@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Tests using the paper's Wikipedia-trained assets when available:
-- FastText 300d (English Wikipedia), indexed WISSE format
-- TF-IDF weights (IDF) trained on English Wikipedia, stop words ignored
+Tests using the paper's real Wikipedia-trained assets (no synthetic/minimal data).
+
+These tests are SKIPPED unless assets are available:
+- Local paths: set WISSE_PAPER_FASTTEXT_DIR and WISSE_PAPER_IDF_PATH (e.g. after downloading from MEGA)
+- Hugging Face: set WISSE_TEST_HF_REGISTRY=1 (only works after the real assets have been uploaded to the HF repo)
 
 Sources (manual download from MEGA if needed):
 - FastText indexed: https://mega.nz/#!zKBUzL7J!V2BN6hsb2_I61WbM3C8OIrSnJotFyxaqfBmapddns4Y
-- IDF (pretrained_idf): https://mega.nz/#!WPx1iYwA!okha3WRVIksZJuq7cJKeKzplxuDYqOa0aq31hyMHvAo
-
-Alternatively, if hosted on Hugging Face (wisse-models), registry keys
-wisse-fasttext-300 and wisse-idf-en are used automatically.
+- TF-IDF (pretrained_idf): https://mega.nz/#!WPx1iYwA!okha3WRVIksZJuq7cJKeKzplxuDYqOa0aq31hyMHvAo
 """
 import os
 from pathlib import Path

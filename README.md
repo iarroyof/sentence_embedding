@@ -2,11 +2,13 @@
 
 Sentence embeddings via **entropy-weighted series** (TF-IDF–weighted word embeddings). No language or knowledge resources required. **Python 3.8+**.
 
-SBERT-like API: `encode()` and `similarity()`. **Default embeddings and TF-IDF weights are on Hugging Face and auto-download on first use** (not at install time).
+SBERT-like API: `encode()` and `similarity()`. **Default model keys** (`wisse-fasttext-300`, `wisse-idf-en`) point to the Hugging Face repo; once the **paper’s Wikipedia FastText and TF-IDF assets are uploaded** there (one-time, see [Uploading assets](#uploading-assets-to-hugging-face)), they auto-download on first use to `~/.wisse`. Until then, use local paths (e.g. after [downloading from MEGA](#pretrained-assets-manual-download)).
 
 ---
 
 ## Quick start
+
+**With assets on Hugging Face** (after one-time upload of the paper assets):
 
 ```python
 from wisse import SentenceEmbedding
@@ -22,12 +24,12 @@ embeddings = model.encode(sentences)  # shape (3, 300)
 sim = model.similarity(embeddings, embeddings)
 ```
 
-Local paths (no download):
+**With local paths** (e.g. after downloading from MEGA):
 
 ```python
 model = SentenceEmbedding(
-    model_name_or_path="/path/to/indexed_embeddings/",
-    idf_name_or_path="/path/to/tfidf.pkl",
+    model_name_or_path="/path/to/indexed_fasttext/",
+    idf_name_or_path="/path/to/idf-en.pkl",
 )
 embeddings = model.encode(["First sentence.", "Second sentence."])
 ```
@@ -44,6 +46,14 @@ s = similarity(embeddings, embeddings, similarity_fn="cosine")
 
 ## Installation
 
+From PyPI:
+
+```bash
+pip install wisse-sentence
+```
+
+From the repo (editable):
+
 ```bash
 pip install -e .
 ```
@@ -54,10 +64,9 @@ Requirements: Python ≥3.8, `numpy`, `scikit-learn`, `gensim`, `joblib`, `reque
 
 ## Default models (Hugging Face)
 
-Wikipedia-trained **FastText (300d)** and **TF-IDF weights** (full TF-IDF, best performing) are on the Hub. They download on **first use** to `~/.wisse` (or `$WISSE_HOME`).
+The package expects **Wikipedia-trained FastText (300d)** and **TF-IDF weights** at the Hugging Face repo. Once those files are uploaded (see [Uploading assets](#uploading-assets-to-hugging-face)), they download on **first use** to `~/.wisse` (or `$WISSE_HOME`).
 
-- **Default**: `wisse-fasttext-300` + `wisse-idf-en` → `SentenceEmbedding()` works out of the box.
-- **Registry**: `wisse-glove-300`, `wisse-fasttext-300` (embeddings); `wisse-idf-en` (TF-IDF).
+- **Registry keys**: `wisse-fasttext-300`, `wisse-idf-en` (and optionally `wisse-glove-300`).
 - **Override**: `WISSE_HF_REPO`, `WISSE_HF_REPO_TYPE`, or `WISSE_FASTTEXT_URL`, `WISSE_IDF_URL`, `WISSE_EMBEDDING_URL`.
 
 ---
@@ -99,7 +108,20 @@ wisse-encode --input sentences.txt --output out.npy --model wisse-fasttext-300 -
 
 keyed2indexed --input model.bin --output output_indexed
 keyed2indexed --input model.vec --txt --output output_indexed
+
+wisse-train --wikipedia en --idf-out idf-en.pkl --embeddings-out fasttext-300-indexed
+wisse-train --corpus-dir ./my_texts --document-unit paragraph --idf-out idf.pkl
 ```
+
+**Train IDF + FastText** (new operating mode): from a directory of plain text files or from Wikipedia (Hugging Face). Produces WISSE-ready IDF pickle and indexed FastText embeddings. For Wikipedia you need `pip install ".[train]"` (adds `datasets`).
+
+- `--corpus-dir PATH` — directory of plain text files, or  
+- `--wikipedia LANG` — e.g. `en`, `es` (downloads from HF `wikimedia/wikipedia`).
+- `--document-unit article|paragraph` — one doc per file/article vs per paragraph.
+- `--idf-out`, `--embeddings-out` — explicit output paths (defaults: `idf-<lang>.pkl`, `fasttext-300-indexed`).
+- `--binary-out PATH` — optionally save FastText in Word2Vec binary format.
+- `--dim`, `--window`, `--min-count`, `--epochs` — paper defaults (300, 5, 5, 5), all configurable.
+- `--cap-articles`, `--cap-tokens` — optional cap with efficient random sampling; default for Wikipedia: 500k articles / 100M tokens.
 
 From repo without installing:
 
@@ -141,23 +163,28 @@ pytest tests/ -v
 python run_tests.py
 ```
 
-| Test | Description |
-|------|-------------|
-| `test_00_install` | Package and public API import |
-| `test_01_toy_tfidf_fasttext_and_helpers` | Toy TF-IDF FastText + all helpers |
-| `test_02_paper_wikipedia_assets` | Paper assets (skip unless paths or HF) |
-| `test_new_user_full_workflow` | New user: mock download, default model, toy sentences |
-| `test_encode_similarity` | encode/similarity and low-level API |
+| Test | Description | Needs real pretrained assets? |
+|------|-------------|-------------------------------|
+| `test_00_install` | Package and public API import | No |
+| `test_01_toy_tfidf_fasttext_and_helpers` | Toy TF-IDF FastText + all helpers (synthetic data) | No |
+| `test_02_paper_wikipedia_assets` | **Paper’s Wikipedia FastText + TF-IDF** | **Yes** (see below) |
+| `test_new_user_full_workflow` | New user: **mocked** download, toy sentences | No (uses mocks) |
+| `test_encode_similarity` | encode/similarity and low-level API (synthetic) | No |
 
-Paper assets (optional): set `WISSE_PAPER_FASTTEXT_DIR` and `WISSE_PAPER_IDF_PATH` to local paths (e.g. from MEGA links below), or `WISSE_TEST_HF_REGISTRY=1` for HF registry test.
+**Tests that use the real pretrained models** (optional): `test_02_paper_wikipedia_assets` runs only when assets are available:
+
+- Set `WISSE_PAPER_FASTTEXT_DIR` and `WISSE_PAPER_IDF_PATH` to local paths (e.g. after downloading from the MEGA links below), or  
+- Set `WISSE_TEST_HF_REGISTRY=1` to use the Hugging Face registry (only works **after** the paper assets have been uploaded to the HF repo).
 
 ---
 
-## Hugging Face model
+## Uploading assets to Hugging Face
 
-Artifacts are intended to live on the Hub for autodownload. The `hf_model/` folder is the model card; see `hf_model/PUSH_TO_HF.md` for upload steps.
+For `SentenceEmbedding()` to work with defaults (no local paths), the **paper’s** FastText and TF-IDF files must be on the Hub. There are no synthetic “minimal” defaults — only the real pretrained assets are useful.
 
-- **Repo**: [huggingface.co/datasets/iarroyof/wisse-models](https://huggingface.co/datasets/iarroyof/wisse-models)
+1. **Get the assets**: Download from MEGA (links in [Pretrained assets](#pretrained-assets-manual-download)): indexed FastText and the TF-IDF pickle. Optionally pack the FastText directory as `fasttext-300-indexed.tar.gz`.
+2. **Upload**: Use `hf_model/upload_assets_to_hf.py` with local paths, or the Hub UI/CLI. Full steps: **`hf_model/PUSH_TO_HF.md`**.
+3. **Repo**: [huggingface.co/datasets/iarroyof/wisse-models](https://huggingface.co/datasets/iarroyof/wisse-models)
 
 ---
 
