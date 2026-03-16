@@ -1,7 +1,9 @@
 # Train WISSE IDF + FastText from Wikipedia, register assets, run toy example.
-# Build: docker build -t wisse-train .
-# Run:   docker run --rm wisse-train
-# Optional: mount a volume to keep models: docker run --rm -v wisse-models:/workspace/models wisse-train
+# Build once (no training at build time):  docker build -f docker/Dockerfile -t wisse-train .
+# Run with default cap (quick):            docker run --rm wisse-train
+# Run with 6B tokens (GloVe-style):       docker run --rm -e CAP_TOKENS=6000000000 wisse-train
+# Run with 16B tokens (FastText-style):   docker run --rm -e CAP_TOKENS=16000000000 wisse-train
+# Keep models on a volume:                 docker run --rm -v wisse-models:/workspace/models wisse-train
 
 FROM python:3.11-slim
 
@@ -24,21 +26,14 @@ ENV OUTPUT_DIR=/workspace/output
 
 RUN mkdir -p /workspace/output /workspace/models
 
-# Train from Wikipedia (small cap so the container finishes in reasonable time)
-# Override with docker run -e CAP_ARTICLES=50000 etc.
+# Default cap (quick run). Override at run time: -e CAP_TOKENS=6000000000
 ENV CAP_ARTICLES=2000
 ENV CAP_TOKENS=5000000
+ENV WIKIPEDIA_LANG=en
 
-RUN wisse-train --wikipedia en \
-    --document-unit article \
-    --idf-out /workspace/output/idf-en.pkl \
-    --embeddings-out /workspace/output/fasttext-300-indexed \
-    --cap-articles ${CAP_ARTICLES} \
-    --cap-tokens ${CAP_TOKENS} \
-    --dim 300 --window 5 --min-count 5 --epochs 3
-
-# Copy script that registers assets and runs toy example (build context = repo root)
+# Training runs at container start, not at build (so you can change cap without rebuilding)
 COPY docker/train_and_demo.py /workspace/train_and_demo.py
+COPY docker/entrypoint.sh /workspace/entrypoint.sh
+RUN chmod +x /workspace/entrypoint.sh
 
-# Register trained files under WISSE_HOME and run toy example
-CMD ["python", "/workspace/train_and_demo.py"]
+ENTRYPOINT ["/workspace/entrypoint.sh"]

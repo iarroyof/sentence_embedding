@@ -121,7 +121,7 @@ wisse-train --corpus-dir ./my_texts --document-unit paragraph --idf-out idf.pkl
 - `--idf-out`, `--embeddings-out` — explicit output paths (defaults: `idf-<lang>.pkl`, `fasttext-300-indexed`).
 - `--binary-out PATH` — optionally save FastText in Word2Vec binary format.
 - `--dim`, `--window`, `--min-count`, `--epochs` — paper defaults (300, 5, 5, 5), all configurable.
-- `--cap-articles`, `--cap-tokens` — optional cap with efficient random sampling; default for Wikipedia: 500k articles / 100M tokens.
+- `--cap-articles`, `--cap-tokens` — optional cap with efficient random sampling; default for Wikipedia: 500k articles / 100M tokens. For a **final** training at published embedding-era scale use `--cap-tokens 6000000000` (6B, GloVe-style) or `--cap-tokens 16000000000` (16B, FastText Wikipedia+news).
 
 From repo without installing:
 

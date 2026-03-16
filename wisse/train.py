@@ -23,9 +23,15 @@ DEFAULT_DIM = 300
 DEFAULT_WINDOW = 5
 DEFAULT_MIN_COUNT = 5
 DEFAULT_EPOCHS = 5
-# Typical scale for 2015–2019: ~500k articles or ~100M tokens
+# Default cap: moderate scale for quick runs (~500k articles / 100M tokens)
 DEFAULT_CAP_ARTICLES = 500_000
 DEFAULT_CAP_TOKENS = 100_000_000
+
+# Published historical scales (embedding era 2014–2017) for "final" training:
+# - GloVe (2014): Wikipedia 2014 + Gigaword 5 = 6B tokens
+# - FastText (2017): Wikipedia + news = 16B tokens (official pretrained)
+GLOVE_STYLE_CAP_TOKENS = 6_000_000_000   # 6B — GloVe Wikipedia+Gigaword scale
+FASTTEXT_WIKI_NEWS_CAP_TOKENS = 16_000_000_000   # 16B — FastText Wikipedia+news
 
 # HF Wikipedia config: date.language (e.g. 20231101.en)
 WIKI_CONFIG_DATE = "20231101"
