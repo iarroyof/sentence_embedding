@@ -317,7 +317,8 @@ def train_fasttext_from_sentences(
     out_path.mkdir(parents=True, exist_ok=True)
     from .wisse import keyed2indexed
     keyed2indexed(model.wv, str(out_path), parallel=True)
-    logger.info("Saved indexed embeddings to %s", out_path)
+    n_vectors = len(model.wv)
+    logger.info("Saved indexed embeddings to %s (vocabulary size: %d words)", out_path, n_vectors)
 
     if save_binary_path:
         model.wv.save_word2vec_format(save_binary_path, binary=True)
@@ -366,7 +367,11 @@ def run_train(
     if not docs or not sentences:
         raise RuntimeError("Corpus produced no documents or sentences")
 
-    logger.info("Corpus: %d documents, %d sentences", len(docs), len(sentences))
+    n_tokens = sum(len(s) for s in sentences)
+    logger.info(
+        "Corpus: %d documents, %d sentences, ~%d tokens (verify this matches your cap)",
+        len(docs), len(sentences), n_tokens,
+    )
     train_idf_from_docs(docs, idf_out)
     emb_path = train_fasttext_from_sentences(
         sentences,

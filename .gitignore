@@ -31,6 +31,7 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+nohup.out
 
 # Old / local data (do not commit)
 *.l
@@ -47,6 +48,3 @@ embeddings.list
 .pypirc
 [pypi].txt
 *.pypirc
-*pypi*.txt
-strip_secrets.bat
-docker/strip_pypi_secrets.sh
