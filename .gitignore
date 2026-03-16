@@ -43,6 +43,10 @@ embeddings.list
 # WISSE cache (user data, not repo)
 # ~/.wisse is in user home
 
-# PyPI upload (keep token out of repo)
+# PyPI upload (keep token out of repo — never commit)
 .pypirc
 [pypi].txt
+*.pypirc
+*pypi*.txt
+strip_secrets.bat
+docker/strip_pypi_secrets.sh
