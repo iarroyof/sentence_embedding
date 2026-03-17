@@ -1,0 +1,15 @@
+#!/bin/sh
+# Block commits that add PyPI secret files.
+# Enable for this repo: git config core.hooksPath .githooks
+
+if git diff --cached --name-only | grep -q '^\.pypirc$'; then
+  echo "ERROR: Refusing to commit: .pypirc is staged (contains PyPI token)."
+  echo "Unstage: git reset HEAD -- .pypirc"
+  exit 1
+fi
+if git diff --cached --name-only | grep -q '\[pypi\]\.txt'; then
+  echo "ERROR: Refusing to commit: [pypi].txt is staged (contains PyPI token)."
+  echo "Unstage: git reset HEAD -- \"[pypi].txt\""
+  exit 1
+fi
+exit 0

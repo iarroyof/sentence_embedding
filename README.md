@@ -200,6 +200,12 @@ If you prefer not to use the Hub, download and extract manually, then pass paths
 
 ---
 
+## PyPI upload / secrets
+
+**Never commit** `.pypirc` or `[pypi].txt` (they may contain your PyPI API token). They are in `.gitignore`. A **pre-commit hook** in `.githooks/pre-commit` blocks them if staged. Enable it once per clone: `git config core.hooksPath .githooks`.
+
+---
+
 ## Citation
 
 ```bibtex
