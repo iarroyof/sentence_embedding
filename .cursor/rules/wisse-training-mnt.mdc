@@ -1,0 +1,41 @@
+---
+description: Large WISSE training — use /mnt for sentence corpus and outputs (blue-demon / NVMe)
+alwaysApply: true
+---
+
+# Training directory on `/mnt` (large disk)
+
+On hosts where `/mnt` (or the NVMe mount with ~1.3T+ free, e.g. **blue-demon**) is the big filesystem, **do not** stream multi‑GB sentence files or write embeddings under `~/sentence_embedding` or `/tmp` unless space is confirmed.
+
+## Convention
+
+Use a dedicated tree on the **large disk** (often under `/mnt/...`). If `mkdir` under `/mnt` fails with **permission denied**, either:
+
+```bash
+sudo mkdir -p /mnt/wisse-training/{corpus,models}
+sudo chown -R "$USER:$USER" /mnt/wisse-training
+```
+
+…or use any **writable** path on that volume (`ls -la /mnt` to find scratch/lab dirs), or `~/wisse-training` if home is on the big disk (`df -h ~`).
+
+## CLI examples (Wikipedia, large cap)
+
+Sentence file + outputs on `/mnt`:
+
+```bash
+wisse-train --wikipedia en \
+  --cap-articles 20000000 \
+  --cap-tokens 6000000000 \
+  --sentence-corpus /mnt/wisse-training/corpus/en_sentences.txt \
+  --idf-out /mnt/wisse-training/models/idf-en.pkl \
+  --embeddings-out /mnt/wisse-training/models/fasttext-300-indexed \
+  --dim 300 --window 5 --min-count 5 --epochs 5 --workers 8
+```
+
+## Docker
+
+Mount `/mnt/wisse-training` into the container and pass the same paths **inside** the container (e.g. `-v /mnt/wisse-training:/data` then `--sentence-corpus /data/corpus/en_sentences.txt`).
+
+## When editing code/docs
+
+- Default relative paths in examples are fine for toy runs; for **6B+ token** or streaming training, document or suggest **`/mnt/wisse-training/...`** (or the project’s agreed mount).

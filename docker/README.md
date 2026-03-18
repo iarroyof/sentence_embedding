@@ -45,6 +45,29 @@ docker run --rm -e CAP_TOKENS=16000000000 wisse-train
 docker run --rm -v wisse-models:/workspace/models -e CAP_TOKENS=6000000000 wisse-train
 ```
 
+**Large training on a host directory (e.g. `/mnt/wisse-training` on blue-demon):** mount it and set `WISSE_TRAINING_ROOT` so the sentence stream + IDF + embeddings use the big disk (not container layer).
+
+```bash
+# From repo root (after: docker build -f docker/Dockerfile -t wisse-train .)
+docker run --rm \
+  -v /mnt/wisse-training:/data \
+  -e WISSE_TRAINING_ROOT=/data \
+  -e CAP_TOKENS=6000000000 \
+  -e WORKERS=8 \
+  -e EPOCHS=5 \
+  wisse-train
+```
+
+Outputs on the host:
+
+- `/mnt/wisse-training/corpus/wiki-en-sentences.txt` — streaming sentence file  
+- `/mnt/wisse-training/models/idf-en.pkl`  
+- `/mnt/wisse-training/models/fasttext-300-indexed/`  
+
+Optional: `-e SENTENCE_CORPUS=/data/corpus/custom.txt` — `-e IDF_OUT=...` — `-e EMBEDDINGS_OUT=...` — `-e WIKIPEDIA_LANG=es`.
+
+**16B tokens:** `-e CAP_TOKENS=16000000000` (ensure hundreds of GB free on `/mnt`).
+
 ## What the container does
 
 1. **At build:** Installs `wisse-sentence` with the `train` extra (adds `datasets`). No training.

@@ -10,8 +10,10 @@ import shutil
 from pathlib import Path
 
 WISSE_HOME = Path(os.environ.get("WISSE_HOME", "/workspace/models"))
-TRAIN_IDF = Path("/workspace/output/idf-en.pkl")
-TRAIN_EMBEDDINGS = Path("/workspace/output/fasttext-300-indexed")
+TRAIN_IDF = Path(os.environ.get("TRAIN_IDF", "/workspace/output/idf-en.pkl"))
+TRAIN_EMBEDDINGS = Path(
+    os.environ.get("TRAIN_EMBEDDINGS", "/workspace/output/fasttext-300-indexed")
+)
 
 
 def register_assets() -> None:
