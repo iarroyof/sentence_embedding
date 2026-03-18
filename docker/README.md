@@ -52,9 +52,9 @@ docker run --rm -v wisse-models:/workspace/models -e CAP_TOKENS=6000000000 wisse
 3. Writes IDF to `/workspace/output/idf-en.pkl` and embeddings to `/workspace/output/fasttext-300-indexed/`.
 4. Runs `train_and_demo.py`: registers assets under `WISSE_HOME` and runs the toy example.
 
-**How to confirm the right cap was used:** At the start you should see  
-`Training from Wikipedia (en): cap_articles=... cap_tokens=...` with your chosen values. Then look for  
-`Corpus: X documents, Y sentences, ~Z tokens` and `vocabulary size: N words`. For 16B tokens expect N in the hundreds of thousands and a long run (hours). If you see ~12k words and a short run, the image may be **old** (training was baked in at build); rebuild with `docker build -f docker/Dockerfile -t wisse-train .`.
+**Large caps (e.g. 6B+ tokens):** Training uses the **streaming pipeline** automatically (`--cap-tokens` > 15M): one pass writes sentences to a temp file — ensure the container has **enough free disk** (tens–100+ GB for multi-billion tokens). Logs show `Streaming pass` / `Pass done` instead of loading the full corpus in RAM.
+
+**How to confirm caps:** `Training from Wikipedia ... cap_articles=... cap_tokens=...`. Then `Pass done: ... docs, ... sentences` (streaming) or `Corpus: X documents...` (small in-memory run). For 16B tokens expect a large vocab and a very long run.
 
 ## One-liner (build + run)
 

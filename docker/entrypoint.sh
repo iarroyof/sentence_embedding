@@ -13,6 +13,9 @@ if [ "${CAP_TOKENS}" -gt 1000000000 ] 2>/dev/null; then
 fi
 
 echo "Training from Wikipedia (${WIKIPEDIA_LANG}): cap_articles=${CAP_ARTICLES} cap_tokens=${CAP_TOKENS}"
+if [ "${CAP_TOKENS}" -gt 15000000 ] 2>/dev/null; then
+  echo "Note: large cap_tokens uses streaming (temp sentence file on disk; ensure enough free space)."
+fi
 wisse-train --wikipedia "${WIKIPEDIA_LANG}" \
     --document-unit article \
     --idf-out /workspace/output/idf-en.pkl \

@@ -143,7 +143,46 @@ def main_train() -> None:
         help="Max tokens to use. Default for Wikipedia: 100000000",
     )
     parser.add_argument("--seed", type=int, default=42, help="Random seed for sampling (default: 42)")
+    parser.add_argument(
+        "--streaming",
+        action="store_true",
+        help="Force one-pass streaming (sentences on disk; low RAM). Auto-on when --cap-tokens > 15M.",
+    )
+    parser.add_argument(
+        "--no-streaming",
+        action="store_true",
+        help="Disable auto streaming even for large --cap-tokens (may OOM).",
+    )
+    parser.add_argument(
+        "--sentence-corpus",
+        type=str,
+        default=None,
+        metavar="PATH",
+        help="With streaming: keep sentence lines here instead of a temp file (reuse for reruns)",
+    )
+    parser.add_argument(
+        "--idf-min-df",
+        type=int,
+        default=1,
+        help="Streaming IDF: min document frequency (default: 1)",
+    )
+    parser.add_argument(
+        "--idf-max-df",
+        type=float,
+        default=1.0,
+        help="Streaming IDF: max document proportion 0–1 (default: 1.0)",
+    )
+    parser.add_argument(
+        "--idf-max-features",
+        type=int,
+        default=None,
+        help="Streaming IDF: cap vocabulary size by top df (optional)",
+    )
     args = parser.parse_args()
+
+    if args.streaming and args.no_streaming:
+        print("Error: use only one of --streaming and --no-streaming", file=sys.stderr)
+        sys.exit(1)
 
     from .train import (
         DEFAULT_CAP_ARTICLES,
@@ -164,6 +203,12 @@ def main_train() -> None:
     import logging
     logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)
 
+    streaming = None
+    if args.streaming:
+        streaming = True
+    elif args.no_streaming:
+        streaming = False
+
     try:
         idf_path, emb_path = run_train(
             corpus_dir=args.corpus_dir,
@@ -180,6 +225,11 @@ def main_train() -> None:
             cap_articles=cap_articles,
             cap_tokens=cap_tokens,
             seed=args.seed,
+            streaming=streaming,
+            sentence_corpus_path=args.sentence_corpus,
+            idf_min_df=args.idf_min_df,
+            idf_max_df=args.idf_max_df,
+            idf_max_features=args.idf_max_features,
         )
         print(f"IDF: {idf_path}")
         print(f"Embeddings: {emb_path}")

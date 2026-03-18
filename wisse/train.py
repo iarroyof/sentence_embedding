@@ -342,13 +342,60 @@ def run_train(
     cap_articles: Optional[int] = None,
     cap_tokens: Optional[int] = None,
     seed: int = 42,
+    streaming: Optional[bool] = None,
+    sentence_corpus_path: Optional[str] = None,
+    idf_min_df: int = 1,
+    idf_max_df: float = 1.0,
+    idf_max_features: Optional[int] = None,
 ) -> Tuple[Path, Path]:
     """
     Main entry: load corpus (dir or Wikipedia), train IDF and FastText, write outputs.
     Returns (idf_path, embeddings_dir_path).
+
+    When ``streaming`` is True, or when ``cap_tokens`` exceeds the streaming threshold,
+    uses a one-pass disk-backed pipeline (no full sentence list in RAM). Wikipedia then
+    uses sequential consumption until caps (not reservoir sampling).
     """
     if (corpus_dir is None) == (wikipedia_lang is None):
         raise ValueError("Set exactly one of corpus_dir or wikipedia_lang")
+
+    from .train_streaming import STREAMING_TOKEN_THRESHOLD, run_train_streaming
+
+    if streaming is False:
+        use_streaming = False
+    elif streaming is True:
+        use_streaming = True
+    elif cap_tokens is not None and cap_tokens > STREAMING_TOKEN_THRESHOLD:
+        use_streaming = True
+    else:
+        use_streaming = False
+
+    if use_streaming:
+        if wikipedia_lang and cap_articles:
+            logger.info(
+                "Streaming mode: Wikipedia documents are taken sequentially from the "
+                "shuffled stream until cap_articles/cap_tokens (not reservoir sampling)."
+            )
+        return run_train_streaming(
+            corpus_dir=corpus_dir,
+            wikipedia_lang=wikipedia_lang,
+            document_unit=document_unit,
+            idf_out=idf_out,
+            embeddings_out=embeddings_out,
+            binary_out=binary_out,
+            dim=dim,
+            window=window,
+            min_count=min_count,
+            epochs=epochs,
+            workers=workers,
+            cap_articles=cap_articles,
+            cap_tokens=cap_tokens,
+            seed=seed,
+            idf_min_df=idf_min_df,
+            idf_max_df=idf_max_df,
+            idf_max_features=idf_max_features,
+            sentence_corpus_path=sentence_corpus_path,
+        )
 
     if corpus_dir is not None:
         it = iter_corpus_from_dir(corpus_dir, document_unit=document_unit)

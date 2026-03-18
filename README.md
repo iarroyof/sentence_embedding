@@ -121,7 +121,8 @@ wisse-train --corpus-dir ./my_texts --document-unit paragraph --idf-out idf.pkl
 - `--idf-out`, `--embeddings-out` — explicit output paths (defaults: `idf-<lang>.pkl`, `fasttext-300-indexed`).
 - `--binary-out PATH` — optionally save FastText in Word2Vec binary format.
 - `--dim`, `--window`, `--min-count`, `--epochs` — paper defaults (300, 5, 5, 5), all configurable.
-- `--cap-articles`, `--cap-tokens` — optional cap with efficient random sampling; default for Wikipedia: 500k articles / 100M tokens. For a **final** training at published embedding-era scale use `--cap-tokens 6000000000` (6B, GloVe-style) or `--cap-tokens 16000000000` (16B, FastText Wikipedia+news).
+- `--cap-articles`, `--cap-tokens` — optional caps; default for Wikipedia: 500k articles / 100M tokens. For **very large** `--cap-tokens` (above ~15M), training **automatically uses a streaming pipeline**: one pass writes sentences to a temp file (needs disk space), document frequencies stay in RAM for IDF, FastText trains via `corpus_file` (low RAM). Use `--streaming` to force that path on smaller runs, or `--no-streaming` to keep the in-memory path (risk of OOM on huge corpora). With streaming, Wikipedia is consumed **sequentially** from the shuffled stream until caps (not reservoir sampling). `--sentence-corpus PATH` keeps the sentence file for reuse. `--idf-min-df`, `--idf-max-df`, `--idf-max-features` tune streaming IDF.
+- For **final** scale: `--cap-tokens 6000000000` (6B) or `--cap-tokens 16000000000` (16B) — use streaming (auto) and ensure enough disk for the sentence corpus.
 
 From repo without installing:
 
