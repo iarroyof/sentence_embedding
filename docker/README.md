@@ -68,6 +68,27 @@ Optional: `-e SENTENCE_CORPUS=/data/corpus/custom.txt` — `-e IDF_OUT=...` — 
 
 **16B tokens:** `-e CAP_TOKENS=16000000000` (ensure hundreds of GB free on `/mnt`).
 
+## Similarity sampling (no Python on the host)
+
+The image includes `scripts/sample_sentence_similarities.py`. Mount your data and **override the entrypoint** so training does not run:
+
+```bash
+# Rebuild once if your image predates the scripts/ COPY in the Dockerfile
+docker build -f docker/Dockerfile -t wisse-train .
+
+docker run --rm \
+  -v /mnt/wisse-training:/data \
+  --entrypoint python \
+  wisse-train \
+  /workspace/scripts/sample_sentence_similarities.py \
+  --sentence-corpus /data/corpus/wiki-en-sentences.txt \
+  --model /data/models/fasttext-300-indexed \
+  --idf /data/models/idf-en.pkl \
+  --output /data/models/sentence_pair_similarities.txt
+```
+
+Writes the report to the host at `/mnt/wisse-training/models/sentence_pair_similarities.txt`. Adjust paths if your mount differs.
+
 ## What the container does
 
 1. **At build:** Installs `wisse-sentence` with the `train` extra (adds `datasets`). No training.

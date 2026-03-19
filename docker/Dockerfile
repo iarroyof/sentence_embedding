@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy project and install package with train extra (datasets for Wikipedia)
 COPY pyproject.toml setup.py README.md LICENSE ./
 COPY wisse/ ./wisse/
+COPY scripts/ ./scripts/
 
 RUN pip install --no-cache-dir -e ".[train]"
 
