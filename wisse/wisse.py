@@ -183,13 +183,21 @@ class wisse:
                 yield self.transform(s)
 
 
+def embedding_filename_stem(word: str) -> Optional[str]:
+    """
+    Basename stem for an indexed embedding file (must match keyed2indexed / save_dense).
+    """
+    safe = "".join(c if c.isalnum() or c in "._-" else "_" for c in word)
+    return safe if safe else None
+
+
 def save_dense(directory: str, filename: str, array: np.ndarray) -> Optional[None]:
     directory = os.path.normpath(directory) + os.sep
     try:
-        safe = "".join(c if c.isalnum() or c in "._-" else "_" for c in filename)
-        if not safe:
+        stem = embedding_filename_stem(filename)
+        if not stem:
             return None
-        path = os.path.join(directory, safe + ".npy")
+        path = os.path.join(directory, stem + ".npy")
         np.save(path, array)
     except (UnicodeEncodeError, OSError):
         return None
@@ -211,12 +219,31 @@ def _iter_keyed_vocab(keyed_model: Any):
 
 
 class vector_space:
-    """Word embedding space backed by a directory of .npy files or a .tar.gz archive."""
+    """
+    Word embedding space backed by a directory of .npy files or a .tar.gz archive.
 
-    def __init__(self, directory: str, sparse: bool = False):
+    For large indexed directories (millions of words), use ``lazy_index=True`` (default
+    for directories): no full ``os.listdir`` at startup; each ``__getitem__`` loads
+    only that word's ``.npy`` (same as inference). Vectors are never all loaded into RAM.
+
+    ``lazy_index=False`` builds a word→path dict (faster repeated lookups, high RAM
+    and slow startup for huge vocabs). Archives (``.tar.gz``) always use an in-memory
+    member index.
+    """
+
+    def __init__(
+        self,
+        directory: str,
+        sparse: bool = False,
+        lazy_index: Optional[bool] = None,
+    ):
         self.sparse = sparse
         self._tar = False
+        self._lazy = False
+        self._directory: Optional[str] = None
         ext = ".npz" if sparse else ".npy"
+        self._ext = ext
+
         if directory.endswith(".tar.gz"):
             self._tar = True
             import tarfile
@@ -227,25 +254,81 @@ class vector_space:
             }
         else:
             directory = os.path.normpath(directory) + os.sep
-            self.words = {
-                f.replace(ext, ""): os.path.join(directory, f)
-                for f in os.listdir(directory)
-                if f.endswith(ext)
-            }
+            if lazy_index is None:
+                lazy_index = True
+            self._lazy = bool(lazy_index)
+            if self._lazy:
+                self._directory = directory
+                self.words = {}  # unused in lazy mode; __getitem__ uses path resolution
+            else:
+                self.words = {
+                    f.replace(ext, ""): os.path.join(directory, f)
+                    for f in os.listdir(directory)
+                    if f.endswith(ext)
+                }
+
+    def _path_for_word(self, item: str) -> Optional[str]:
+        if self._tar:
+            try:
+                return self.words[item]
+            except KeyError:
+                return None
+        stem = embedding_filename_stem(item)
+        if not stem or self._directory is None:
+            return None
+        path = os.path.join(self._directory, stem + self._ext)
+        return path if os.path.isfile(path) else None
+
+    def get_embedding_dimension(self) -> int:
+        """Infer vector size from one stored embedding (no full vocabulary scan in lazy mode)."""
+        if self._tar:
+            if not self.words:
+                return 0
+            first_key = next(iter(self.words.keys()))
+            return int(np.asarray(self[first_key]).size)
+        if self._lazy and self._directory is not None:
+            with os.scandir(self._directory) as it:
+                for entry in it:
+                    if entry.name.endswith(self._ext) and entry.is_file():
+                        arr = load_dense(entry.path)
+                        return int(arr.size) if arr.ndim == 1 else int(arr.shape[-1])
+            return 0
+        if not self.words:
+            return 0
+        first_key = next(iter(self.words.keys()))
+        return int(np.asarray(self[first_key]).size)
 
     def __getitem__(self, item: str) -> np.ndarray:
-        path = self.words[item]
         if self._tar:
-            import tarfile
+            path = self.words[item]
             f = self._tarfile.extractfile(self._tarfile.getmember(path))
             return np.load(f, allow_pickle=True)
+        if self._lazy:
+            path = self._path_for_word(item)
+            if path is None:
+                raise KeyError(item)
+            return load_dense(path)
+        path = self.words[item]
         return load_dense(path)
 
     def __contains__(self, item: str) -> bool:
-        return item in self.words
+        if self._tar or not self._lazy:
+            return item in self.words
+        return self._path_for_word(item) is not None
 
     def __len__(self) -> int:
-        return len(self.words)
+        if self._tar or not self._lazy:
+            return len(self.words)
+        if self._directory is None:
+            return 0
+        if not hasattr(self, "_lazy_len"):
+            n = 0
+            with os.scandir(self._directory) as it:
+                for entry in it:
+                    if entry.name.endswith(self._ext) and entry.is_file():
+                        n += 1
+            self._lazy_len = n
+        return int(self._lazy_len)
 
 
 def keyed2indexed(

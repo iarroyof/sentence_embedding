@@ -94,15 +94,10 @@ class SentenceEmbedding:
             generate=True,
         )
 
-        # Infer embedding dimension from first available word
-        keys = list(self._embedding.words.keys())
-        if keys:
-            try:
-                v = np.asarray(self._embedding[keys[0]])
-                self._dim = int(v.size)
-            except Exception:
-                self._dim = 0
-        else:
+        # One .npy load (or tar member), not a full vocabulary scan
+        try:
+            self._dim = int(self._embedding.get_embedding_dimension())
+        except Exception:
             self._dim = 0
 
     @property
