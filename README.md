@@ -130,6 +130,20 @@ From repo without installing:
 python keyed2indexed.py --input model.bin --output output_indexed
 ```
 
+### Sample sentences from training corpus → pairwise similarities
+
+After training you have a line corpus (e.g. `wiki-en-sentences.txt`). This script reservoir-samples **50** lines, encodes them with **TF-IDF–weighted** `SentenceEmbedding`, and writes **most similar** and **most dissimilar** pairs (cosine) to a report file:
+
+```bash
+python scripts/sample_sentence_similarities.py \
+  --sentence-corpus /mnt/wisse-training/corpus/wiki-en-sentences.txt \
+  --model /mnt/wisse-training/models/fasttext-300-indexed \
+  --idf /mnt/wisse-training/models/idf-en.pkl \
+  --output sentence_pair_similarities.txt
+```
+
+Use `--top-similar` / `--top-dissimilar` to change how many pairs are listed; `--all-pairs` to dump every pair among the sample.
+
 ---
 
 ## Low-level usage
