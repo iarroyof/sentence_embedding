@@ -84,10 +84,15 @@ docker run --rm \
   --sentence-corpus /data/corpus/wiki-en-sentences.txt \
   --model /data/models/fasttext-300-indexed \
   --idf /data/models/idf-en.pkl \
-  --output /data/models/sentence_pair_similarities.txt
+  --output /data/models/sentence_pair_similarities.txt \
+  --combiner avg
 ```
 
-Writes the report to the host at `/mnt/wisse-training/models/sentence_pair_similarities.txt`. Adjust paths if your mount differs.
+Default sampling filters (token length + wiki boilerplate) make “top similar” pairs more interpretable than raw uniform sampling. For the old behavior: `--no-length-filter --keep-boilerplate`.
+
+To compare two model bundles, run the same `docker run ... sample_sentence_similarities.py` command twice with the same `--seed` and corpus but different `--model`, `--idf`, and `-o`.
+
+Writes the report to the host under `/mnt/wisse-training/models/` (or your chosen `-o`). Adjust paths if your mount differs.
 
 ## What the container does
 

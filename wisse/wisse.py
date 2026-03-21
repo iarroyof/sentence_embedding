@@ -11,6 +11,7 @@ from functools import partial
 from typing import Any, List, Optional, Tuple, Union
 
 import numpy as np
+from sklearn.exceptions import NotFittedError
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 logging.basicConfig(
@@ -143,6 +144,21 @@ class wisse:
             return self.missing_cbow, self.missing_bow, sentence_vec
         return sentence_vec
 
+    def _infer_idf_only_weights(self, sentence: List[str]) -> Tuple[dict, List[str]]:
+        """Use stored idf_ + vocabulary_ (no CountVectorizer / TfidfTransformer.transform)."""
+        existent: dict = {}
+        missing: List[str] = []
+        vocab = self.tfidf.vocabulary_
+        idf_ = self.tfidf.idf_
+        for word in sentence:
+            try:
+                idx = vocab[word]
+                weight = float(idf_[idx]) if idf_[idx] > 2 else 0.01
+                existent[word] = weight
+            except KeyError:
+                missing.append(word)
+        return existent, missing
+
     def _infer_tfidf_weights(
         self, sentence: List[str]
     ) -> Tuple[dict, List[str]]:
@@ -157,7 +173,17 @@ class wisse:
 
         if self.tf_tfidf:
             # Full TF-IDF (term frequency × idf) from .transform() — best performing
-            unseen = self.tfidf.transform([" ".join(sentence)]).toarray()
+            try:
+                unseen = self.tfidf.transform([" ".join(sentence)]).toarray()
+            except NotFittedError:
+                # sklearn 1.x unpickling pre-0.18 TfidfVectorizer often leaves the inner
+                # TfidfTransformer unfitted; vocabulary_ and idf_ on the vectorizer may
+                # still be valid — fall back to IDF-only weights.
+                logging.warning(
+                    "TfidfVectorizer.transform failed (NotFittedError, often legacy "
+                    "pickle). Using IDF-only weights from vocabulary_/idf_."
+                )
+                return self._infer_idf_only_weights(sentence)
             vocab = self.tfidf.vocabulary_
             for word in sentence:
                 try:
@@ -165,15 +191,7 @@ class wisse:
                 except KeyError:
                     missing.append(word)
         else:
-            vocab = self.tfidf.vocabulary_
-            idf_ = self.tfidf.idf_
-            for word in sentence:
-                try:
-                    idx = vocab[word]
-                    weight = float(idf_[idx]) if idf_[idx] > 2 else 0.01
-                    existent[word] = weight
-                except KeyError:
-                    missing.append(word)
+            return self._infer_idf_only_weights(sentence)
 
         return existent, missing
 

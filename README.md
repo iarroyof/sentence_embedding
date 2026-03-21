@@ -144,6 +144,10 @@ python scripts/sample_sentence_similarities.py \
 
 Use `--top-similar` / `--top-dissimilar` to change how many pairs are listed; `--all-pairs` to dump every pair among the sample.
 
+**Interpreting similarities:** WISSE is bag-of-words FastText + TF-IDF, not SBERT — high cosine between two random Wikipedia lines often reflects shared common tokens or long footer/nav lines, not “same topic.” By default the script uses **`--min-tokens 10 --max-tokens 100`** and skips common **wiki boilerplate** lines; use `--no-length-filter` and `--keep-boilerplate` to reproduce the old “any line” behavior. **`--combiner avg`** is optional for more length-robust vectors.
+
+To compare **paper vs your** models, run the script **twice** with the same `--sentence-corpus`, `--seed`, and filter flags, but different `--model` / `--idf` / `-o` (or use two terminals / two output files).
+
 ---
 
 ## Low-level usage
