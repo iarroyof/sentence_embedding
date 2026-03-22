@@ -92,6 +92,13 @@ Default sampling filters (token length + wiki boilerplate) make “top similar�
 
 To compare two model bundles, run the same `docker run ... sample_sentence_similarities.py` command twice with the same `--seed` and corpus but different `--model`, `--idf`, and `-o`.
 
+**Paper MEGA bundle** (original filenames): mount the extract under `/data` and use:
+
+- `--model /data/paper_fasttext_wikiEn_300d/fstx_300d_indexed`
+- `--idf /data/wikiEn_sts_clean_ph2_tfidf_binary_stop.pk`
+
+(Adjust if your extract path differs; see repo `README.md` → **Paper MEGA bundle (paths after extract)**.)
+
 Writes the report to the host under `/mnt/wisse-training/models/` (or your chosen `-o`). Adjust paths if your mount differs.
 
 ## What the container does

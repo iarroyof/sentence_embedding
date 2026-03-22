@@ -9,6 +9,10 @@ These tests are SKIPPED unless assets are available:
 Sources (manual download from MEGA if needed):
 - FastText indexed: https://mega.nz/#!zKBUzL7J!V2BN6hsb2_I61WbM3C8OIrSnJotFyxaqfBmapddns4Y
 - TF-IDF (pretrained_idf): https://mega.nz/#!WPx1iYwA!okha3WRVIksZJuq7cJKeKzplxuDYqOa0aq31hyMHvAo
+
+Paper bundle paths after extract (set env vars to these):
+- WISSE_PAPER_FASTTEXT_DIR -> .../paper_fasttext_wikiEn_300d/fstx_300d_indexed
+- WISSE_PAPER_IDF_PATH     -> .../wikiEn_sts_clean_ph2_tfidf_binary_stop.pk
 """
 import os
 from pathlib import Path

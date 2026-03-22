@@ -24,12 +24,12 @@ embeddings = model.encode(sentences)  # shape (3, 300)
 sim = model.similarity(embeddings, embeddings)
 ```
 
-**With local paths** (e.g. after downloading from MEGA):
+**With local paths** (e.g. paper MEGA bundle — see [Paper MEGA bundle (paths after extract)](#paper-mega-bundle-paths-after-extract)):
 
 ```python
 model = SentenceEmbedding(
-    model_name_or_path="/path/to/indexed_fasttext/",
-    idf_name_or_path="/path/to/idf-en.pkl",
+    model_name_or_path="/path/to/paper_fasttext_wikiEn_300d/fstx_300d_indexed",
+    idf_name_or_path="/path/to/wikiEn_sts_clean_ph2_tfidf_binary_stop.pk",
 )
 embeddings = model.encode(["First sentence.", "Second sentence."])
 ```
@@ -142,6 +142,10 @@ python scripts/sample_sentence_similarities.py \
   --output sentence_pair_similarities.txt
 ```
 
+**Authors’ MEGA bundle** (same script; use these paths if you did not rename files):
+
+`--model …/paper_fasttext_wikiEn_300d/fstx_300d_indexed` · `--idf …/wikiEn_sts_clean_ph2_tfidf_binary_stop.pk` (details below).
+
 Use `--top-similar` / `--top-dissimilar` to change how many pairs are listed; `--all-pairs` to dump every pair among the sample.
 
 **Interpreting similarities:** WISSE is bag-of-words FastText + TF-IDF, not SBERT — high cosine between two random Wikipedia lines often reflects shared common tokens or long footer/nav lines, not “same topic.” By default the script uses **`--min-tokens 10 --max-tokens 100`** and skips common **wiki boilerplate** lines; use `--no-length-filter` and `--keep-boilerplate` to reproduce the old “any line” behavior. **`--combiner avg`** is optional for more length-robust vectors.
@@ -216,6 +220,30 @@ If you prefer not to use the Hub, download and extract manually, then pass paths
 - **GloVe** (840B 300d): [idx_Glove](https://mega.nz/#!Pa4GQC7Y!ccQ9398j234ixYcqhbIqEUPj-jS-aC3HXdExMk5PyQs)
 - **Dep2Vec** (300d): [idx_Dep2Vec](https://mega.nz/#!CHYXjbrb!jk3gW5DaVOW4yksq-B4eGKJDQv9LSVPxmBJqM68rZHs)
 - **TF-IDF** (Wikipedia, stop words ignored): [pretrained_idf](https://mega.nz/#!WPx1iYwA!okha3WRVIksZJuq7cJKeKzplxuDYqOa0aq31hyMHvAo)
+
+### Paper MEGA bundle (paths after extract)
+
+The authors’ archives use **fixed inner names** (not the Hub names `fasttext-300-indexed` / `idf-en.pkl`). After download:
+
+| Role | Path to pass to this repo |
+|------|---------------------------|
+| **Indexed FastText (300d, en wiki)** | **`…/paper_fasttext_wikiEn_300d/fstx_300d_indexed/`** — directory of `*.npy` word vectors (WISSE indexed format). |
+| **TF-IDF weights** | **`…/wikiEn_sts_clean_ph2_tfidf_binary_stop.pk`** — pickled `TfidfVectorizer` from the **pretrained_idf** archive (use this file as `--idf`; `.pk` / `.pkl` both work). |
+
+The parent folder of the FastText tree may sit wherever you extracted it; the important leaf is **`fstx_300d_indexed`**. The IDF `.pk` may sit next to other files from the same archive — search by filename if your tool nests folders differently.
+
+Example (adjust the prefix to your machine):
+
+```bash
+python scripts/sample_sentence_similarities.py \
+  --sentence-corpus /path/to/wiki-en-sentences.txt \
+  --model /path/to/paper_fasttext_wikiEn_300d/fstx_300d_indexed \
+  --idf /path/to/wikiEn_sts_clean_ph2_tfidf_binary_stop.pk \
+  -o sentence_pair_similarities.txt \
+  --combiner avg
+```
+
+For optional paper tests, set `WISSE_PAPER_FASTTEXT_DIR` to the **`fstx_300d_indexed`** directory and `WISSE_PAPER_IDF_PATH` to the **`.pk`** file.
 
 ---
 

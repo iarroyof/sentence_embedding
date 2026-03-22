@@ -108,7 +108,19 @@ class wisse:
         except Exception:
             sent = sent.lower()
 
-        ss = self.tokenize(sent)
+        # Match sklearn: TF-IDF uses the full analyzer (preprocess + tokenize + ngrams)
+        # on the raw document string, not build_tokenizer() on a space-joined token list.
+        doc_for_tfidf: Optional[str] = None
+        if self.tfidf is not None:
+            try:
+                ss = list(self.tfidf.build_analyzer()(sent))
+                doc_for_tfidf = sent
+            except Exception:
+                ss = self.tokenize(sent)
+                doc_for_tfidf = " ".join(ss)
+        else:
+            ss = self.tokenize(sent)
+
         self.missing_bow: List[str] = []
         self.missing_cbow: List[str] = []
         series: dict = {}
@@ -119,7 +131,7 @@ class wisse:
         if self.tf_tfidf is False and self.tfidf is None:
             self.weights, m = dict(zip(ss, [1.0] * len(ss))), []
         else:
-            self.weights, m = self._infer_tfidf_weights(ss)
+            self.weights, m = self._infer_tfidf_weights(ss, raw_document=doc_for_tfidf)
 
         self.missing_bow += m
 
@@ -154,21 +166,24 @@ class wisse:
         return extract_idf_feature_array(self.tfidf)
 
     def _infer_manual_tfidf_weights(
-        self, sentence: List[str], idf_arr: np.ndarray
+        self,
+        sentence: List[str],
+        idf_arr: np.ndarray,
+        raw_document: str,
     ) -> Tuple[dict, List[str]]:
         """
-        Rebuild sklearn-style TF×IDF for one pseudo-document ``" ".join(sentence)``
-        when ``.transform()`` is broken but ``idf_`` was recovered into ``idf_arr``.
+        Rebuild sklearn-style TF×IDF for ``raw_document`` when ``.transform()`` is
+        broken but ``idf_`` was recovered into ``idf_arr``.
 
-        Mirrors CountVectorizer (binary / raw counts) → optional sublinear_tf → × idf
-        → row-wise norm, matching ``TfidfVectorizer.transform`` for that document.
+        ``sentence`` should be ``list(vectorizer.build_analyzer()(raw_document))`` so
+        embedding lookups align with TF-IDF features. Mirrors CountVectorizer →
+        sublinear_tf → × idf → row norm like ``TfidfVectorizer.transform``.
         """
         v = self.tfidf
         assert v is not None
         vocab = v.vocabulary_
-        doc = " ".join(sentence)
         try:
-            tokens = list(v.build_analyzer()(doc))
+            tokens = list(v.build_analyzer()(raw_document))
         except Exception:
             tokens = list(sentence)
 
@@ -253,9 +268,11 @@ class wisse:
         return self._infer_idf_table_weights(sentence, idf_arr)
 
     def _infer_tfidf_weights(
-        self, sentence: List[str]
+        self,
+        sentence: List[str],
+        raw_document: Optional[str] = None,
     ) -> Tuple[dict, List[str]]:
-        """Compute weights: full TF-IDF (best) when tf_tfidf=True, else IDF-only."""
+        """Compute weights: full TF-IDF when tf_tfidf=True, else IDF-only."""
         existent: dict = {}
         missing: List[str] = []
 
@@ -264,15 +281,19 @@ class wisse:
                 existent[word] = 1.0
             return existent, missing
 
+        doc = raw_document if raw_document is not None else " ".join(sentence)
+
         # Recovered idf_ from sklearn pre-0.18 pickles (see tfidf_compat): full TF×IDF
         if self._idf_per_feature is not None:
             if self.tf_tfidf:
-                return self._infer_manual_tfidf_weights(sentence, self._idf_per_feature)
+                return self._infer_manual_tfidf_weights(
+                    sentence, self._idf_per_feature, doc
+                )
             return self._infer_idf_table_weights(sentence, self._idf_per_feature)
 
         if self.tf_tfidf:
             try:
-                unseen = self.tfidf.transform([" ".join(sentence)]).toarray()
+                unseen = self.tfidf.transform([doc]).toarray()
             except NotFittedError:
                 logging.warning(
                     "TfidfVectorizer.transform failed (NotFittedError). "
