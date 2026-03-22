@@ -35,6 +35,7 @@ class wisse:
         verbose: bool = False,
         return_missing: bool = False,
         generate: bool = False,
+        idf_per_feature: Optional[np.ndarray] = None,
     ):
         if vectorizer is not None:
             self.tokenize = vectorizer.build_tokenizer()
@@ -44,6 +45,8 @@ class wisse:
         self.tfidf = vectorizer
         self.embedding = embeddings
         self.tf_tfidf = tf_tfidf if vectorizer is not None else False
+        # Pre-aligned IDF from tfidf_compat when sklearn .transform() is unusable (legacy pickles)
+        self._idf_per_feature = idf_per_feature
         self.rm = return_missing
         self.generate = generate
         self.verbose = verbose
@@ -144,20 +147,39 @@ class wisse:
             return self.missing_cbow, self.missing_bow, sentence_vec
         return sentence_vec
 
-    def _infer_idf_only_weights(self, sentence: List[str]) -> Tuple[dict, List[str]]:
-        """Use stored idf_ + vocabulary_ (no CountVectorizer / TfidfTransformer.transform)."""
+    def _raw_idf_array(self) -> Optional[np.ndarray]:
+        from .tfidf_compat import extract_idf_feature_array
+
+        return extract_idf_feature_array(self.tfidf)
+
+    def _infer_idf_table_weights(
+        self, sentence: List[str], idf_arr: np.ndarray
+    ) -> Tuple[dict, List[str]]:
+        """IDF-only weights from a pre-aligned (n_features,) array and vocabulary_."""
         existent: dict = {}
         missing: List[str] = []
         vocab = self.tfidf.vocabulary_
-        idf_ = self.tfidf.idf_
         for word in sentence:
             try:
-                idx = vocab[word]
-                weight = float(idf_[idx]) if idf_[idx] > 2 else 0.01
-                existent[word] = weight
+                idx = int(vocab[word])
+                if idx < 0 or idx >= len(idf_arr):
+                    missing.append(word)
+                    continue
+                w = float(idf_arr[idx])
+                existent[word] = w if w > 2.0 else 0.01
             except KeyError:
                 missing.append(word)
         return existent, missing
+
+    def _infer_idf_only_weights(self, sentence: List[str]) -> Tuple[dict, List[str]]:
+        """Recover IDF table without .transform() (e.g. ad-hoc wisse use, legacy pickle)."""
+        from .tfidf_compat import align_idf_to_vocab, extract_idf_feature_array
+
+        vocab = self.tfidf.vocabulary_
+        n_features = int(max(vocab.values())) + 1
+        raw = extract_idf_feature_array(self.tfidf)
+        idf_arr = align_idf_to_vocab(raw, n_features)
+        return self._infer_idf_table_weights(sentence, idf_arr)
 
     def _infer_tfidf_weights(
         self, sentence: List[str]
@@ -171,17 +193,18 @@ class wisse:
                 existent[word] = 1.0
             return existent, missing
 
+        # Set once at SentenceEmbedding load for sklearn pre-0.18 pickles (see tfidf_compat)
+        if self._idf_per_feature is not None:
+            return self._infer_idf_table_weights(sentence, self._idf_per_feature)
+
         if self.tf_tfidf:
-            # Full TF-IDF (term frequency × idf) from .transform() — best performing
             try:
                 unseen = self.tfidf.transform([" ".join(sentence)]).toarray()
             except NotFittedError:
-                # sklearn 1.x unpickling pre-0.18 TfidfVectorizer often leaves the inner
-                # TfidfTransformer unfitted; vocabulary_ and idf_ on the vectorizer may
-                # still be valid — fall back to IDF-only weights.
                 logging.warning(
-                    "TfidfVectorizer.transform failed (NotFittedError, often legacy "
-                    "pickle). Using IDF-only weights from vocabulary_/idf_."
+                    "TfidfVectorizer.transform failed (NotFittedError). "
+                    "Using recovered IDF table (pass idf_per_feature from tfidf_compat "
+                    "at init to avoid this path)."
                 )
                 return self._infer_idf_only_weights(sentence)
             vocab = self.tfidf.vocabulary_

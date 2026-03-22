@@ -17,6 +17,7 @@ from .download import (
     get_idf_path,
     load_idf,
 )
+from .tfidf_compat import prepare_tfidf_vectorizer_for_inference
 from .wisse import vector_space, wisse
 from . import similarity as sim_module
 
@@ -78,12 +79,21 @@ class SentenceEmbedding:
                 idf_path = get_idf_path(idf_name_or_path)
                 self._vectorizer = load_idf(idf_path)
                 self._tf_tfidf = True
+                _, self._idf_per_feature = prepare_tfidf_vectorizer_for_inference(
+                    self._vectorizer
+                )
             except FileNotFoundError as e:
                 logger.warning(
                     "TF-IDF artifact not found or download failed; using uniform weights. %s",
                     e,
                 )
                 self._use_tfidf = False
+                self._idf_per_feature = None
+        else:
+            self._idf_per_feature = None
+
+        if not self._use_tfidf:
+            self._idf_per_feature = None
 
         self._wisse = wisse(
             self._embedding,
@@ -92,6 +102,7 @@ class SentenceEmbedding:
             combiner=combiner,
             return_missing=False,
             generate=True,
+            idf_per_feature=self._idf_per_feature,
         )
 
         # One .npy load (or tar member), not a full vocabulary scan
