@@ -6,9 +6,9 @@ often fail under **sklearn 1.x**: the inner ``TfidfTransformer`` unpickles as
 property breaks.
 
 This module resolves that **once** when loading: probe ``transform()``, and if it
-fails, recover a per-feature IDF vector from ``__dict__`` / ``df_`` / ``n_samples_``
-(or fall back to ones). ``SentenceEmbedding`` passes that vector into ``wisse`` so
-inference never touches the broken path.
+fails, recover a per-feature ``idf_`` vector from ``__dict__`` / ``df_`` / ``n_samples_``
+(or fall back to ones). ``SentenceEmbedding`` passes that into ``wisse``, which applies
+the same TF×IDF weighting as sklearn (without calling the broken ``transform()``).
 """
 from __future__ import annotations
 
@@ -127,9 +127,9 @@ def prepare_tfidf_vectorizer_for_inference(
     use_transform, idf_per_feature
         If ``use_transform`` is True, pass ``idf_per_feature=None`` to ``wisse`` and
         use full ``TfidfVectorizer.transform`` (TF×IDF).
-        If False, pass ``idf_per_feature`` (shape ``(n_features,)``) and never call
-        ``transform`` — IDF-only weighting with the paper-era heuristic (idf>2 else 0.01)
-        in ``wisse``.
+        If False, pass ``idf_per_feature`` (shape ``(n_features,)``): ``wisse`` rebuilds
+        the same TF×IDF pipeline (counts / binary / sublinear × ``idf_`` / norm) without
+        calling ``.transform()`` on the broken inner transformer.
     """
     if vectorizer is None:
         return True, None

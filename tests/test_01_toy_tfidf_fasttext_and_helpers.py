@@ -64,6 +64,43 @@ def toy_idf_path(tmp_path):
     return _make_toy_idf(tmp_path, TOY_VOCAB)
 
 
+def test_manual_tfidf_via_idf_per_feature_matches_transform(
+    toy_fasttext_indexed_dir, toy_idf_path
+):
+    """Legacy path (idf_per_feature + no .transform) must match full sklearn TF×IDF."""
+    import wisse
+
+    with open(toy_idf_path, "rb") as f:
+        idf = pickle.load(f)
+    idf_arr = np.asarray(idf.idf_, dtype=np.float64)
+    vs = wisse.vector_space(toy_fasttext_indexed_dir)
+    w_sklearn = wisse.wisse(
+        vs,
+        vectorizer=idf,
+        tf_tfidf=True,
+        combiner="sum",
+        return_missing=False,
+        generate=True,
+        idf_per_feature=None,
+    )
+    w_manual = wisse.wisse(
+        vs,
+        vectorizer=idf,
+        tf_tfidf=True,
+        combiner="sum",
+        return_missing=False,
+        generate=True,
+        idf_per_feature=idf_arr,
+    )
+    for s in TOY_SENTENCES + ["hello world embedding test", "unknownword x"]:
+        a = w_sklearn.infer_sentence(s)
+        b = w_manual.infer_sentence(s)
+        if a is None and b is None:
+            continue
+        assert a is not None and b is not None
+        np.testing.assert_allclose(a, b, rtol=1e-5, atol=1e-6)
+
+
 def test_toy_sentences_tfidf_fasttext_embedding(toy_fasttext_indexed_dir, toy_idf_path):
     """Embed toy sentences with full TF-IDF weighted FastText-style embeddings via SentenceEmbedding."""
     import wisse

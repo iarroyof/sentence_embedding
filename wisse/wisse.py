@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import logging
 import os
+from collections import Counter
 from functools import partial
 from typing import Any, List, Optional, Tuple, Union
 
@@ -152,6 +153,76 @@ class wisse:
 
         return extract_idf_feature_array(self.tfidf)
 
+    def _infer_manual_tfidf_weights(
+        self, sentence: List[str], idf_arr: np.ndarray
+    ) -> Tuple[dict, List[str]]:
+        """
+        Rebuild sklearn-style TF×IDF for one pseudo-document ``" ".join(sentence)``
+        when ``.transform()`` is broken but ``idf_`` was recovered into ``idf_arr``.
+
+        Mirrors CountVectorizer (binary / raw counts) → optional sublinear_tf → × idf
+        → row-wise norm, matching ``TfidfVectorizer.transform`` for that document.
+        """
+        v = self.tfidf
+        assert v is not None
+        vocab = v.vocabulary_
+        doc = " ".join(sentence)
+        try:
+            tokens = list(v.build_analyzer()(doc))
+        except Exception:
+            tokens = list(sentence)
+
+        counts = Counter(tokens)
+        binary = bool(getattr(v, "binary", False))
+        sublinear_tf = bool(getattr(v, "sublinear_tf", False))
+        use_idf = bool(getattr(v, "use_idf", True))
+        norm = getattr(v, "norm", "l2")
+
+        idx_to_raw: dict = {}
+        for tok, c in counts.items():
+            if tok not in vocab:
+                continue
+            idx = int(vocab[tok])
+            if idx < 0 or idx >= len(idf_arr):
+                continue
+            tf = 1.0 if (binary and c > 0) else float(c)
+            if sublinear_tf:
+                tf = 1.0 + np.log(tf) if tf > 0 else 0.0
+            idf_w = float(idf_arr[idx]) if use_idf else 1.0
+            idx_to_raw[idx] = tf * idf_w
+
+        if not idx_to_raw:
+            missing: List[str] = []
+            for word in sentence:
+                missing.append(word)
+            return {}, missing
+
+        values = np.fromiter(idx_to_raw.values(), dtype=np.float64)
+        if norm == "l2":
+            denom = float(np.linalg.norm(values))
+            if denom > 0:
+                for k in list(idx_to_raw.keys()):
+                    idx_to_raw[k] /= denom
+        elif norm == "l1":
+            denom = float(np.sum(np.abs(values)))
+            if denom > 0:
+                for k in list(idx_to_raw.keys()):
+                    idx_to_raw[k] /= denom
+        # norm is None: leave unnormalized (sklearn TfidfTransformer)
+
+        existent: dict = {}
+        missing = []
+        for word in sentence:
+            if word not in vocab:
+                missing.append(word)
+                continue
+            idx = int(vocab[word])
+            if idx not in idx_to_raw:
+                missing.append(word)
+                continue
+            existent[word] = float(idx_to_raw[idx])
+        return existent, missing
+
     def _infer_idf_table_weights(
         self, sentence: List[str], idf_arr: np.ndarray
     ) -> Tuple[dict, List[str]]:
@@ -193,8 +264,10 @@ class wisse:
                 existent[word] = 1.0
             return existent, missing
 
-        # Set once at SentenceEmbedding load for sklearn pre-0.18 pickles (see tfidf_compat)
+        # Recovered idf_ from sklearn pre-0.18 pickles (see tfidf_compat): full TF×IDF
         if self._idf_per_feature is not None:
+            if self.tf_tfidf:
+                return self._infer_manual_tfidf_weights(sentence, self._idf_per_feature)
             return self._infer_idf_table_weights(sentence, self._idf_per_feature)
 
         if self.tf_tfidf:
