@@ -200,3 +200,31 @@ def test_all_helpers(
     s_self = wisse.similarity(emb, None)
     assert s_self.shape == (2, 2)
     np.testing.assert_allclose(np.diag(s_self), 1.0, atol=1e-5)
+
+
+def test_legacy_sklearn_idf_diag_recovery():
+    """Pre-0.18 TfidfTransformer used _idf_diag; idf_ was not always in __dict__."""
+    from scipy import sparse
+
+    from wisse.tfidf_compat import extract_idf_feature_array
+
+    n = 64
+    idf = np.log(np.arange(2, n + 2, dtype=np.float64)) + 1.0
+
+    class Inner:
+        pass
+
+    inner = Inner()
+    inner._idf_diag = sparse.spdiags(idf, 0, n, n, format="csr")
+
+    class FakeVec:
+        vocabulary_ = {str(i): i for i in range(n)}
+        _tfidf = inner
+
+        def transform(self, _X):
+            raise RuntimeError("simulates broken sklearn 1.x unpickle")
+
+    arr = extract_idf_feature_array(FakeVec())
+    assert arr is not None
+    assert arr.shape == (n,)
+    np.testing.assert_allclose(arr, idf, rtol=1e-5)

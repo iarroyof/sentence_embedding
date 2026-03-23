@@ -39,6 +39,39 @@ def _smooth_idf_from_df(df: Any, n_samples: Any) -> Optional[np.ndarray]:
     return np.log((1.0 + n) / (1.0 + df_a)) + 1.0
 
 
+def _idf_from_legacy_tfidf_idf_diag(inner: Any) -> Optional[np.ndarray]:
+    """
+    Sklearn **<= 0.18** ``TfidfTransformer`` stored IDF as a sparse ``_idf_diag``
+    matrix; ``idf_`` was a **property** (not always in ``__dict__``). Unpickling
+    under sklearn 1.x leaves ``_idf_diag`` but ``transform()`` / ``idf_`` break.
+    """
+    if inner is None:
+        return None
+    diag = getattr(inner, "_idf_diag", None)
+    if diag is None and hasattr(inner, "__dict__"):
+        diag = inner.__dict__.get("_idf_diag")
+    if diag is None:
+        return None
+    try:
+        import scipy.sparse as sp
+
+        if sp.issparse(diag):
+            # Same as old property: np.ravel(self._idf_diag.sum(axis=0))
+            try:
+                flat = np.asarray(diag.diagonal(), dtype=np.float64).ravel()
+                if flat.size > 0:
+                    return flat
+            except Exception:
+                pass
+            return np.ravel(np.asarray(diag.sum(axis=0), dtype=np.float64))
+    except Exception:
+        pass
+    try:
+        return np.ravel(np.asarray(diag.sum(axis=0), dtype=np.float64))
+    except Exception:
+        return None
+
+
 def extract_idf_feature_array(vectorizer: Any) -> Optional[np.ndarray]:
     """
     Best-effort recovery of shape ``(n_features,)`` IDF weights without using the
@@ -48,6 +81,11 @@ def extract_idf_feature_array(vectorizer: Any) -> Optional[np.ndarray]:
         return None
 
     inner = getattr(vectorizer, "_tfidf", None)
+
+    if inner is not None:
+        legacy = _idf_from_legacy_tfidf_idf_diag(inner)
+        if legacy is not None and legacy.size > 0:
+            return legacy
 
     if inner is not None:
         raw = inner.__dict__.get("idf_")
@@ -148,7 +186,8 @@ def prepare_tfidf_vectorizer_for_inference(
 
     logger.info(
         "TF-IDF artifact: .transform() failed under this sklearn (typical for pickles "
-        "from sklearn pre-0.18). Recovering per-feature IDF; using IDF-only weights."
+        "from sklearn pre-0.18). Recovering per-feature IDF for manual TF×IDF (incl. "
+        "legacy _idf_diag if present)."
     )
 
     raw = extract_idf_feature_array(vectorizer)
